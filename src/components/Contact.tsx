@@ -63,7 +63,7 @@ const Contact = ({ darkMode }: { darkMode: boolean }) => {
     {
       icon: <Phone className="text-green-600" size={24} />,
       title: "Telefone",
-      value: "+55 (11) 99999-9999",
+      value: "+55 (11) 98797-9507",
       link: "tel:+5511999999999",
     },
     {

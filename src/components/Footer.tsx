@@ -122,7 +122,7 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm flex items-center gap-2">
-              © {currentYear} DevPortfolio. Feito com{" "}
+              © {currentYear} Andrel Dev. Feito com{" "}
               <Heart size={16} className="text-red-500" /> e muito código.
             </p>
             <button
