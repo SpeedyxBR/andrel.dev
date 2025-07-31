@@ -1,0 +1,475 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrel Carvalho | Portfolio </title>
+  <meta name="description" content="Portfólio do desenvolvedor front-end Andrel Carvalho para compartilhar projetos e habilidades desenvolvidas.">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+</head>
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <ul class="menu menu--principal">
+        <li class="menu__item">
+          <a class="menu__link active" href="#home">
+            <span class="menu__text">Home</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#projetos">
+            <span class="menu__text">Projetos</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#sobre">
+            <span class="menu__text">Sobre</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#contato">
+            <span class="menu__text">Contato</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__brand">
+      <a href="#home">
+        <img class="brand__logo" src="assets/images/logo-ea.svg" alt="Logo EA">
+      </a>
+    </div>
+    <div class="header__toggle">
+      <i id="toggleTheme" class="bi bi-sun"></i>
+    </div>
+  </header>
+  <nav class="nav--mobile">
+    <ul class="menu menu--mobile">
+      <li class="menu__item">
+        <a class="menu__link active" href="#home">
+          <i class="menu__icon bi bi-house-door"></i>
+          <span class="menu__text">Home</span>
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#projetos">
+          <i class="menu__icon bi bi-window-stack"></i>
+          <span class="menu__text">Projetos</span>
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#sobre">
+          <i class="menu__icon bi bi-person"></i>
+          <span class="menu__text">Sobre</span>
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#contato">
+          <i class="menu__icon bi bi-envelope"></i>
+          <span class="menu__text">Contato</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="home">
+    <div class="main__content1">
+      <h1><b>Soluções Criativas &</b> Desenvolvimento Front-end</h1>
+      <p>Andrel Carvalho, São Paulo-SP, Desenvolvedor Front-end.</p> 
+      <ul class="menu menu--social">
+        <li>
+          <a class="menu__link" href="https://github.com/SpeedyxBR" target="_blank">
+            <i class="menu__icon bi bi-github"></i>
+          </a>
+        </li>
+        <li>
+          <a class="menu__link" href="https://www.linkedin.com/in/andrel-carvalho/" target="_blank">
+            <i class="menu__icon bi bi-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a class="menu__link" href="https://www.instagram.com/_dreeel/" target="_blank">
+            <i class="menu__icon bi bi-instagram"></i>
+          </a>
+        </li>
+      </ul>
+      <a href="#projetos">
+        <button class="btn btn--primary">
+          <span>Ver Projetos</span>
+          <i class="bi bi-arrow-down-right"></i>
+        </button>  
+      </a>
+    </div>
+  </main>
+
+  <section class="technologies">
+    <h2>Conhecimento nas principais tecnologias do mercado</h2>
+    <ul class="technologies__list">
+      <li class="technologies__item">
+        <img class="technologies__logo" src="assets/images/technologies/HTML.svg" alt="Logo HTML">
+      </li>
+      <li class="technologies__item">
+        <img class="technologies__logo" src="assets/images/technologies/JavaScript.svg" alt="Logo JS">
+      </li>
+      <li class="technologies__item">
+        <img class="technologies__logo" src="assets/images/technologies/CSS.svg" alt="Logo CSS">
+      </li>
+      <li class="technologies__item">
+        <img class="technologies__logo" src="assets/images/technologies/React.svg" alt="Logo React">
+      </li>
+      <li class="technologies__item">
+        <img class="technologies__logo" src="assets/images/technologies/Node.js.svg" alt="Logo Node.js">
+      </li>
+      <li class="technologies__item">
+        <img class="technologies__logo" src="assets/images/technologies/Tailwind CSS.svg" alt="Logo  Tailwind CSS">
+      </li>
+    </ul>
+  </section>
+
+  <section id="projetos" class="projects">
+    <h2>Projetos</h2>
+    <div class="projects__container">
+      <div class="projects__card">
+        <img class="card__cover" src="assets/images/projects/detona-game.png" alt="Jogo Detona Ralph">
+        <div class="card__body">
+          <h3 class="card__title">Jogo Detona Ralph</h3>
+          <p class="card__description">Quebra-cabeça de 8 bits</p>
+          <ul class="card__list">
+            <li class="card__item">Rank de Acertos;</li>
+            <li class="card__item">Audio dinâmico;</li>
+          </ul>
+          <ul class="technologies__list">
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/HTML.svg" alt="Logo HTML">
+            </li>
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/CSS.svg" alt="Logo CSS">
+            </li>
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/JavaScript.svg" alt="Logo JavaScript">
+            </li>
+          </ul>
+          <div class="card__buttons">
+            <!-- Botão com link para a prévia -->
+            <a 
+              class="btn btn--primary" 
+              href="https://speedyxbr.github.io/DETONA-RALPH-JOGO/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <span>Prévia</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <!-- Botão com link para o repositório -->
+            <a 
+              class="btn" 
+              href="https://github.com/SpeedyxBR/DETONA-RALPH-JOGO" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <span>Repositório</span>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+      <div class="projects__card card--reverse">
+        <img class="card__cover" src="assets/images/projects/Jogodamemoria.PNG" alt="Capa Archstil">
+        <div class="card__body">
+          <h3 class="card__title">Jogo da Memória</h3>
+          <p class="card__description">O layout apresenta um tabuleiro de 4x4 (16 cartas no total), onde cada carta pode ser virada para revelar um emoji de animal (como um leão, macaco, raposa e etc). O objetivo do jogo é combinar pares de cartas com o mesmo emoji.</p>
+          <ul class="card__list">
+            <li class="card__item">Interatividade: O jogador pode clicar nas cartas para virá-las;</li>
+            <li class="card__item">Reinício: Botão para reiniciar o jogo a qualquer momento;</li>
+            <li class="card__item">Design responsivo: Ajusta o layout do tabuleiro e das cartas para diferentes dispositivos.</li>
+          </ul>
+          <ul class="technologies__list">
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/HTML.svg" alt="Logo HTML">
+            </li>
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/CSS.svg" alt="Logo CSS">
+            </li>
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/JavaScript.svg" alt="Logo JavaScript">
+            </li>
+          <div class="card__buttons">
+            <!-- Botão com link para a prévia -->
+            <a 
+              class="btn btn--primary" 
+              href="https://speedyxbr.github.io/JOGO-DA-MEMORIA/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <span>Prévia</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <!-- Botão com link para o repositório -->
+            <a 
+              class="btn" 
+              href="https://github.com/SpeedyxBR/JOGO-DA-MEMORIA" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <span>Repositório</span>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects__card">
+        <img class="card__cover" src="assets/images/projects/gerenciadordetarefas.png" alt="Capa Games Store">
+        <div class="card__body">
+          <h3 class="card__title">Gerenciador de Tarefas</h3>
+          <p class="card__description">Aplicação para organizar e acompanhar tarefas diárias de forma eficiente.</p>
+          <ul class="card__list">
+            <li class="card__item">Listagem de tarefas;</li>
+            <li class="card__item">Anotações;</li>
+            <li class="card__item">Organizações e multitarefas.</li>
+          </ul>
+          <ul class="technologies__list">
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/HTML.svg" alt="Logo HTML">
+            </li>
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/JavaScript.svg" alt="Logo JS">
+            </li>
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/CSS.svg" alt="Logo CSS">
+            </li>
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/React.svg" alt="Logo React">
+            </li>
+            <li class="technologies__item">
+              <img class="technologies__logo" src="assets/images/technologies/Tailwind CSS.svg" alt="Logo  Tailwind CSS">
+            </li>
+          </ul>
+          <div class="card__buttons">
+            <!-- Botão com link para a prévia -->
+            <a 
+              class="btn btn--primary" 
+              href="https://curso-de-react-yt-kohl.vercel.app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <span>Prévia</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <!-- Botão com link para o repositório -->
+            <a 
+              class="btn" 
+              href="https://github.com/SpeedyxBR/curso-de-react-yt" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <span>Repositório</span>
+            </a>
+          </div>
+      </div>
+      <a href="https://github.com/SpeedyxBR">
+        <button class="btn btn--primary">
+          <span>Ver Todos os Projetos</span>
+          <i class="bi bi-arrow-up-right"></i>
+        </button>  
+      </a>
+    </div>
+  </section>
+
+  <section id="sobre" class="about">
+    <div class="about__content1">
+      <img class="about__photo" src="assets/images/avatar.jpeg" alt="">
+      <div class="about__description">
+        <h2>Sobre mim</h2>
+        <p>Andrel Carvalho | Estudante de desenvolvimento web full-stack
+          Meu primeiro contato com HTML, CSS e JavaScript despertou uma paixão por transformar ideias em realidade digital. Atualmente, como estudante de Análise e Desenvolvimento de Sistemas, estou me dedicando ao desenvolvimento front-end com React e explorando o back-end com Node.js, construindo projetos que integram ambas as áreas.
+        </p>  
+        <div class="about__icons">
+          <i class="bi bi-translate"></i>
+          <span>Inglês: Básico | Francês: Avançado</span>
+        </div>
+        <div class="description__buttons">
+          <a href="https://www.linkedin.com/in/andrel-carvalho/" target="_blank">
+            <button class="btn btn--primary">
+              <span>Conecte-se Comigo</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </button> 
+          </a>
+          <a href="">
+            <button class="btn">
+              <span>Currículo</span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="about__content2">
+      <div class="col1">
+        <div class="row1">
+          <h3>Formação</h3>
+          <h4>Análise e Desenvolvimento de Sistemas</h4>
+          <span>Ago 2023 - Atualmente</span>
+          <div class="about__icons">
+            <i class="bi bi-bank"></i>
+            <span> Faculdade Anhanguera - Marte </span>
+          </div>
+
+          <!-- <div class="about__icons">
+            <i class="bi bi-mortarboard"></i>
+            <span> Especialização </span>
+          </div> -->
+
+
+        </div>
+        <div class="row2">
+          <h3>Habilidades Técnicas</h3>
+          </span>
+          <ul class="about__list">
+            <li class="about__item">
+              Desenvolvimento front-end com <strong>React</strong>, utilizando Hooks, JSX e componentização 
+              para interfaces dinâmicas e reutilizáveis;
+            </li>
+            <li class="about__item">
+              Criação de APIs RESTful com <strong>Node.js</strong> e <strong>Express.js</strong>, 
+              integrando lógica de negócios e bancos de dados;
+            </li>
+            <li class="about__item">
+              Domínio de <strong>JavaScript</strong> (ES6+), <strong>HTML5</strong> e <strong>CSS3</strong> 
+              para construção de layouts responsivos e interatividade;
+            </li>
+            <li class="about__item">
+              Experiência em projetos acadêmicos <strong>full-stack</strong>, combinando front-end (React) 
+              com APIs customizadas (Node.js);
+            </li>
+            <li class="about__item">
+              Controle de versão com <strong>Git</strong> e familiaridade com ecossistema <strong>npm</strong> 
+              para gerenciamento de pacotes;
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col2">
+        <h3>Cursos</h3>
+        <div id="accordion">
+          <div class="accordion__item active">
+            <button class="accordion__header start">
+              <span>Versionamento de Código com Git e GitHub</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body">
+              <p>
+                Digital Innovation One. Out 2024. 2h.
+              </p>
+              <p>
+                O que é versionamento de código, Git e GitHub. Como instalar e configurar o Git em diferentes sistemas 
+                operacionais e como autenticar via Token e SSH. Como manusear repositórios, indo desde a criação e clonagem 
+                até o gerenciamento de branches, passando por todas as etapas de salvar, desfazer e sincronizar alterações 
+                com o repositório remoto. 
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header">
+              <span>Contribuindo em um Projeto Open Source no GitHub</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body">
+              <p>
+                Digital Innovation One. Fev 2023. 1h.
+              </p>
+              <p>
+                Lab prático sobre colaboração em projetos de código aberto.
+              </p>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__header end">
+                <span>Ri Happy - Front-end do Zero</span>
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <div class="accordion__body end">
+                <p>
+                  Digital Innovation One. Dez 2024. 75h.
+                </p>
+                <p>
+                  É um conteúdo completo e totalmente alinhado com o dia a dia de desenvolvedores Front-End, com mentorias dos próprios experts da Ri Happy Front-end com HTML, CSS e JAVASCRIPT!
+                </p>
+              </div>
+          </div>
+        </div>
+  </section>
+  
+  <section id="contato" class="contact">
+    <h2>Contate-me</h2>
+    <p>Estou disponível para serviços e novas conexões. Contate-me via 
+      e-mail e conecte-se comigo através das minhas redes sociais.
+    </p>
+    <ul class="menu menu--social">
+      <li>
+        <a class="menu__link" href="https://github.com/SpeedyxBR" target="_blank">
+          <i class="menu__icon bi bi-github"></i>
+          <span>GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a class="menu__link" href="https://www.linkedin.com/in/andrel-carvalho/" target="_blank">
+          <i class="menu__icon bi bi-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </li>
+      <li>
+        <a class="menu__link" href="https://www.instagram.com/_dreeel/" target="_blank">
+          <i class="menu__icon bi bi-instagram"></i>
+          <span>Instagram</span>
+        </a>
+      </li>
+    </ul>
+    <a href="mailto:andrel.cilva@gmail.com">
+      <button class="btn btn--primary">
+        <span class="email">andrel.cilva@gmail.com</span>
+      </button>  
+    </a>
+  </section>
+
+  <footer>
+    <p>
+      © 2025.
+      <a href="https://github.com/SpeedyxBR" target="_blank">Andrel Carvalho</a>.
+    </p>
+  </footer>
+  <script src="assets/js/scripts.js"></script>
+</body>
+=======
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio profissional de Desenvolvedor Fullstack especializado em React, Node.js e TypeScript. Criando experiências digitais modernas e funcionais." />
+    <meta name="keywords" content="desenvolvedor, fullstack, react, nodejs, typescript, portfolio, web developer" />
+    <meta name="author" content="Dev Portfolio" />
+    <title>Desenvolvedor Fullstack | Portfólio Profissional</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Desenvolvedor Fullstack | Portfólio Profissional" />
+    <meta property="og:description" content="Portfólio profissional de Desenvolvedor Fullstack especializado em React, Node.js e TypeScript" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Desenvolvedor Fullstack | Portfólio Profissional" />
+    <meta property="twitter:description" content="Portfólio profissional de Desenvolvedor Fullstack especializado em React, Node.js e TypeScript" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+>>>>>>> 2037355 (Primeiro commit do novo  portfolio)
+</html>
