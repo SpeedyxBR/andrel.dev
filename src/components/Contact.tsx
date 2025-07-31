@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
 import emailjs from "emailjs-com";
 
-const Contact = () => {
+const Contact = ({ darkMode }: { darkMode: boolean }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -75,13 +75,26 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section
+      id="contact"
+      className={`py-20 ${
+        darkMode ? "bg-gray-900" : "bg-gray-50"
+      } transition-colors duration-300`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2
+            className={`text-3xl sm:text-4xl font-bold mb-4 ${
+              darkMode ? "text-white" : "text-gray-900"
+            }`}
+          >
             Entre em Contato
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p
+            className={`text-xl max-w-3xl mx-auto ${
+              darkMode ? "text-gray-300" : "text-gray-600"
+            }`}
+          >
             Vamos conversar sobre oportunidades, projetos ou apenas trocar
             ideias sobre tecnologia
           </p>
@@ -90,28 +103,56 @@ const Contact = () => {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Info */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">
+            <div
+              className={`${
+                darkMode ? "bg-gray-800" : "bg-white"
+              } rounded-xl p-8 shadow-lg`}
+            >
+              <h3
+                className={`text-xl font-bold mb-6 ${
+                  darkMode ? "text-white" : "text-gray-900"
+                }`}
+              >
                 Informações de Contato
               </h3>
 
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <div className="p-2 bg-gray-50 rounded-lg">{info.icon}</div>
+                    <div
+                      className={`${
+                        darkMode ? "bg-gray-900" : "bg-gray-50"
+                      } p-2 rounded-lg`}
+                    >
+                      {info.icon}
+                    </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">
+                      <h4
+                        className={`font-semibold mb-1 ${
+                          darkMode ? "text-white" : "text-gray-900"
+                        }`}
+                      >
                         {info.title}
                       </h4>
                       {info.link ? (
                         <a
                           href={info.link}
-                          className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                          className={`${
+                            darkMode
+                              ? "text-gray-300 hover:text-blue-400"
+                              : "text-gray-600 hover:text-blue-600"
+                          } transition-colors duration-200`}
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-gray-600">{info.value}</p>
+                        <p
+                          className={`${
+                            darkMode ? "text-gray-300" : "text-gray-600"
+                          }`}
+                        >
+                          {info.value}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -119,7 +160,11 @@ const Contact = () => {
               </div>
 
               <div className="mt-8 pt-8 border-t border-gray-200">
-                <h4 className="font-semibold text-gray-900 mb-4">
+                <h4
+                  className={`font-semibold mb-4 ${
+                    darkMode ? "text-white" : "text-gray-900"
+                  }`}
+                >
                   Redes Sociais
                 </h4>
                 <div className="flex gap-4">
@@ -127,7 +172,11 @@ const Contact = () => {
                     href="https://github.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 text-gray-700 hover:text-gray-900"
+                    className={`${
+                      darkMode
+                        ? "bg-gray-900 text-gray-200 hover:bg-gray-700 hover:text-white"
+                        : "bg-gray-50 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                    } p-3 rounded-lg transition-colors duration-200`}
                   >
                     <Github size={20} />
                   </a>
@@ -135,7 +184,11 @@ const Contact = () => {
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200 text-gray-700 hover:text-blue-600"
+                    className={`${
+                      darkMode
+                        ? "bg-gray-900 text-gray-200 hover:bg-gray-700 hover:text-blue-400"
+                        : "bg-gray-50 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+                    } p-3 rounded-lg transition-colors duration-200`}
                   >
                     <Linkedin size={20} />
                   </a>
@@ -146,8 +199,16 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">
+            <div
+              className={`${
+                darkMode ? "bg-gray-800" : "bg-white"
+              } rounded-xl p-8 shadow-lg`}
+            >
+              <h3
+                className={`text-xl font-bold mb-6 ${
+                  darkMode ? "text-white" : "text-gray-900"
+                }`}
+              >
                 Envie uma Mensagem
               </h3>
 
@@ -174,7 +235,9 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className={`block text-sm font-medium mb-2 ${
+                        darkMode ? "text-gray-200" : "text-gray-700"
+                      }`}
                     >
                       Nome Completo *
                     </label>
@@ -185,14 +248,20 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                      className={`w-full px-4 py-3 border ${
+                        darkMode
+                          ? "border-gray-700 bg-gray-900 text-white"
+                          : "border-gray-300"
+                      } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200`}
                       placeholder="Seu nome"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-2"
+                      className={`block text-sm font-medium mb-2 ${
+                        darkMode ? "text-gray-200" : "text-gray-700"
+                      }`}
                     >
                       Email *
                     </label>
@@ -203,7 +272,11 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                      className={`w-full px-4 py-3 border ${
+                        darkMode
+                          ? "border-gray-700 bg-gray-900 text-white"
+                          : "border-gray-300"
+                      } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200`}
                       placeholder="seu@email.com"
                     />
                   </div>
@@ -212,7 +285,9 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className={`block text-sm font-medium mb-2 ${
+                      darkMode ? "text-gray-200" : "text-gray-700"
+                    }`}
                   >
                     Assunto *
                   </label>
@@ -223,7 +298,11 @@ const Contact = () => {
                     required
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                    className={`w-full px-4 py-3 border ${
+                      darkMode
+                        ? "border-gray-700 bg-gray-900 text-white"
+                        : "border-gray-300"
+                    } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200`}
                     placeholder="Assunto da mensagem"
                   />
                 </div>
@@ -231,7 +310,9 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className={`block text-sm font-medium mb-2 ${
+                      darkMode ? "text-gray-200" : "text-gray-700"
+                    }`}
                   >
                     Mensagem *
                   </label>
@@ -242,7 +323,11 @@ const Contact = () => {
                     rows={6}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none"
+                    className={`w-full px-4 py-3 border ${
+                      darkMode
+                        ? "border-gray-700 bg-gray-900 text-white"
+                        : "border-gray-300"
+                    } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none`}
                     placeholder="Descreva sua mensagem, proposta ou dúvida..."
                   />
                 </div>

@@ -1,15 +1,19 @@
-import React from 'react';
-import { Heart, Github, Linkedin, Mail } from 'lucide-react';
+import React from "react";
+import { Heart, Github, Linkedin, Mail } from "lucide-react";
 
-const Footer = () => {
+const Footer = ({ darkMode }: { darkMode: boolean }) => {
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer
+      className={`${
+        darkMode ? "bg-gray-900 text-white" : "bg-gray-900 text-white"
+      } py-12 transition-colors duration-300`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
@@ -17,8 +21,12 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">
               Dev<span className="text-blue-400">Portfolio</span>
             </h3>
-            <p className="text-gray-400 leading-relaxed">
-              Desenvolvedor Fullstack focado em criar experiências digitais 
+            <p
+              className={`${
+                darkMode ? "text-gray-400" : "text-gray-400"
+              } leading-relaxed`}
+            >
+              Desenvolvedor Fullstack focado em criar experiências digitais
               modernas e funcionais com as melhores tecnologias do mercado.
             </p>
           </div>
@@ -28,32 +36,48 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
               <li>
-                <button 
-                  onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("about")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   Sobre Mim
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("skills")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   Habilidades
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("projects")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   Projetos
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   Contato
@@ -98,7 +122,8 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm flex items-center gap-2">
-              © {currentYear} DevPortfolio. Feito com <Heart size={16} className="text-red-500" /> e muito código.
+              © {currentYear} DevPortfolio. Feito com{" "}
+              <Heart size={16} className="text-red-500" /> e muito código.
             </p>
             <button
               onClick={scrollToTop}
