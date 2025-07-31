@@ -2,22 +2,27 @@ import React, { useEffect, useState } from "react";
 import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = ({ darkMode }: { darkMode: boolean }) => {
-  const [langIndex, setLangIndex] = useState(0);
-
-  const descriptions = [
-    { lang: "pt", text: "Desenvolvedor Web Fullstack" },
-    { lang: "en", text: "Fullstack Web Developer" },
-    { lang: "es", text: "Desarrollador Web Fullstack" },
-    { lang: "fr", text: "Développeur Web Fullstack" },
-    { lang: "de", text: "Fullstack Webentwickler" },
+  const greetings = [
+    { lang: "pt", text: "Olá, eu sou o Andrel" },
+    { lang: "en", text: "Hi, I'm Andrel" },
+    { lang: "es", text: "Hola, soy Andrel" },
+    { lang: "fr", text: "Salut, je suis Andrel" },
+    { lang: "de", text: "Hallo, ich bin Andrel" },
   ];
+
+  const [index, setIndex] = useState(0);
+  const [greeting, setGreeting] = useState(greetings[0].text);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setLangIndex((prev) => (prev + 1) % descriptions.length);
-    }, 3000); // troca a cada 3s
+      setIndex((prev) => (prev + 1) % greetings.length);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    setGreeting(greetings[index].text);
+  }, [index]);
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
@@ -38,16 +43,15 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
   return (
     <section
       id="home"
-      className={`min-h-screen flex items-center justify-center pt-16 ${
-        darkMode
-          ? "bg-gray-900 text-white"
-          : "bg-gradient-to-br from-blue-50 via-white to-indigo-50 text-gray-900"
+      className={`min-h-screen flex items-center justify-center pt-16 transition-colors duration-500 ${
+        darkMode ? "bg-black text-white" : "bg-white text-gray-900"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-100 dark:to-gray-800 pointer-events-none animate-backgroundFade"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center">
-          {/* FOTO EM CÍRCULO */}
-          <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-lg border-4 border-blue-600">
+          <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 shadow-lg border-4 border-blue-600 animate-float">
             <img
               src="/andrel.jpeg"
               alt="Andrel Carvalho"
@@ -55,39 +59,18 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             />
           </div>
 
-          {/* TÍTULO */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-2">
-            Desenvolvedor
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-              Web Fullstack
-            </span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+            {greeting}
+            <span className="blinking-cursor">|</span>
           </h1>
 
-          {/* DESCRIÇÃO EM LÍNGUAS */}
-          <p className="text-xl mb-6 transition-opacity duration-500 h-8">
-            <span lang={descriptions[langIndex].lang}>
-              {descriptions[langIndex].text}
-            </span>
-          </p>
-
-          {/* TEXTO BASE */}
           <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Criando experiências digitais com{" "}
-            <span className="font-semibold" style={{ color: "#61DAFB" }}>
-              React
-            </span>
-            ,{" "}
-            <span className="font-semibold" style={{ color: "#3C873A" }}>
-              Node.js
-            </span>{" "}
-            e{" "}
-            <span className="font-semibold" style={{ color: "#3178C6" }}>
-              TypeScript
-            </span>
-            . Focado em código limpo, performance e experiência do usuário.
+            Criando experiências digitais com {" "}
+            <span className="font-semibold text-[#61DAFB]">React</span>, {" "}
+            <span className="font-semibold text-[#3C873A]">Node.js</span> e {" "}
+            <span className="font-semibold text-[#3178C6]">TypeScript</span>. Focado em código limpo, performance e experiência do usuário.
           </p>
 
-          {/* BOTÕES */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <button
               onClick={handleDownloadCV}
@@ -104,7 +87,6 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             </button>
           </div>
 
-          {/* ÍCONES */}
           <div className="flex justify-center gap-6 mb-16">
             <a
               href="https://github.com/SpeedyxBR"
@@ -123,19 +105,42 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
               <Linkedin size={24} />
             </a>
             <a
-              href="andrel.cilva@gmail.com"
+              href="mailto:andrel.cilva@gmail.com"
               className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-gray-700 hover:text-green-600 transform hover:-translate-y-1"
             >
               <Mail size={24} />
             </a>
           </div>
 
-          {/* ÍCONE DE ROLAGEM */}
           <div className="animate-bounce">
             <ChevronDown size={32} className="text-gray-400 mx-auto" />
           </div>
         </div>
       </div>
+
+      <style>{`
+        .blinking-cursor {
+          animation: blink 1s step-start infinite;
+        }
+        @keyframes blink {
+          50% { opacity: 0; }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+          100% { transform: translateY(0px); }
+        }
+        .animate-backgroundFade {
+          animation: backgroundFade 10s ease-in-out infinite alternate;
+        }
+        @keyframes backgroundFade {
+          0% { opacity: 0.5; }
+          100% { opacity: 1; }
+        }
+      `}</style>
     </section>
   );
 };
