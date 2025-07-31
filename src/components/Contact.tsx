@@ -57,7 +57,7 @@ const Contact = ({ darkMode }: { darkMode: boolean }) => {
     {
       icon: <Mail className="text-blue-600" size={24} />,
       title: "Email",
-      value: "contato@exemplo.com",
+      value: "andrel.cilva@gmail.com",
       link: "mailto:contato@exemplo.com",
     },
     {
@@ -169,7 +169,7 @@ const Contact = ({ darkMode }: { darkMode: boolean }) => {
                 </h4>
                 <div className="flex gap-4">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/SpeedyxBR"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${
@@ -181,7 +181,7 @@ const Contact = ({ darkMode }: { darkMode: boolean }) => {
                     <Github size={20} />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/in/andrel-carvalho"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${

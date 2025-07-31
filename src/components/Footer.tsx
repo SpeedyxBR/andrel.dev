@@ -19,7 +19,7 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold mb-4">
-              Dev<span className="text-blue-400">Portfolio</span>
+              Andrel <span className="text-blue-400">Dev</span>
             </h3>
             <p
               className={`${
@@ -91,7 +91,7 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
             <h4 className="text-lg font-semibold mb-4">Conecte-se</h4>
             <div className="flex gap-4 mb-4">
               <a
-                href="https://github.com"
+                href="https://github.com/SpeedyxBR"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200"
@@ -99,7 +99,7 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/andrel-carvalho"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200"
@@ -107,7 +107,7 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:contato@exemplo.com"
+                href="mailto:andrel.cilva@gmail.com"
                 className="p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200"
               >
                 <Mail size={20} />
