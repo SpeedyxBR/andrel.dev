@@ -105,12 +105,13 @@ textarea:focus {
   color: #111 !important;
 }
 
+/*
+  Esta regra estava sobrescrevendo a cor do texto no modo claro.
+  Eu removi o `color: #111 !important;` daqui.
+  Agora, o Tailwind pode gerenciar a cor do texto corretamente
+  com base na classe `text-gray-700` que você usa no seu componente.
+*/
 .bg-white {
   background-color: #fff !important;
-  color: #111 !important;
   transition: background-color 0.3s, color 0.3s;
 }
-  background-color: #fff !important;
-  color: #111 !important;
-  transition: background-color 0.3s, color 0.3s;
-

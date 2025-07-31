@@ -43,7 +43,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
   return (
     <section
       id="home"
-      className={`min-h-screen flex items-center justify-center pt-16 transition-colors duration-500 overflow-hidden relative ${
+      className={`min-h-screen flex items-center justify-center pt-16 transition-colors duration-500 relative ${
         darkMode ? "bg-black text-white" : "bg-white text-gray-900"
       }`}
     >
@@ -68,9 +68,9 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
           </h1>
 
           <p className="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Criando experiências digitais com {" "}
-            <span className="font-semibold text-[#61DAFB]">React</span>, {" "}
-            <span className="font-semibold text-[#3C873A]">Node.js</span> e {" "}
+            Criando experiências digitais com{" "}
+            <span className="font-semibold text-[#61DAFB]">React</span>,{" "}
+            <span className="font-semibold text-[#3C873A]">Node.js</span> e{" "}
             <span className="font-semibold text-[#3178C6]">TypeScript</span>. Focado em código limpo, performance e experiência do usuário.
           </p>
 
@@ -84,7 +84,11 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             </button>
             <button
               onClick={scrollToProjects}
-              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-200 hover:shadow-lg transform hover:-translate-y-1"
+              className={`border-2 px-8 py-4 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all duration-200 hover:shadow-lg transform hover:-translate-y-1 ${
+                darkMode
+                  ? "border-gray-500 text-gray-200"
+                  : "border-gray-300 text-gray-700"
+              }`}
             >
               Ver Projetos
             </button>
@@ -95,7 +99,9 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
               href="https://github.com/SpeedyxBR"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-gray-700 hover:text-gray-900 transform hover:-translate-y-1"
+              className={`p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 ${
+                darkMode ? "bg-gray-800 text-white hover:text-blue-400" : "bg-white text-gray-700 hover:text-gray-900"
+              }`}
             >
               <Github size={24} />
             </a>
@@ -103,37 +109,37 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
               href="https://www.linkedin.com/in/andrel-carvalho"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-gray-700 hover:text-blue-600 transform hover:-translate-y-1"
+              className={`p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 ${
+                darkMode ? "bg-gray-800 text-white hover:text-blue-400" : "bg-white text-gray-700 hover:text-blue-600"
+              }`}
             >
               <Linkedin size={24} />
             </a>
             <a
               href="mailto:andrel.cilva@gmail.com"
-              className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-gray-700 hover:text-green-600 transform hover:-translate-y-1"
+              className={`p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 ${
+                darkMode ? "bg-gray-800 text-white hover:text-green-400" : "bg-white text-gray-700 hover:text-green-600"
+              }`}
             >
               <Mail size={24} />
             </a>
           </div>
 
           <div className="animate-bounce cursor-pointer" onClick={scrollToProjects}>
-            <ChevronDown size={32} className="text-gray-400 mx-auto" />
+            <ChevronDown size={32} className={`mx-auto ${darkMode ? "text-gray-400" : "text-gray-600"}`} />
           </div>
         </div>
       </div>
 
       <style>{`
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
         body {
           min-height: 100vh;
-          background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
-          overflow-x: hidden;
         }
-
+        
+        .dark body {
+          background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+        }
+        
         .stars {
           width: 1px;
           height: 1px;
