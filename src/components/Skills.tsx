@@ -73,14 +73,14 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
             Tecnologias e ferramentas que domino para criar soluções completas
           </p>
         </div>
-        <motion.div 
+        <motion.div
           className="overflow-hidden relative max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.div 
+          <motion.div
             className="marquee flex items-center gap-10"
             animate={{ x: [0, -50] }}
             transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
