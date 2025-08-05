@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Download, Sun, Moon } from "lucide-react";
+import {
+  Menu,
+  X,
+  Download,
+  Sun,
+  Moon,
+  Home,
+  User,
+  Code,
+  Briefcase,
+  Mail,
+} from "lucide-react";
 
 const Header = ({
   darkMode,
@@ -36,6 +47,14 @@ const Header = ({
     }
   };
 
+  const menuItems = [
+    { id: "home", label: "Home", icon: <Home size={20} /> },
+    { id: "about", label: "Sobre", icon: <User size={20} /> },
+    { id: "skills", label: "Habilidades", icon: <Code size={20} /> },
+    { id: "projects", label: "Projetos", icon: <Briefcase size={20} /> },
+    { id: "contact", label: "Contato", icon: <Mail size={20} /> },
+  ];
+
   return (
     <>
       <header
@@ -61,13 +80,16 @@ const Header = ({
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {["home", "about", "skills", "projects", "contact"].map((section) => (
+              {menuItems.map((item) => (
                 <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className="relative group text-black dark:text-gray-200 transition-colors duration-200"
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="relative group text-black dark:text-gray-200 transition-colors duration-200 flex items-center gap-2"
                 >
-                  <span className="z-10 relative">{section.charAt(0).toUpperCase() + section.slice(1)}</span>
+                  <span className="text-blue-600 group-hover:text-blue-500 transition-colors duration-200">
+                    {item.icon}
+                  </span>
+                  <span className="z-10 relative">{item.label}</span>
                   <span className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
                 </button>
               ))}
@@ -120,18 +142,38 @@ const Header = ({
 
       {/* Mobile Navigation Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-56 z-50 transform bg-black text-white shadow-lg border-l border-gray-700 transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-64 z-50 transform bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white shadow-lg border-l border-gray-700 transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <nav className="flex flex-col p-6 space-y-6 animate-fade-in-right">
-          {["home", "about", "skills", "projects", "contact"].map((section) => (
+          {/* Profile Section */}
+          <div className="flex items-center gap-4 pb-6 border-b border-gray-700">
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-600">
+              <img
+                src="/andrel.jpeg"
+                alt="Andrel Carvalho"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div>
+              <h2 className="text-lg font-bold text-white">Andrel Carvalho</h2>
+              <p className="text-sm text-gray-300">
+                Desenvolvedor Web Fullstack
+              </p>
+            </div>
+          </div>
+
+          {menuItems.map((item) => (
             <button
-              key={section}
-              onClick={() => scrollToSection(section)}
-              className="relative group text-left text-gray-200 hover:text-blue-400 transition-colors duration-200"
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="relative group text-left text-gray-200 hover:text-blue-400 transition-colors duration-200 flex items-center gap-3 py-2"
             >
-              <span className="z-10 relative capitalize">{section}</span>
+              <span className="text-blue-400 group-hover:text-blue-300 transition-colors duration-200">
+                {item.icon}
+              </span>
+              <span className="z-10 relative">{item.label}</span>
               <span className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
             </button>
           ))}
