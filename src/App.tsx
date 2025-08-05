@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { HelmetProvider } from "react-helmet-async";
+import SEO from "./components/SEO";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,12 +9,16 @@ import Certifications from "./components/Certifications";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Toast from "./components/ui/Toast";
+import { useToast } from "./hooks/useToast";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
     const stored = localStorage.getItem("theme");
     return stored === "light" ? false : true;
   });
+
+  const { toasts, removeToast } = useToast();
 
   useEffect(() => {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
@@ -21,33 +27,48 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div
-      className={
-        darkMode
-          ? "min-h-screen bg-transparent text-white transition-colors duration-300 relative"
-          : "min-h-screen bg-white text-gray-900 transition-colors duration-300 relative"
-      }
-    >
-      {darkMode && (
-        <>
-          <div className="stars"></div>
-          <div className="shooting-star"></div>
-          <div className="shooting-star"></div>
-          <div className="shooting-star"></div>
-        </>
-      )}
+    <HelmetProvider>
+      <SEO />
+      <div
+        className={
+          darkMode
+            ? "min-h-screen bg-transparent text-white transition-colors duration-300 relative"
+            : "min-h-screen bg-white text-gray-900 transition-colors duration-300 relative"
+        }
+      >
+        {darkMode && (
+          <>
+            <div className="stars"></div>
+            <div className="shooting-star"></div>
+            <div className="shooting-star"></div>
+            <div className="shooting-star"></div>
+          </>
+        )}
 
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main>
-        <Hero darkMode={darkMode} />
-        <About darkMode={darkMode} />
-        <Skills darkMode={darkMode} />
-        <Certifications darkMode={darkMode} />
-        <Projects darkMode={darkMode} />
-        <Contact darkMode={darkMode} />
-      </main>
-      <Footer darkMode={darkMode} />
-    </div>
+        <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+        <main>
+          <Hero darkMode={darkMode} />
+          <About darkMode={darkMode} />
+          <Skills darkMode={darkMode} />
+          <Certifications darkMode={darkMode} />
+          <Projects darkMode={darkMode} />
+          <Contact darkMode={darkMode} />
+        </main>
+        <Footer darkMode={darkMode} />
+        
+        {/* Toast Container */}
+        {toasts.map((toast) => (
+          <Toast
+            key={toast.id}
+            message={toast.message}
+            type={toast.type}
+            isVisible={true}
+            onClose={() => removeToast(toast.id)}
+            duration={toast.duration}
+          />
+        ))}
+      </div>
+    </HelmetProvider>
   );
 }
 

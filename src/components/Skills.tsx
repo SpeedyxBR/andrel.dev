@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaReact,
   FaNodeJs,
@@ -72,14 +73,26 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
             Tecnologias e ferramentas que domino para criar soluções completas
           </p>
         </div>
-        <div className="overflow-hidden relative max-w-3xl mx-auto">
-          <div className="marquee flex items-center gap-10">
+        <motion.div 
+          className="overflow-hidden relative max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.div 
+            className="marquee flex items-center gap-10"
+            animate={{ x: [0, -50] }}
+            transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+          >
             {techs.concat(techs).map((tech, idx) => (
-              <div
+              <motion.div
                 key={idx}
                 className={`flex flex-col items-center justify-center min-w-[80px] ${
                   darkMode ? "text-white" : "text-gray-700"
                 }`}
+                whileHover={{ scale: 1.1, y: -5 }}
+                transition={{ duration: 0.2 }}
               >
                 {tech.icon}
                 <span
@@ -89,20 +102,10 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
                 >
                   {tech.name}
                 </span>
-              </div>
+              </motion.div>
             ))}
-          </div>
-          <style>{`
-            .marquee {
-              animation: marquee 18s linear infinite;
-              width: max-content;
-            }
-            @keyframes marquee {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
-            }
-          `}</style>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
