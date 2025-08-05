@@ -1,5 +1,15 @@
 import React from "react";
-import { Heart, Github, Linkedin, Mail } from "lucide-react";
+import {
+  Heart,
+  Github,
+  Linkedin,
+  Mail,
+  User,
+  Code,
+  Award,
+  Briefcase,
+  Mail as MailIcon,
+} from "lucide-react";
 
 const Footer = ({ darkMode }: { darkMode: boolean }) => {
   const currentYear = new Date().getFullYear();
@@ -21,14 +31,14 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
           {/* Brand */}
           <div>
             <h3 className="text-xl font-bold mb-4">
-              Andrel <span className="text-blue-400">Dev</span>
+              Andrel <span className="text-blue-400">Carvalho</span>
             </h3>
             <p
               className={`${
                 darkMode ? "text-gray-400" : "text-gray-400"
               } leading-relaxed`}
             >
-              Desenvolvedor Fullstack focado em criar experiências digitais
+              Desenvolvedor Web Fullstack focado em criar experiências digitais
               modernas e funcionais com as melhores tecnologias do mercado.
             </p>
           </div>
@@ -44,8 +54,9 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
                       .getElementById("about")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2"
                 >
+                  <User size={16} className="text-blue-400" />
                   Sobre Mim
                 </button>
               </li>
@@ -56,8 +67,9 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
                       .getElementById("skills")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2"
                 >
+                  <Code size={16} className="text-green-400" />
                   Habilidades
                 </button>
               </li>
@@ -68,8 +80,9 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
                       .getElementById("certifications")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2"
                 >
+                  <Award size={16} className="text-yellow-400" />
                   Certificações
                 </button>
               </li>
@@ -80,8 +93,9 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
                       .getElementById("projects")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2"
                 >
+                  <Briefcase size={16} className="text-purple-400" />
                   Projetos
                 </button>
               </li>
@@ -92,8 +106,9 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
                       .getElementById("contact")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2"
                 >
+                  <MailIcon size={16} className="text-red-400" />
                   Contato
                 </button>
               </li>
@@ -136,7 +151,7 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm flex items-center gap-2">
-              © {currentYear} Andrel Dev. Feito com{" "}
+              © {currentYear} Andrel Carvalho. Feito com{" "}
               <Heart size={16} className="text-red-500" /> e muito código.
             </p>
             <button

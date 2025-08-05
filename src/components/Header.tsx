@@ -71,13 +71,14 @@ const Header = ({
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1
-                className={`text-xl font-bold ${
+              <button
+                onClick={() => scrollToSection("home")}
+                className={`text-xl font-bold hover:scale-105 transition-transform duration-200 cursor-pointer ${
                   darkMode ? "text-white" : "text-gray-900"
                 }`}
               >
-                Andrel <span className="text-blue-600">Dev</span>
-              </h1>
+                Andrel <span className="text-blue-600">Carvalho</span>
+              </button>
             </div>
 
             {/* Desktop Navigation */}

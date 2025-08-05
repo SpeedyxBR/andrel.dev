@@ -1,7 +1,13 @@
 import React from "react";
 import { Award, ExternalLink, Calendar, Tag } from "lucide-react";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const Certifications = ({ darkMode }: { darkMode: boolean }) => {
+  const { elementRef: titleRef, isVisible: titleVisible } = useScrollReveal();
+  const { elementRef: featuredRef, isVisible: featuredVisible } =
+    useScrollReveal();
+  const { elementRef: otherRef, isVisible: otherVisible } = useScrollReveal();
+
   const certifications = [
     {
       title: "Ri Happy - Front-end do Zero",
@@ -82,7 +88,12 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
       } transition-colors duration-300`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div
+          ref={titleRef}
+          className={`text-center mb-16 scroll-reveal ${
+            titleVisible ? "visible" : ""
+          }`}
+        >
           <h2
             className={`text-3xl sm:text-4xl font-bold mb-4 ${
               darkMode ? "text-white" : "text-gray-900"
@@ -100,7 +111,12 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
         </div>
 
         {/* Featured Certifications */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div
+          ref={featuredRef}
+          className={`grid lg:grid-cols-2 gap-8 mb-16 scroll-reveal ${
+            featuredVisible ? "visible" : ""
+          }`}
+        >
           {featuredCertifications.map((cert, index) => (
             <div
               key={index}
@@ -206,7 +222,10 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
         </div>
 
         {/* Other Certifications */}
-        <div>
+        <div
+          ref={otherRef}
+          className={`scroll-reveal ${otherVisible ? "visible" : ""}`}
+        >
           <h3
             className={`text-2xl font-bold mb-8 text-center ${
               darkMode ? "text-white" : "text-gray-900"
