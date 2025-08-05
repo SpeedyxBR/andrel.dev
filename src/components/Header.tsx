@@ -10,6 +10,7 @@ import {
   Code,
   Briefcase,
   Mail,
+  Award,
 } from "lucide-react";
 
 const Header = ({
@@ -51,6 +52,7 @@ const Header = ({
     { id: "home", label: "Home", icon: <Home size={20} /> },
     { id: "about", label: "Sobre", icon: <User size={20} /> },
     { id: "skills", label: "Habilidades", icon: <Code size={20} /> },
+    { id: "certifications", label: "Certificações", icon: <Award size={20} /> },
     { id: "projects", label: "Projetos", icon: <Briefcase size={20} /> },
     { id: "contact", label: "Contato", icon: <Mail size={20} /> },
   ];
@@ -142,7 +144,7 @@ const Header = ({
 
       {/* Mobile Navigation Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 z-50 transform bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white shadow-lg border-l border-gray-700 transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-64 z-[9999] transform bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white shadow-lg border-l border-gray-700 transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -191,7 +193,7 @@ const Header = ({
       {isMenuOpen && (
         <div
           onClick={() => setIsMenuOpen(false)}
-          className="fixed inset-0 bg-black bg-opacity-30 z-40"
+          className="fixed inset-0 bg-black bg-opacity-30 z-[9998]"
           aria-hidden="true"
         />
       )}

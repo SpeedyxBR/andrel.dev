@@ -11,7 +11,9 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
   return (
     <footer
       className={`${
-        darkMode ? "bg-gray-900 text-white" : "bg-gray-900 text-white"
+        darkMode
+          ? "bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white"
+          : "bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white"
       } py-12 transition-colors duration-300`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,6 +59,18 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   Habilidades
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("certifications")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                >
+                  Certificações
                 </button>
               </li>
               <li>
