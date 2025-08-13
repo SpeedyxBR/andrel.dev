@@ -334,44 +334,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
               >
                 <div className="relative mb-4">{tech.icon}</div>
 
-                {/* Barra de Progresso */}
-                <div className="w-full mb-3">
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="text-xs text-gray-500">Nível</span>
-                    <span
-                      className={`text-xs font-medium ${
-                        darkMode ? "text-gray-300" : "text-gray-600"
-                      }`}
-                    >
-                      {tech.level}%
-                    </span>
-                  </div>
-                  <div
-                    className={`w-full h-2 rounded-full ${
-                      darkMode ? "bg-gray-700" : "bg-gray-200"
-                    } overflow-hidden`}
-                  >
-                    <motion.div
-                      className={`h-full rounded-full ${
-                        tech.level >= 90
-                          ? "bg-gradient-to-r from-green-400 to-emerald-500"
-                          : tech.level >= 80
-                          ? "bg-gradient-to-r from-blue-400 to-cyan-500"
-                          : tech.level >= 70
-                          ? "bg-gradient-to-r from-yellow-400 to-orange-500"
-                          : "bg-gradient-to-r from-red-400 to-pink-500"
-                      }`}
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${tech.level}%` }}
-                      transition={{
-                        duration: 1.5,
-                        delay: idx * 0.1 + 0.5,
-                        ease: "easeOut",
-                      }}
-                      viewport={{ once: true }}
-                    />
-                  </div>
-                </div>
+                {/* Barra de Progresso removida */}
 
                 <motion.span
                   className={`text-sm font-semibold tracking-wide text-center ${

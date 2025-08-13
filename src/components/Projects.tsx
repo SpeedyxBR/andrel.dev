@@ -5,57 +5,70 @@ import { ExternalLink, Github, Calendar, Tag } from "lucide-react";
 const Projects = ({ darkMode }: { darkMode: boolean }) => {
   const projects = [
     {
-      title: "E-commerce Moderno",
+      title: "PetPals - Petshop",
       description:
-        "Plataforma completa de e-commerce com carrinho de compras, pagamento integrado e painel administrativo. Desenvolvido com React, Node.js e PostgreSQL.",
-      image:
-        "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: [
-        "React",
-        "TypeScript",
-        "Node.js",
-        "PostgreSQL",
-        "Tailwind CSS",
-      ],
-      liveUrl: "https://exemplo-ecommerce.vercel.app",
-      githubUrl: "https://github.com/usuario/ecommerce-projeto",
-      date: "2024",
+        "Aplicação web de petshop com interface moderna e responsiva.",
+      image: "/petpals.jpg",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      liveUrl: "https://petshop-sand-delta.vercel.app",
+      githubUrl: "https://github.com/SpeedyxBR/petshop",
+      date: "Julho 2024",
+      featured: false,
+    },
+    {
+      title: "Yu-Gi-Oh | Jo-ken-po Edition",
+      description:
+        "Jogo de jokenpo que criei para explicar conceitos de lógica de programação aplicados a jogos. Conceitos abordados: Armazenamento e gerenciamento de estado manual, Funções limpas, Organização de código.",
+      image: "/yugioh.jpg",
+      technologies: ["HTML5", "CSS3", "JavaScript"],
+      liveUrl: "https://js-yugioh-assets-gray.vercel.app",
+      githubUrl: "https://github.com/SpeedyxBR/yugioh-jokenpo",
+      date: "Dezembro 2024",
       featured: true,
     },
     {
-      title: "Sistema de Gerenciamento",
+      title: "BEWEAR - Ecommerce (Mobile First)",
       description:
-        "Dashboard administrativo para gerenciamento de usuários, produtos e vendas. Interface intuitiva com gráficos e relatórios em tempo real.",
-      image:
-        "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "Chart.js", "Express", "MongoDB"],
-      liveUrl: "https://dashboard-exemplo.netlify.app",
-      githubUrl: "https://github.com/usuario/sistema-gerenciamento",
-      date: "2024",
+        "Atualmente em desenvolvimento, estou construindo uma plataforma de e-commerce de roupas com foco em uma experiência moderna e intuitiva. O front-end em Next.js garante carregamento rápido, SEO eficiente e navegação fluida em listagem, detalhes e carrinho. O back-end em Node.js gerencia catálogo, autenticação e integrações de pagamento com segurança, oferecendo uma jornada de compra completa e confiável.",
+      image: "/Capa.png",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      liveUrl: "https://petshop-sand-delta.vercel.app",
+      githubUrl: "https://github.com/SpeedyxBR/petshop",
+      date: "Agosto 2025",
       featured: true,
     },
+
     {
-      title: "App de Clima",
-      description:
-        "Aplicação meteorológica com previsão do tempo, geolocalização e interface responsiva. Integração com APIs externas de clima.",
+      title: "Jogo Detona Ralph",
+      description: "Quebra-cabeça de 8 bits",
       image:
-        "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "API Integration", "Geolocation", "CSS3"],
-      liveUrl: "https://weather-app-exemplo.vercel.app",
-      githubUrl: "https://github.com/usuario/weather-app",
+        "https://images.pexels.com/photos/1293267/pexels-photo-1293267.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["HTML5", "CSS3", "JavaScript"],
+      liveUrl: "https://speedyxbr.github.io/DETONA-RALPH-JOGO/",
+      githubUrl: "https://github.com/SpeedyxBR/DETONA-RALPH-JOGO",
       date: "2023",
       featured: false,
     },
     {
-      title: "Landing Page Corporativa",
+      title: "Jogo da Memória",
       description:
-        "Site institucional responsivo para empresa de tecnologia. Design moderno com animações suaves e otimização SEO completa.",
-      image:
-        "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["HTML5", "CSS3", "JavaScript", "GSAP"],
-      liveUrl: "https://landing-corporativa.netlify.app",
-      githubUrl: "https://github.com/usuario/landing-corporativa",
-      date: "2023",
+        "Tabuleiro 4x4 com 16 cartas e emojis de animais. O objetivo é encontrar pares iguais. Inclui reinício rápido e design responsivo para diferentes telas.",
+      image: "/Jogodamemoria.png",
+      technologies: ["HTML5", "CSS3", "JavaScript"],
+      liveUrl: "https://speedyxbr.github.io/JOGO-DA-MEMORIA/",
+      githubUrl: "https://github.com/SpeedyxBR/JOGO-DA-MEMORIA",
+      date: "2024",
+      featured: false,
+    },
+    {
+      title: "Gerenciador de Tarefas",
+      description:
+        "Aplicação para organizar e acompanhar tarefas diárias, com listagem, anotações e suporte a múltiplas tarefas. Layout responsivo.",
+      image: "/gerenciadordetarefas.png",
+      technologies: ["HTML5", "JavaScript", "CSS3", "React", "Tailwind CSS"],
+      liveUrl: "https://curso-de-react-yt-kohl.vercel.app",
+      githubUrl: "https://github.com/SpeedyxBR/curso-de-react-yt",
+      date: "2024",
       featured: false,
     },
   ];
