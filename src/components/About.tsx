@@ -110,11 +110,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                   darkMode ? "text-gray-200" : "text-gray-700"
                 } leading-relaxed mb-6`}
               >
-                Sou um <strong>Desenvolvedor Web Full Stack</strong> em formação,
-                focado em criar experiências digitais excepcionais. Minha
-                jornada começou com curiosidade sobre como a web funciona e se
-                transformou em uma paixão por resolver problemas através do
-                código.
+                Sou um <strong>Desenvolvedor Web Full Stack</strong> e estudante de Análise e Desenvolvimento de Sistemas, dedicado a transformar ideias em soluções digitais robustas e de alto impacto. Minha jornada, que começou com a curiosidade sobre como a web funciona, evoluiu para uma paixão por resolver problemas complexos através do código e criar experiências digitais excepcionais.
               </p>
               <p
                 className={`${
