@@ -275,10 +275,10 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
             viewport={{ once: true }}
           >
             <h2
-              className={`text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r ${
+              className={`text-4xl sm:text-5xl font-bold mb-6 ${
                 darkMode
                   ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
-                  : "bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+                  : "text-gray-900"
               }`}
             >
               Habilidades Técnicas

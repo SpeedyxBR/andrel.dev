@@ -72,7 +72,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
           >
             <h2
               className={`text-3xl sm:text-4xl font-bold mb-4 ${
-                darkMode 
+                darkMode
                   ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                   : "text-gray-900"
               }`}
