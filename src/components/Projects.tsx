@@ -29,7 +29,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
     {
       title: "BEWEAR - Ecommerce (Mobile First)",
       description:
-        "Atualmente em desenvolvimento, estou construindo uma plataforma de e-commerce de roupas com foco em uma experiência moderna e intuitiva. O front-end em Next.js garante carregamento rápido, SEO eficiente e navegação fluida em listagem, detalhes e carrinho. O back-end em Node.js gerencia catálogo, autenticação e integrações de pagamento com segurança, oferecendo uma jornada de compra completa e confiável.",
+        "Atualmente em desenvolvimento. Estou construindo uma plataforma de e-commerce de roupas com foco em uma experiência moderna e intuitiva. O front-end em Next.js garante carregamento rápido, SEO eficiente e navegação fluida em listagem, detalhes e carrinho. O back-end em Node.js gerencia catálogo, autenticação e integrações de pagamento com segurança, oferecendo uma jornada de compra completa e confiável.",
       image: "/Capa.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Next.js, Node.js, Stripe, Drizzle, PostgreSQL"],
       liveUrl: "https://bewear-bootcamp-taupe.vercel.app",

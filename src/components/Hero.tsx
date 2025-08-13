@@ -24,7 +24,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % greetings.length);
-    }, 3000);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
