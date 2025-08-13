@@ -22,64 +22,107 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
       featured: true,
     },
     {
-      title: "Node.js Developer",
-      issuer: "IBM",
-      date: "2024",
-      link: "https://coursera.org/verify/professional-cert/example",
-      description: "Backend development com Node.js e Express",
-      image:
-        "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Node.js", "Express", "Backend", "API"],
+      title: "Bootcamp Ecommerce",
+      issuer: "Full Stack Club",
+      date: "2025",
+      link: "https://drive.google.com/file/d/1VxXc7k_QlfmKoQsT4AXwBk-sxdYuon05/view",
+      description:
+        "Desenvolvimento full-stack de um projeto de e-commerce utilizando React, Next.js, TypeScript e Node.js. Habilidades validadas incluem a criação de interfaces de alta performance, construção de um backend robusto, integração de pagamentos com Stripe e aplicação prática de IA para otimização de fluxo de trabalho.",
+      image: "/bootcamp-certificado.png",
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Stripe",
+        "IA",
+      ],
       featured: true,
     },
-    {
-      title: "TypeScript Fundamentals",
-      issuer: "Microsoft",
-      date: "2024",
-      link: "https://coursera.org/verify/professional-cert/example",
-      description: "Programação tipada e desenvolvimento escalável",
-      image:
-        "https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["TypeScript", "JavaScript", "Programming"],
-      featured: false,
-    },
-    {
-      title: "Full Stack Development",
-      issuer: "Udemy",
-      date: "2023",
-      link: "https://udemy.com/certificate/example",
-      description: "Desenvolvimento completo frontend e backend",
-      image:
-        "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Full Stack", "Web Development", "MERN"],
-      featured: false,
-    },
-    {
-      title: "Git & GitHub",
-      issuer: "GitHub",
-      date: "2023",
-      link: "https://github.com/skills/example",
-      description: "Controle de versão e colaboração em equipe",
-      image:
-        "https://images.pexels.com/photos/1181678/pexels-photo-1181678.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Git", "GitHub", "Version Control"],
-      featured: false,
-    },
-    {
-      title: "Responsive Web Design",
-      issuer: "freeCodeCamp",
-      date: "2023",
-      link: "https://freecodecamp.org/certification/example",
-      description: "Design responsivo e acessibilidade web",
-      image:
-        "https://images.pexels.com/photos/1181679/pexels-photo-1181679.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["CSS3", "HTML5", "Responsive Design"],
-      featured: false,
-    },
-  ];
-
-  const featuredCertifications = certifications.filter((cert) => cert.featured);
-  const otherCertifications = certifications.filter((cert) => !cert.featured);
+    
+      {
+        "title": "Estruturas de Repetição e Arrays em JavaScript",
+        "issuer": "DIO",
+        "date": "2024",
+        "link": "https://www.dio.me/certificate/TIQHRWLS/share",
+        "description": "Aprenda a utilizar estruturas de repetição e arrays para manipular dados em JavaScript.",
+        "image": "/matrizes.webp",
+        "technologies": ["JavaScript", "Arrays", "Programming Logic"],
+        "featured": false
+      },
+      {
+        "title": "Funções e Manipulação de Listas com JavaScript",
+        "issuer": "DIO",
+        "date": "2024",
+        "link": "https://www.dio.me/certificate/N0RCOVMA/share",
+        "description": "Explore o uso de funções e métodos para manipular listas e objetos em JavaScript.",
+        "image": "/funcoesjs.webp",
+        "technologies": ["JavaScript", "Functions", "Lists"],
+        "featured": false
+      },
+      {
+        "title": "Trabalhando com Variáveis em JavaScript",
+        "issuer": "DIO",
+        "date": "2024",
+        "link": "https://www.dio.me/certificate/SWVUDSSC/share",
+        "description": "Conceitos fundamentais sobre como declarar e utilizar variáveis e tipos de dados em JavaScript.",
+        "image": "/variaveis.webp",
+        "technologies": ["JavaScript", "Variables", "Programming"],
+        "featured": false
+      },
+      {
+        "title": "Introdução ao CSS na Prática",
+        "issuer": "DIO",
+        "date": "2024",
+        "link": "https://www.dio.me/certificate/YBZMJPLI/share",
+        "description": "Curso prático sobre como estilizar páginas web com os fundamentos do CSS.",
+        "image": "/css.webp",
+        "technologies": ["CSS", "HTML", "Web Development"],
+        "featured": false
+      },
+      {
+        "title": "Introdução ao HTML na Prática",
+        "issuer": "DIO",
+        "date": "2024",
+        "link": "https://www.dio.me/certificate/EBEOYJFT/share",
+        "description": "Aprenda a estruturar páginas web utilizando as principais tags do HTML.",
+        "image": "/html.webp",
+        "technologies": ["HTML", "Web Development", "Frontend"],
+        "featured": false
+      },
+      {
+        "title": "Introdução à Semântica com HTML",
+        "issuer": "DIO",
+        "date": "2024",
+        "link": "https://www.dio.me/certificate/MNA8O4P4/share",
+        "description": "Entenda a importância e a aplicação de tags semânticas para acessibilidade e SEO em HTML.",
+        "image": "/htmlsm.webp",
+        "technologies": ["HTML", "Semantic HTML", "Web Development"],
+        "featured": false
+      },
+      {
+        "title": "Pensamento Computacional",
+        "issuer": "DIO",
+        "date": "2024",
+        "link": "https://www.dio.me/certificate/DSHXKLF3/share",
+        "description": "Desenvolva a base da lógica de programação e o pensamento computacional para resolver problemas.",
+        "image": "/logica.webp",
+        "technologies": ["Logic", "Problem Solving", "Algorithms"],
+        "featured": false
+      },
+      {
+        "title": "Introdução a Classes e Objetos com JavaScript",
+        "issuer": "DIO",
+        "date": "2024",
+        "link": "https://www.dio.me/certificate/R8DUM8GP/share",
+        "description": "Fundamentos da Programação Orientada a Objetos (POO) aplicada em JavaScript.",
+        "image": "/classeseobjetos.webp",
+        "technologies": ["JavaScript", "OOP", "Classes"],
+        "featured": false
+      },
+    ];
+    const featuredCertifications = certifications.filter((cert) => cert.featured);
+    const otherCertifications = certifications.filter((cert) => !cert.featured);
 
   return (
     <section
