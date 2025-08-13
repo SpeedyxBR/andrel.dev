@@ -24,7 +24,7 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
     {
       title: "Bootcamp Ecommerce",
       issuer: "Full Stack Club",
-      date: "2025",
+      date: "Agosto 2025",
       link: "https://drive.google.com/file/d/1VxXc7k_QlfmKoQsT4AXwBk-sxdYuon05/view",
       description:
         "Desenvolvimento full-stack de um projeto de e-commerce utilizando React, Next.js, TypeScript e Node.js. Habilidades validadas incluem a criação de interfaces de alta performance, construção de um backend robusto, integração de pagamentos com Stripe e aplicação prática de IA para otimização de fluxo de trabalho.",
@@ -39,90 +39,98 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
       ],
       featured: true,
     },
-    
-      {
-        "title": "Estruturas de Repetição e Arrays em JavaScript",
-        "issuer": "DIO",
-        "date": "2024",
-        "link": "https://www.dio.me/certificate/TIQHRWLS/share",
-        "description": "Aprenda a utilizar estruturas de repetição e arrays para manipular dados em JavaScript.",
-        "image": "/matrizes.webp",
-        "technologies": ["JavaScript", "Arrays", "Programming Logic"],
-        "featured": false
-      },
-      {
-        "title": "Funções e Manipulação de Listas com JavaScript",
-        "issuer": "DIO",
-        "date": "2024",
-        "link": "https://www.dio.me/certificate/N0RCOVMA/share",
-        "description": "Explore o uso de funções e métodos para manipular listas e objetos em JavaScript.",
-        "image": "/funcoesjs.webp",
-        "technologies": ["JavaScript", "Functions", "Lists"],
-        "featured": false
-      },
-      {
-        "title": "Trabalhando com Variáveis em JavaScript",
-        "issuer": "DIO",
-        "date": "2024",
-        "link": "https://www.dio.me/certificate/SWVUDSSC/share",
-        "description": "Conceitos fundamentais sobre como declarar e utilizar variáveis e tipos de dados em JavaScript.",
-        "image": "/variaveis.webp",
-        "technologies": ["JavaScript", "Variables", "Programming"],
-        "featured": false
-      },
-      {
-        "title": "Introdução ao CSS na Prática",
-        "issuer": "DIO",
-        "date": "2024",
-        "link": "https://www.dio.me/certificate/YBZMJPLI/share",
-        "description": "Curso prático sobre como estilizar páginas web com os fundamentos do CSS.",
-        "image": "/css.webp",
-        "technologies": ["CSS", "HTML", "Web Development"],
-        "featured": false
-      },
-      {
-        "title": "Introdução ao HTML na Prática",
-        "issuer": "DIO",
-        "date": "2024",
-        "link": "https://www.dio.me/certificate/EBEOYJFT/share",
-        "description": "Aprenda a estruturar páginas web utilizando as principais tags do HTML.",
-        "image": "/html.webp",
-        "technologies": ["HTML", "Web Development", "Frontend"],
-        "featured": false
-      },
-      {
-        "title": "Introdução à Semântica com HTML",
-        "issuer": "DIO",
-        "date": "2024",
-        "link": "https://www.dio.me/certificate/MNA8O4P4/share",
-        "description": "Entenda a importância e a aplicação de tags semânticas para acessibilidade e SEO em HTML.",
-        "image": "/htmlsm.webp",
-        "technologies": ["HTML", "Semantic HTML", "Web Development"],
-        "featured": false
-      },
-      {
-        "title": "Pensamento Computacional",
-        "issuer": "DIO",
-        "date": "2024",
-        "link": "https://www.dio.me/certificate/DSHXKLF3/share",
-        "description": "Desenvolva a base da lógica de programação e o pensamento computacional para resolver problemas.",
-        "image": "/logica.webp",
-        "technologies": ["Logic", "Problem Solving", "Algorithms"],
-        "featured": false
-      },
-      {
-        "title": "Introdução a Classes e Objetos com JavaScript",
-        "issuer": "DIO",
-        "date": "2024",
-        "link": "https://www.dio.me/certificate/R8DUM8GP/share",
-        "description": "Fundamentos da Programação Orientada a Objetos (POO) aplicada em JavaScript.",
-        "image": "/classeseobjetos.webp",
-        "technologies": ["JavaScript", "OOP", "Classes"],
-        "featured": false
-      },
-    ];
-    const featuredCertifications = certifications.filter((cert) => cert.featured);
-    const otherCertifications = certifications.filter((cert) => !cert.featured);
+
+    {
+      title: "Estruturas de Repetição e Arrays em JavaScript",
+      issuer: "DIO",
+      date: "2024",
+      link: "https://www.dio.me/certificate/TIQHRWLS/share",
+      description:
+        "Aprenda a utilizar estruturas de repetição e arrays para manipular dados em JavaScript.",
+      image: "/matrizes.webp",
+      technologies: ["JavaScript", "Arrays", "Programming Logic"],
+      featured: false,
+    },
+    {
+      title: "Funções e Manipulação de Listas com JavaScript",
+      issuer: "DIO",
+      date: "2024",
+      link: "https://www.dio.me/certificate/N0RCOVMA/share",
+      description:
+        "Explore o uso de funções e métodos para manipular listas e objetos em JavaScript.",
+      image: "/funcoesjs.webp",
+      technologies: ["JavaScript", "Functions", "Lists"],
+      featured: false,
+    },
+    {
+      title: "Trabalhando com Variáveis em JavaScript",
+      issuer: "DIO",
+      date: "2024",
+      link: "https://www.dio.me/certificate/SWVUDSSC/share",
+      description:
+        "Conceitos fundamentais sobre como declarar e utilizar variáveis e tipos de dados em JavaScript.",
+      image: "/variaveis.webp",
+      technologies: ["JavaScript", "Variables", "Programming"],
+      featured: false,
+    },
+    {
+      title: "Introdução ao CSS na Prática",
+      issuer: "DIO",
+      date: "2024",
+      link: "https://www.dio.me/certificate/YBZMJPLI/share",
+      description:
+        "Curso prático sobre como estilizar páginas web com os fundamentos do CSS.",
+      image: "/css.webp",
+      technologies: ["CSS", "HTML", "Web Development"],
+      featured: false,
+    },
+    {
+      title: "Introdução ao HTML na Prática",
+      issuer: "DIO",
+      date: "2024",
+      link: "https://www.dio.me/certificate/EBEOYJFT/share",
+      description:
+        "Aprenda a estruturar páginas web utilizando as principais tags do HTML.",
+      image: "/html.webp",
+      technologies: ["HTML", "Web Development", "Frontend"],
+      featured: false,
+    },
+    {
+      title: "Introdução à Semântica com HTML",
+      issuer: "DIO",
+      date: "2024",
+      link: "https://www.dio.me/certificate/MNA8O4P4/share",
+      description:
+        "Entenda a importância e a aplicação de tags semânticas para acessibilidade e SEO em HTML.",
+      image: "/htmlsm.webp",
+      technologies: ["HTML", "Semantic HTML", "Web Development"],
+      featured: false,
+    },
+    {
+      title: "Pensamento Computacional",
+      issuer: "DIO",
+      date: "2024",
+      link: "https://www.dio.me/certificate/DSHXKLF3/share",
+      description:
+        "Desenvolva a base da lógica de programação e o pensamento computacional para resolver problemas.",
+      image: "/logica.webp",
+      technologies: ["Logic", "Problem Solving", "Algorithms"],
+      featured: false,
+    },
+    {
+      title: "Introdução a Classes e Objetos com JavaScript",
+      issuer: "DIO",
+      date: "2024",
+      link: "https://www.dio.me/certificate/R8DUM8GP/share",
+      description:
+        "Fundamentos da Programação Orientada a Objetos (POO) aplicada em JavaScript.",
+      image: "/classeseobjetos.webp",
+      technologies: ["JavaScript", "OOP", "Classes"],
+      featured: false,
+    },
+  ];
+  const featuredCertifications = certifications.filter((cert) => cert.featured);
+  const otherCertifications = certifications.filter((cert) => !cert.featured);
 
   return (
     <section
@@ -225,7 +233,12 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className={`w-full ${
+                    cert.title === "Bootcamp Ecommerce" ||
+                    cert.title === "Ri Happy - Front-end do Zero"
+                      ? "h-56 sm:h-72"
+                      : "h-72"
+                  } object-cover group-hover:scale-105 transition-transform duration-300`}
                 />
                 <div
                   className={`absolute inset-0 bg-black ${
