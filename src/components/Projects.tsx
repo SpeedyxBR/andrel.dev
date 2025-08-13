@@ -22,7 +22,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
       image: "/yugioh.jpg",
       technologies: ["HTML5", "CSS3", "JavaScript"],
       liveUrl: "https://js-yugioh-assets-gray.vercel.app",
-      githubUrl: "https://github.com/SpeedyxBR/yugioh-jokenpo",
+      githubUrl: "https://github.com/SpeedyxBR/js-yugioh-assets",
       date: "Dezembro 2024",
       featured: true,
     },
@@ -31,7 +31,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
       description:
         "Atualmente em desenvolvimento, estou construindo uma plataforma de e-commerce de roupas com foco em uma experiência moderna e intuitiva. O front-end em Next.js garante carregamento rápido, SEO eficiente e navegação fluida em listagem, detalhes e carrinho. O back-end em Node.js gerencia catálogo, autenticação e integrações de pagamento com segurança, oferecendo uma jornada de compra completa e confiável.",
       image: "/Capa.png",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Next.js, Node.js, Stripe, Drizzle, PostgreSQL"],
       liveUrl: "https://bewear-bootcamp-taupe.vercel.app",
       githubUrl: "https://github.com/SpeedyxBR/bewear",
       date: "Agosto 2025",
