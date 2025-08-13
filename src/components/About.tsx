@@ -110,7 +110,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                   darkMode ? "text-gray-200" : "text-gray-700"
                 } leading-relaxed mb-6`}
               >
-                Sou um <strong>Desenvolvedor Web Fullstack</strong> em formação,
+                Sou um <strong>Desenvolvedor Web Full Stack</strong> em formação,
                 focado em criar experiências digitais excepcionais. Minha
                 jornada começou com curiosidade sobre como a web funciona e se
                 transformou em uma paixão por resolver problemas através do
@@ -124,7 +124,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                 Especializo-me em <strong>React</strong> e{" "}
                 <strong>TypeScript</strong> no frontend, criando interfaces
                 intuitivas e responsivas. No backend, trabalho com
-                <strong> Node.js</strong> e <strong>NestJS</strong>,
+                <strong> Node.js</strong> e <strong>Next.js</strong>,
                 desenvolvendo APIs robustas e escaláveis.
               </p>
               <p className={`${darkMode ? "text-gray-200" : "text-gray-700"}`}>

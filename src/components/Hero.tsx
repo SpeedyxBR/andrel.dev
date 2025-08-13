@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import Button from "./ui/Button";
+import { Particles } from "./ui/Particles";
 
 // Estilos animados para os fundos
 import "../styles/background-dark.scss";
@@ -70,6 +71,9 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
       }`}
     >
       <div className="stars" aria-hidden="true"></div>
+      {!darkMode && !reducedMotion && (
+        <Particles darkMode={darkMode} count={8} />
+      )}
       {!reducedMotion && (
         <>
           <div className="shooting-star" aria-hidden="true"></div>
@@ -141,7 +145,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              Desenvolvedor Web Fullstack
+              Desenvolvedor Web Full Stack
             </motion.h2>
 
             <motion.p
