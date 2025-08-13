@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Award, ExternalLink, Calendar, Tag } from "lucide-react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
@@ -83,10 +84,35 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
   return (
     <section
       id="certifications"
-      className={`py-20 ${
+      className={`py-20 relative overflow-hidden ${
         darkMode ? "bg-gray-900" : "bg-white"
       } transition-colors duration-300`}
     >
+      {/* Floating Particles */}
+      {[...Array(6)].map((_, i) => (
+        <motion.div
+          key={i}
+          className={`absolute w-2 h-2 rounded-full ${
+            darkMode ? "bg-blue-400" : "bg-blue-600"
+          } opacity-30`}
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+          }}
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.3, 0.8, 0.3],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 3 + Math.random() * 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: Math.random() * 2,
+          }}
+        />
+      ))}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={titleRef}
@@ -94,20 +120,36 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
             titleVisible ? "visible" : ""
           }`}
         >
-          <h2
-            className={`text-3xl sm:text-4xl font-bold mb-4 ${
-              darkMode ? "text-white" : "text-gray-900"
-            }`}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
           >
-            Certificações em Destaque
-          </h2>
-          <p
-            className={`text-xl max-w-3xl mx-auto ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
+            <h2
+              className={`text-3xl sm:text-4xl font-bold mb-4 ${
+                darkMode 
+                  ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  : "text-gray-900"
+              }`}
+            >
+              Certificações em Destaque
+            </h2>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
           >
-            Credenciais e certificados que validam minhas habilidades técnicas
-          </p>
+            <p
+              className={`text-xl max-w-3xl mx-auto ${
+                darkMode ? "text-gray-300" : "text-gray-600"
+              }`}
+            >
+              Credenciais e certificados que validam minhas habilidades técnicas
+            </p>
+          </motion.div>
         </div>
 
         {/* Featured Certifications */}
@@ -118,11 +160,23 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
           }`}
         >
           {featuredCertifications.map((cert, index) => (
-            <div
+            <motion.div
               key={index}
               className={`rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group ${
                 darkMode ? "bg-gray-800" : "bg-white"
               }`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.2,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+              whileHover={{
+                y: -5,
+                transition: { duration: 0.3, ease: "easeOut" },
+              }}
             >
               <div className="relative overflow-hidden">
                 <img
@@ -217,7 +271,7 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -226,20 +280,39 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
           ref={otherRef}
           className={`scroll-reveal ${otherVisible ? "visible" : ""}`}
         >
-          <h3
-            className={`text-2xl font-bold mb-8 text-center ${
-              darkMode ? "text-white" : "text-gray-900"
-            }`}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
           >
-            Outras Certificações
-          </h3>
+            <h3
+              className={`text-2xl font-bold mb-8 text-center ${
+                darkMode ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Outras Certificações
+            </h3>
+          </motion.div>
           <div className="grid md:grid-cols-2 gap-6">
             {otherCertifications.map((cert, index) => (
-              <div
+              <motion.div
                 key={index}
                 className={`rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden group ${
                   darkMode ? "bg-gray-800" : "bg-white"
                 }`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1 + 0.8,
+                  ease: "easeOut",
+                }}
+                viewport={{ once: true }}
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.2, ease: "easeOut" },
+                }}
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -317,12 +390,18 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
                     <ExternalLink size={14} />
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          viewport={{ once: true }}
+        >
           <p
             className={`text-lg ${
               darkMode ? "text-gray-300" : "text-gray-600"
@@ -331,7 +410,7 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
             Continuo sempre aprendendo e buscando novas certificações para
             aprimorar minhas habilidades.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -85,7 +85,9 @@ const Contact = ({ darkMode }: { darkMode: boolean }) => {
         <div className="text-center mb-16">
           <h2
             className={`text-3xl sm:text-4xl font-bold mb-4 ${
-              darkMode ? "text-white" : "text-gray-900"
+              darkMode 
+                ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                : "text-gray-900"
             }`}
           >
             Entre em Contato

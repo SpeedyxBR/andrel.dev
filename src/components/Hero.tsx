@@ -104,7 +104,11 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             </motion.h1>
 
             <motion.h2
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
+              className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 ${
+                darkMode 
+                  ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  : "bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
+              }`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}

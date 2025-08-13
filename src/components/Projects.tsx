@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { ExternalLink, Github, Calendar, Tag } from "lucide-react";
 
 const Projects = ({ darkMode }: { darkMode: boolean }) => {
@@ -65,37 +66,90 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
   return (
     <section
       id="projects"
-      className={`py-20 ${
+      className={`py-20 relative overflow-hidden ${
         darkMode ? "bg-gray-900" : "bg-white"
       } transition-colors duration-300`}
     >
+      {/* Floating Particles */}
+      {[...Array(6)].map((_, i) => (
+        <motion.div
+          key={i}
+          className={`absolute w-2 h-2 rounded-full ${
+            darkMode ? "bg-blue-400" : "bg-blue-600"
+          } opacity-30`}
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+          }}
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.3, 0.8, 0.3],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 3 + Math.random() * 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: Math.random() * 2,
+          }}
+        />
+      ))}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2
-            className={`text-3xl sm:text-4xl font-bold mb-4 ${
-              darkMode ? "text-white" : "text-gray-900"
-            }`}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
           >
-            Projetos em Destaque
-          </h2>
-          <p
-            className={`text-xl max-w-3xl mx-auto ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
+            <h2
+              className={`text-3xl sm:text-4xl font-bold mb-4 ${
+                darkMode 
+                  ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  : "text-gray-900"
+              }`}
+            >
+              Projetos em Destaque
+            </h2>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
           >
-            Alguns dos trabalhos que desenvolvi, demonstrando minhas habilidades
-            práticas
-          </p>
+            <p
+              className={`text-xl max-w-3xl mx-auto ${
+                darkMode ? "text-gray-300" : "text-gray-600"
+              }`}
+            >
+              Alguns dos trabalhos que desenvolvi, demonstrando minhas
+              habilidades práticas
+            </p>
+          </motion.div>
         </div>
 
         {/* Featured Projects */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {featuredProjects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
               className={`rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group ${
                 darkMode ? "bg-gray-800" : "bg-white"
               }`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.2,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+              whileHover={{
+                y: -5,
+                transition: { duration: 0.3, ease: "easeOut" },
+              }}
             >
               <div className="relative overflow-hidden">
                 <img
@@ -182,28 +236,47 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Other Projects */}
         <div>
-          <h3
-            className={`text-2xl font-bold mb-8 text-center ${
-              darkMode ? "text-white" : "text-gray-900"
-            }`}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true }}
           >
-            Outros Projetos
-          </h3>
+            <h3
+              className={`text-2xl font-bold mb-8 text-center ${
+                darkMode ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Outros Projetos
+            </h3>
+          </motion.div>
           <div className="grid md:grid-cols-2 gap-6">
             {otherProjects.map((project, index) => (
-              <div
+              <motion.div
                 key={index}
                 className={`rounded-lg p-6 transition-colors duration-200 ${
                   darkMode
                     ? "bg-gray-800 hover:bg-gray-700"
                     : "bg-gray-50 hover:bg-gray-100"
                 }`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1 + 0.8,
+                  ease: "easeOut",
+                }}
+                viewport={{ once: true }}
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.2, ease: "easeOut" },
+                }}
               >
                 <div
                   className={`flex items-center gap-2 text-sm mb-2 ${
@@ -273,7 +346,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
                     Código
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

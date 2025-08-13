@@ -1,13 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaReact,
-  FaCss3Alt,
-  FaHtml5,
-  FaJs,
-  FaGitAlt,
-  FaGithub,
-} from "react-icons/fa";
+import { FaReact, FaCss3Alt, FaHtml5, FaJs, FaGitAlt } from "react-icons/fa";
+import { TbBrandGithub } from "react-icons/tb";
 import {
   SiTypescript,
   SiTailwindcss,
@@ -157,8 +151,8 @@ const techs = [
   {
     name: "GitHub",
     icon: (
-      <FaGithub
-        className="text-gray-800 hover:text-gray-700 transition-colors duration-300 dark:text-white dark:hover:text-gray-200"
+      <TbBrandGithub
+        className="text-black hover:text-gray-800 transition-colors duration-300"
         size={52}
       />
     ),
@@ -252,9 +246,9 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
-          className={`absolute w-2 h-2 rounded-full ${
-            darkMode ? "bg-blue-400" : "bg-blue-600"
-          } opacity-30`}
+          className={`absolute w-2 h-2 rounded-full opacity-30 ${
+            darkMode ? "bg-blue-400" : "bg-gray-600"
+          }`}
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,

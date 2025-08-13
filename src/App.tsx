@@ -24,6 +24,13 @@ function App() {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
     document.body.classList.toggle("dark-background", darkMode);
     document.body.classList.toggle("light-background", !darkMode);
+
+    // Aplicar classe 'dark' para o Tailwind CSS
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }, [darkMode]);
 
   return (
@@ -55,7 +62,7 @@ function App() {
           <Contact darkMode={darkMode} />
         </main>
         <Footer darkMode={darkMode} />
-        
+
         {/* Toast Container */}
         {toasts.map((toast) => (
           <Toast
