@@ -162,7 +162,7 @@ const Header = ({
             <div>
               <h2 className="text-lg font-bold text-white">Andrel Carvalho</h2>
               <p className="text-sm text-gray-300">
-                Desenvolvedor Web Fullstack
+                Desenvolvedor Web Full Stack
               </p>
             </div>
           </div>

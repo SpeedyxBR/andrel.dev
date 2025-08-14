@@ -39,6 +39,19 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
       ],
       featured: true,
     },
+    {
+      title: "Fundamentos do Node.js",
+      issuer: "Full Stack Club",
+      date: "Agosto 2025",
+      link: "https://drive.google.com/file/d/1dJAHG6gammRuxC-9ArADrxNmxHYIpeH3/view",
+      description:
+        "Este módulo me deu uma base sólida para a construção de backends, APIs e a lógica de servidor, complementando minhas habilidades em desenvolvimento frontend. A união desses conhecimentos reforça meu objetivo de atuar como um Desenvolvedor Full Stack completo e versátil.",
+      image: "/fundamentosnodejs.png",
+      technologies: [
+        "Node.js",
+      ],
+      featured: true,
+    },
 
     {
       title: "Estruturas de Repetição e Arrays em JavaScript",
