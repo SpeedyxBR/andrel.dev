@@ -8,6 +8,24 @@ import { Particles } from "./ui/Particles";
 import "../styles/background-dark.scss";
 import "../styles/background-light.scss";
 
+// Hook para detectar dispositivos móveis
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
+  return isMobile;
+};
+
 const greetings = [
   { lang: "pt", text: "Olá, eu sou o Andrel" },
   { lang: "en", text: "Hi, I'm Andrel" },
@@ -20,13 +38,17 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
   const [index, setIndex] = useState(0);
   const [greeting, setGreeting] = useState(greetings[0].text);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const isMobile = useIsMobile();
 
+  // Desabilita troca de idioma em mobile para melhorar performance
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % greetings.length);
-    }, 10000);
-    return () => clearInterval(interval);
-  }, []);
+    if (!isMobile) {
+      const interval = setInterval(() => {
+        setIndex((prev) => (prev + 1) % greetings.length);
+      }, 10000);
+      return () => clearInterval(interval);
+    }
+  }, [isMobile]);
 
   useEffect(() => {
     setGreeting(greetings[index].text);
@@ -71,10 +93,11 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
       }`}
     >
       <div className="stars" aria-hidden="true"></div>
-      {!darkMode && !reducedMotion && (
-        <Particles darkMode={darkMode} count={8} />
+      {/* Desabilita partículas e estrelas cadentes em mobile para melhorar performance */}
+      {!darkMode && !reducedMotion && !isMobile && (
+        <Particles darkMode={darkMode} count={4} />
       )}
-      {!reducedMotion && (
+      {!reducedMotion && !isMobile && (
         <>
           <div className="shooting-star" aria-hidden="true"></div>
           <div className="shooting-star" aria-hidden="true"></div>
@@ -93,9 +116,11 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
           >
             <motion.div
               className="w-56 h-56 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-blue-600"
-              animate={reducedMotion ? undefined : { y: [0, -10, 0] }}
+              animate={
+                reducedMotion || isMobile ? undefined : { y: [0, -10, 0] }
+              }
               transition={
-                reducedMotion
+                reducedMotion || isMobile
                   ? undefined
                   : { duration: 3, repeat: Infinity, ease: "easeInOut" }
               }
@@ -128,6 +153,8 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
               transition={{ duration: 0.6, delay: 0.6 }}
               id="hero-title"
               aria-live="polite"
+              // Fixa altura para evitar layout shift
+              style={{ minHeight: "1.2em" }}
             >
               {greeting}
               <span className="blinking-cursor" aria-hidden="true">
@@ -247,7 +274,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
 
             <motion.div
               className={`flex justify-center lg:justify-start cursor-pointer mt-8 ${
-                reducedMotion ? "" : "animate-bounce"
+                reducedMotion || isMobile ? "" : "animate-bounce"
               }`}
               onClick={scrollToProjects}
               initial={{ opacity: 0, y: 20 }}

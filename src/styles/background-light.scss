@@ -4,9 +4,15 @@ body.light-background {
 }
 
 @keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .animate-float {
@@ -15,8 +21,15 @@ body.light-background {
 
 .blinking-cursor {
   animation: blink 1s step-start infinite;
+
+  /* Reduz frequência da animação em mobile */
+  @media (max-width: 768px) {
+    animation: blink 2s step-start infinite;
+  }
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }

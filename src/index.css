@@ -11,6 +11,42 @@
 
 html {
   scroll-behavior: smooth;
+
+  /* Otimizações para mobile */
+  @media (max-width: 768px) {
+    scroll-behavior: auto; /* Remove smooth scroll em mobile para melhor performance */
+  }
+}
+
+/* Otimizações de performance para mobile */
+@media (max-width: 768px) {
+  /* Reduz transformações e animações pesadas */
+  * {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+
+  /* Exceções para animações importantes */
+  .blinking-cursor,
+  .scroll-reveal,
+  .scroll-reveal-left,
+  .scroll-reveal-right,
+  .scroll-reveal-scale {
+    transition-duration: 300ms !important;
+    animation-duration: 300ms !important;
+  }
+
+  /* Melhora performance do scroll */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+  }
+
+  /* Remove hover effects em touch devices */
+  button:hover,
+  a:hover {
+    transform: none !important;
+  }
 }
 
 body {
