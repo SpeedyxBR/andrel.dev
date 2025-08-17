@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,
   X,
@@ -144,60 +145,148 @@ const Header = ({
       </header>
 
       {/* Mobile Navigation Drawer */}
-      <div
-        className={`fixed top-0 right-0 h-full w-64 z-[9999] transform bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white shadow-lg border-l border-gray-700 transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <nav className="flex flex-col p-6 space-y-6 animate-fade-in-right">
-          {/* Profile Section */}
-          <div className="flex items-center gap-4 pb-6 border-b border-gray-700">
-            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-600">
-              <img
-                src="/andrel.jpeg"
-                alt="Andrel Carvalho"
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div>
-              <h2 className="text-lg font-bold text-white">Andrel Carvalho</h2>
-              <p className="text-sm text-gray-300">
-                Desenvolvedor Web Full Stack
-              </p>
-            </div>
-          </div>
-
-          {menuItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="relative group text-left text-gray-200 hover:text-blue-400 transition-colors duration-200 flex items-center gap-3 py-2"
-            >
-              <span className="text-blue-400 group-hover:text-blue-300 transition-colors duration-200">
-                {item.icon}
-              </span>
-              <span className="z-10 relative">{item.label}</span>
-              <span className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-            </button>
-          ))}
-          <button
-            onClick={handleDownloadCV}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2 w-fit"
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30,
+            }}
+            className={`fixed top-0 right-0 h-full w-80 z-[9999] ${
+              darkMode
+                ? "bg-gradient-to-b from-gray-900 via-gray-800 to-black"
+                : "bg-gradient-to-b from-white via-gray-50 to-gray-100"
+            } shadow-2xl border-l ${
+              darkMode ? "border-gray-700" : "border-gray-200"
+            }`}
           >
-            <Download size={16} />
-            Baixar CV
-          </button>
-        </nav>
-      </div>
+            {/* Close Button */}
+            <motion.button
+              initial={{ opacity: 0, rotate: -90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              exit={{ opacity: 0, rotate: 90 }}
+              transition={{ delay: 0.2 }}
+              onClick={() => setIsMenuOpen(false)}
+              className={`absolute top-4 right-4 p-2 rounded-full ${
+                darkMode
+                  ? "text-white hover:bg-gray-800"
+                  : "text-gray-900 hover:bg-gray-200"
+              } transition-colors duration-200`}
+            >
+              <X size={24} />
+            </motion.button>
+
+            <nav className="flex flex-col p-6 space-y-6 h-full">
+              {/* Profile Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className={`flex items-center gap-4 pb-6 border-b ${
+                  darkMode ? "border-gray-700" : "border-gray-200"
+                }`}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="w-16 h-16 rounded-full overflow-hidden border-2 border-blue-600 shadow-lg"
+                >
+                  <img
+                    src="/andrel.jpeg"
+                    alt="Andrel Carvalho"
+                    className="object-cover w-full h-full"
+                  />
+                </motion.div>
+                <div>
+                  <h2
+                    className={`text-lg font-bold ${
+                      darkMode ? "text-white" : "text-gray-900"
+                    }`}
+                  >
+                    Andrel Carvalho
+                  </h2>
+                  <p
+                    className={`text-sm ${
+                      darkMode ? "text-gray-300" : "text-gray-600"
+                    }`}
+                  >
+                    Desenvolvedor Web Full Stack
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Menu Items */}
+              <div className="flex-1 space-y-2">
+                {menuItems.map((item, index) => (
+                  <motion.button
+                    key={item.id}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.2 + index * 0.1 }}
+                    whileHover={{ scale: 1.02, x: 5 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`relative group text-left w-full p-4 rounded-xl transition-all duration-200 flex items-center gap-4 ${
+                      darkMode
+                        ? "text-gray-200 hover:text-blue-400 hover:bg-gray-800/50"
+                        : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                    }`}
+                  >
+                    <motion.span
+                      whileHover={{ rotate: 5 }}
+                      className={`p-2 rounded-lg ${
+                        darkMode
+                          ? "bg-blue-600/20 text-blue-400"
+                          : "bg-blue-100 text-blue-600"
+                      }`}
+                    >
+                      {item.icon}
+                    </motion.span>
+                    <span className="font-medium">{item.label}</span>
+                    <motion.div
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ scaleX: 1 }}
+                      className="absolute bottom-0 left-4 right-4 h-0.5 bg-blue-500 origin-left"
+                    />
+                  </motion.button>
+                ))}
+              </div>
+
+              {/* Download CV Button */}
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={handleDownloadCV}
+                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-200 flex items-center gap-3 justify-center shadow-lg font-medium"
+              >
+                <Download size={20} />
+                Baixar Currículo
+              </motion.button>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Overlay para fechar o menu clicando fora */}
-      {isMenuOpen && (
-        <div
-          onClick={() => setIsMenuOpen(false)}
-          className="fixed inset-0 bg-black bg-opacity-30 z-[9998]"
-          aria-hidden="true"
-        />
-      )}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => setIsMenuOpen(false)}
+            className="fixed inset-0 bg-black bg-opacity-30 z-[9998] backdrop-blur-sm"
+            aria-hidden="true"
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 };
