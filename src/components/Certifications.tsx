@@ -47,9 +47,19 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
       description:
         "Este módulo me deu uma base sólida para a construção de backends, APIs e a lógica de servidor, complementando minhas habilidades em desenvolvimento frontend. A união desses conhecimentos reforça meu objetivo de atuar como um Desenvolvedor Full Stack completo e versátil.",
       image: "/fundamentosnodejs.png",
-      technologies: [
-        "Node.js",
-      ],
+      technologies: ["Node.js"],
+      featured: true,
+    },
+
+    {
+      title: "Módulos do Node.js",
+      issuer: "Full Stack Club",
+      date: "Agosto 2025",
+      link: "https://drive.google.com/file/d/1yh1tIaNRKX6xFNDDMd1HiOIaDD6VgILL/view?usp=drive_link",
+      description:
+        "Aprofundamento no sistema modular do Node.js, incluindo CommonJS e ES Modules, criação de módulos customizados, NPM, gerenciamento de dependências e estruturação de projetos escaláveis. Desenvolvimento de bibliotecas reutilizáveis e aplicação de boas práticas de arquitetura modular para construção de aplicações robustas e maintíveis.",
+      image: "/nodemodulos.png",
+      technologies: ["Node.js", "CommonJS", "ES Modules", "NPM"],
       featured: true,
     },
 
