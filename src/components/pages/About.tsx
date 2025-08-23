@@ -141,8 +141,8 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                       <div
                         className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 ${
                           darkMode
-                            ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
-                            : "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg"
+                            ? "bg-gradient-to-r from-blue-800 to-blue-700 text-white shadow-lg"
+                            : "bg-gradient-to-r from-blue-700 to-blue-600 text-white shadow-lg"
                         }`}
                       >
                         {item.category}
@@ -184,21 +184,21 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className={`text-center p-8 rounded-3xl ${
+          className={`text-center p-6 rounded-2xl ${
             darkMode
-              ? "bg-gradient-to-r from-gray-800 to-gray-700 border border-gray-600"
-              : "bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200"
+              ? "bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 border border-gray-600 shadow-xl"
+              : "bg-gradient-to-br from-white via-gray-50 to-gray-100 border border-gray-200 shadow-xl"
           }`}
         >
           <h3
-            className={`text-2xl font-bold mb-4 ${
+            className={`text-xl font-bold mb-4 ${
               darkMode ? "text-white" : "text-gray-900"
             }`}
           >
             Por que Programação?
           </h3>
           <p
-            className={`text-lg leading-relaxed max-w-4xl mx-auto ${
+            className={`text-base leading-relaxed max-w-3xl mx-auto ${
               darkMode ? "text-gray-300" : "text-gray-600"
             }`}
           >
@@ -206,53 +206,27 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
             códigos, mas com o fascínio por desvendar o que havia por trás da
             tela. O que começou como uma curiosidade inocente, formatando e
             otimizando computadores com Windows, se transformou no alicerce da
-            minha carreira. Essa experiência prática me ensinou sobre a lógica e
-            a estrutura dos sistemas, lições que se provaram inestimáveis no meu
-            caminho.
+            minha carreira.
           </p>
           <p
-            className={`text-lg leading-relaxed max-w-4xl mx-auto mt-4 ${
+            className={`text-base leading-relaxed max-w-3xl mx-auto mt-3 ${
               darkMode ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            Em um movimento que pode parecer inesperado, mas que aprimorou
-            minhas habilidades de aprendizado, iniciei um curso de francês de
-            três anos em 2020. Dominar uma nova língua me deu a disciplina e a
-            capacidade de processar informações complexas, qualidades essenciais
-            para qualquer desenvolvedor.
+            Em 2020, iniciei um curso de francês de três anos, aprimorando
+            minhas habilidades de aprendizado e disciplina. Em 2023, comecei a
+            cursar Análise e Desenvolvimento de Sistemas, onde tive meu primeiro
+            contato formal com HTML, CSS e JavaScript.
           </p>
           <p
-            className={`text-lg leading-relaxed max-w-4xl mx-auto mt-4 ${
+            className={`text-base leading-relaxed max-w-3xl mx-auto mt-3 ${
               darkMode ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            A transição para a minha área de atuação veio com a faculdade. Em
-            2023, comecei a cursar Análise e Desenvolvimento de Sistemas, onde
-            tive meu primeiro contato formal com as bases do desenvolvimento
-            web: HTML, CSS e JavaScript. Foi o momento em que a teoria e a
-            prática do meu passado se uniram.
-          </p>
-          <p
-            className={`text-lg leading-relaxed max-w-4xl mx-auto mt-4 ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
-          >
-            A partir de 2025, aprofundei meus estudos em projetos com
-            tecnologias de ponta, como React, Next.js, Node.js e TypeScript. A
-            cada novo desafio, sinto a empolgação de transformar ideias em
-            realidade. Minha jornada é uma prova do meu comprometimento em
-            evoluir continuamente e em me adaptar ao ritmo acelerado do mercado.
-          </p>
-          <p
-            className={`text-lg leading-relaxed max-w-4xl mx-auto mt-4 ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
-          >
-            Hoje, meu objetivo é simples, mas ambicioso: usar minhas habilidades
-            para construir soluções que resolvam problemas reais, que sejam
-            eficientes, escaláveis e que causem um impacto positivo. Estou
-            pronto para o próximo desafio e para continuar essa jornada de
-            aprendizado.
+            A partir de 2025, aprofundei meus estudos em tecnologias modernas
+            como React, Next.js, Node.js e TypeScript. Hoje, meu objetivo é usar
+            minhas habilidades para construir soluções que resolvam problemas
+            reais e causem impacto positivo.
           </p>
         </motion.div>
       </div>
