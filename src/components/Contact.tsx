@@ -82,10 +82,10 @@ const Contact = ({ darkMode }: { darkMode: boolean }) => {
       } transition-colors duration-300`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 ipad:mb-16 lg:mb-16">
           <h2
-            className={`text-3xl sm:text-4xl font-bold mb-4 ${
-              darkMode 
+            className={`text-2xl sm:text-3xl ipad:text-3xl lg:text-4xl font-bold mb-4 ${
+              darkMode
                 ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                 : "text-gray-900"
             }`}
@@ -93,7 +93,7 @@ const Contact = ({ darkMode }: { darkMode: boolean }) => {
             Entre em Contato
           </h2>
           <p
-            className={`text-xl max-w-3xl mx-auto ${
+            className={`text-lg sm:text-xl ipad:text-xl lg:text-xl max-w-3xl mx-auto ${
               darkMode ? "text-gray-300" : "text-gray-600"
             }`}
           >
@@ -102,7 +102,7 @@ const Contact = ({ darkMode }: { darkMode: boolean }) => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid ipad:grid-cols-1 lg:grid-cols-3 gap-8 ipad:gap-12 lg:gap-12">
           {/* Contact Info */}
           <div className="lg:col-span-1">
             <div
@@ -232,8 +232,8 @@ const Contact = ({ darkMode }: { darkMode: boolean }) => {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-6 contact-form">
+                <div className="grid ipad:grid-cols-1 md:grid-cols-2 gap-4 ipad:gap-6 lg:gap-6">
                   <div>
                     <label
                       htmlFor="name"

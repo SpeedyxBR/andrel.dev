@@ -69,12 +69,12 @@ const Header = ({
             : "bg-transparent"
         }`}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 header-nav">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <button
                 onClick={() => scrollToSection("home")}
-                className={`text-xl font-bold hover:scale-105 transition-transform duration-200 cursor-pointer ${
+                className={`text-lg sm:text-xl ipad:text-xl lg:text-xl font-bold hover:scale-105 transition-transform duration-200 cursor-pointer header-logo ${
                   darkMode ? "text-white" : "text-gray-900"
                 }`}
               >
@@ -83,7 +83,7 @@ const Header = ({
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex ipad:flex lg:flex items-center space-x-6 sm:space-x-8 ipad:space-x-8 lg:space-x-8">
               {menuItems.map((item) => (
                 <button
                   key={item.id}

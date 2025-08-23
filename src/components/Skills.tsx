@@ -267,7 +267,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
         />
       ))}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 ipad:mb-16 lg:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -275,7 +275,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
             viewport={{ once: true }}
           >
             <h2
-              className={`text-4xl sm:text-5xl font-bold mb-6 ${
+              className={`text-3xl sm:text-4xl ipad:text-4xl lg:text-5xl font-bold mb-6 ${
                 darkMode
                   ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                   : "text-gray-900"
@@ -291,7 +291,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
             viewport={{ once: true }}
           >
             <p
-              className={`text-xl max-w-3xl mx-auto ${
+              className={`text-lg sm:text-xl ipad:text-xl lg:text-xl max-w-3xl mx-auto ${
                 darkMode ? "text-gray-300" : "text-gray-600"
               }`}
             >
@@ -307,7 +307,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 ipad:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 ipad:gap-8 lg:gap-8 skills-grid">
             {techs.map((tech, idx) => (
               <motion.div
                 key={idx}

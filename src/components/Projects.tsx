@@ -31,7 +31,12 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
       description:
         "Atualmente em desenvolvimento. Estou construindo uma plataforma de e-commerce de roupas com foco em uma experiência moderna e intuitiva. O front-end em Next.js garante carregamento rápido, SEO eficiente e navegação fluida em listagem, detalhes e carrinho. O back-end em Node.js gerencia catálogo, autenticação e integrações de pagamento com segurança, oferecendo uma jornada de compra completa e confiável.",
       image: "/Capa.png",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Next.js, Node.js, Stripe, Drizzle, PostgreSQL"],
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Next.js, Node.js, Stripe, Drizzle, PostgreSQL",
+      ],
       liveUrl: "https://bewear-bootcamp-taupe.vercel.app",
       githubUrl: "https://github.com/SpeedyxBR/bewear",
       date: "Agosto 2025",
@@ -109,7 +114,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
       ))}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 ipad:mb-16 lg:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +122,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
             viewport={{ once: true }}
           >
             <h2
-              className={`text-3xl sm:text-4xl font-bold mb-4 ${
+              className={`text-2xl sm:text-3xl ipad:text-3xl lg:text-4xl font-bold mb-4 ${
                 darkMode
                   ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                   : "text-gray-900"
@@ -133,7 +138,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
             viewport={{ once: true }}
           >
             <p
-              className={`text-xl max-w-3xl mx-auto ${
+              className={`text-lg sm:text-xl ipad:text-xl lg:text-xl max-w-3xl mx-auto ${
                 darkMode ? "text-gray-300" : "text-gray-600"
               }`}
             >
@@ -144,7 +149,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
         </div>
 
         {/* Featured Projects */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid ipad:grid-cols-2 lg:grid-cols-2 gap-6 ipad:gap-8 lg:gap-8 mb-12 ipad:mb-16 lg:mb-16 projects-grid">
           {featuredProjects.map((project, index) => (
             <motion.div
               key={index}
@@ -262,14 +267,14 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
             viewport={{ once: true }}
           >
             <h3
-              className={`text-2xl font-bold mb-8 text-center ${
+              className={`text-xl sm:text-2xl ipad:text-2xl lg:text-2xl font-bold mb-6 ipad:mb-8 lg:mb-8 text-center ${
                 darkMode ? "text-white" : "text-gray-900"
               }`}
             >
               Outros Projetos
             </h3>
           </motion.div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid ipad:grid-cols-2 md:grid-cols-2 gap-4 ipad:gap-6 lg:gap-6">
             {otherProjects.map((project, index) => (
               <motion.div
                 key={index}

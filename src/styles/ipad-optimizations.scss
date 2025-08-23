@@ -1,0 +1,384 @@
+/* Otimizações específicas para iPad */
+
+/* Meta viewport para iPad */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Otimizações de touch para iPad */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Permitir seleção de texto em campos de input */
+  input,
+  textarea {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+
+  /* Melhorar performance de scroll no iPad */
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  /* Otimizar animações para iPad */
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-scale-in {
+    will-change: transform, opacity;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  /* Ajustar tamanhos de fonte para melhor legibilidade no iPad */
+  .text-xs {
+    font-size: 0.875rem !important;
+  }
+  .text-sm {
+    font-size: 1rem !important;
+  }
+  .text-base {
+    font-size: 1.125rem !important;
+  }
+  .text-lg {
+    font-size: 1.25rem !important;
+  }
+  .text-xl {
+    font-size: 1.5rem !important;
+  }
+  .text-2xl {
+    font-size: 1.875rem !important;
+  }
+  .text-3xl {
+    font-size: 2.25rem !important;
+  }
+  .text-4xl {
+    font-size: 2.75rem !important;
+  }
+  .text-5xl {
+    font-size: 3.25rem !important;
+  }
+  .text-6xl {
+    font-size: 3.75rem !important;
+  }
+
+  /* Ajustar espaçamentos para iPad */
+  .space-y-1 > * + * {
+    margin-top: 0.5rem !important;
+  }
+  .space-y-2 > * + * {
+    margin-top: 0.75rem !important;
+  }
+  .space-y-3 > * + * {
+    margin-top: 1rem !important;
+  }
+  .space-y-4 > * + * {
+    margin-top: 1.5rem !important;
+  }
+  .space-y-6 > * + * {
+    margin-top: 2rem !important;
+  }
+  .space-y-8 > * + * {
+    margin-top: 2.5rem !important;
+  }
+  .space-y-12 > * + * {
+    margin-top: 3rem !important;
+  }
+
+  /* Ajustar margens para iPad */
+  .m-1 {
+    margin: 0.5rem !important;
+  }
+  .m-2 {
+    margin: 0.75rem !important;
+  }
+  .m-3 {
+    margin: 1rem !important;
+  }
+  .m-4 {
+    margin: 1.5rem !important;
+  }
+  .m-6 {
+    margin: 2rem !important;
+  }
+  .m-8 {
+    margin: 2.5rem !important;
+  }
+  .m-12 {
+    margin: 3rem !important;
+  }
+
+  /* Ajustar padding para iPad */
+  .p-1 {
+    padding: 0.5rem !important;
+  }
+  .p-2 {
+    padding: 0.75rem !important;
+  }
+  .p-3 {
+    padding: 1rem !important;
+  }
+  .p-4 {
+    padding: 1.5rem !important;
+  }
+  .p-6 {
+    padding: 2rem !important;
+  }
+  .p-8 {
+    padding: 2.5rem !important;
+  }
+  .p-12 {
+    padding: 3rem !important;
+  }
+
+  /* Ajustar gaps para iPad */
+  .gap-1 {
+    gap: 0.5rem !important;
+  }
+  .gap-2 {
+    gap: 0.75rem !important;
+  }
+  .gap-3 {
+    gap: 1rem !important;
+  }
+  .gap-4 {
+    gap: 1.5rem !important;
+  }
+  .gap-6 {
+    gap: 2rem !important;
+  }
+  .gap-8 {
+    gap: 2.5rem !important;
+  }
+  .gap-12 {
+    gap: 3rem !important;
+  }
+
+  /* Otimizar botões para iPad */
+  button,
+  .btn {
+    min-height: 3rem !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1rem !important;
+    border-radius: 0.5rem !important;
+  }
+
+  /* Otimizar inputs para iPad */
+  input,
+  textarea,
+  select {
+    min-height: 3rem !important;
+    padding: 0.75rem !important;
+    font-size: 1rem !important;
+    border-radius: 0.5rem !important;
+  }
+
+  /* Otimizar cards para iPad */
+  .card {
+    border-radius: 1rem !important;
+    padding: 1.5rem !important;
+    margin: 1rem !important;
+  }
+
+  /* Otimizar navegação para iPad */
+  nav {
+    padding: 0 2rem !important;
+  }
+
+  /* Otimizar seções para iPad */
+  section {
+    padding: 3rem 2rem !important;
+  }
+
+  /* Otimizar imagens para iPad */
+  img {
+    border-radius: 0.75rem !important;
+  }
+
+  /* Otimizar grid para iPad */
+  .grid-cols-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  /* Otimizar flexbox para iPad */
+  .flex-col {
+    flex-direction: row !important;
+    gap: 2rem !important;
+  }
+
+  .flex-col > * {
+    flex: 1 !important;
+  }
+
+  /* Ajustar tamanhos específicos para iPad */
+  .w-56 {
+    width: 18rem !important;
+  }
+  .w-64 {
+    width: 20rem !important;
+  }
+  .w-72 {
+    width: 22rem !important;
+  }
+  .w-80 {
+    width: 24rem !important;
+  }
+  .w-96 {
+    width: 28rem !important;
+  }
+
+  .h-56 {
+    height: 18rem !important;
+  }
+  .h-64 {
+    height: 20rem !important;
+  }
+  .h-72 {
+    height: 22rem !important;
+  }
+  .h-80 {
+    height: 24rem !important;
+  }
+  .h-96 {
+    height: 28rem !important;
+  }
+}
+
+/* Otimizações específicas para iPad Pro */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  /* Ajustes para iPad Pro */
+  .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Melhorar layout em 2 colunas para iPad Pro */
+  .grid-cols-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* Ajustar tamanhos de fonte para iPad Pro */
+  h1 {
+    font-size: 3rem !important;
+  }
+
+  h2 {
+    font-size: 2.25rem !important;
+  }
+
+  /* Ajustar espaçamentos para iPad Pro */
+  section {
+    padding: 4rem 3rem !important;
+  }
+}
+
+/* Otimizações para iPad Air */
+@media screen and (min-width: 820px) and (max-width: 1024px) {
+  /* Ajustes específicos para iPad Air */
+  .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  /* Layout otimizado para iPad Air */
+  .flex-col {
+    flex-direction: row !important;
+    gap: 2rem !important;
+  }
+
+  .flex-col > * {
+    flex: 1 !important;
+  }
+}
+
+/* Otimizações para orientação landscape no iPad */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* Ajustes para orientação landscape */
+  .flex-col {
+    flex-direction: row !important;
+    gap: 2rem !important;
+  }
+
+  .flex-col > * {
+    flex: 1 !important;
+  }
+
+  /* Reduzir altura de seções em landscape */
+  section {
+    min-height: auto !important;
+    padding: 2rem 2rem !important;
+  }
+
+  /* Ajustar tamanhos de fonte em landscape */
+  h1 {
+    font-size: 2.25rem !important;
+  }
+
+  h2 {
+    font-size: 1.875rem !important;
+  }
+}
+
+/* Otimizações para orientação portrait no iPad */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /* Ajustes para orientação portrait */
+  .flex-col {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Aumentar espaçamento vertical em portrait */
+  section {
+    padding: 3rem 2rem !important;
+  }
+
+  /* Ajustar tamanhos de fonte em portrait */
+  h1 {
+    font-size: 2.75rem !important;
+  }
+
+  h2 {
+    font-size: 2.125rem !important;
+  }
+}
+
+/* Otimizações de performance para iPad */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Reduzir animações pesadas */
+  * {
+    transition-duration: 0.2s !important;
+    animation-duration: 0.3s !important;
+  }
+
+  /* Manter animações importantes */
+  .scroll-reveal,
+  .scroll-reveal-left,
+  .scroll-reveal-right,
+  .scroll-reveal-scale {
+    transition-duration: 0.4s !important;
+    animation-duration: 0.5s !important;
+  }
+
+  /* Otimizar transformações */
+  .transform {
+    will-change: transform !important;
+  }
+
+  /* Melhorar performance de scroll */
+  body {
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
+  }
+}

@@ -64,6 +64,18 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
     },
 
     {
+      title: "Node.js Assíncrono",
+      issuer: "Full Stack Club",
+      date: "Agosto 2025",
+      link: "https://drive.google.com/file/d/18dTCp39FwLpezUUK1-Nm2-QT6PKCO7fc/view?usp=drive_link",
+      description:
+        "Aprendendo a criar aplicações assíncronas com Node.js, incluindo callbacks, promises e async/await, além de entender como lidar com erros e gerenciar fluxos de execução de forma eficiente. Aprendendo a criar APIs robustas e escaláveis, com integração de bancos de dados e uso de middlewares para melhorar a segurança e a performance.",
+      image: "/nodejsac.png",
+      technologies: ["Node.js", "Async/Await", "Promises", "Callbacks"],
+      featured: true,
+    },
+
+    {
       title: "Estruturas de Repetição e Arrays em JavaScript",
       issuer: "DIO",
       date: "2024",
