@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, ExternalLink, Calendar, Tag } from "lucide-react";
-import { useScrollReveal } from "../hooks/useScrollReveal";
+import { useScrollReveal } from "../../hooks/useScrollReveal";
 
 const Certifications = ({ darkMode }: { darkMode: boolean }) => {
   const { elementRef: titleRef, isVisible: titleVisible } = useScrollReveal();
