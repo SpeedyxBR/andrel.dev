@@ -10,7 +10,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
       title: "Fundação e Desenvolvimento de Habilidades",
       description:
         "Minha paixão pela tecnologia nasceu na infância, formatando e otimizando computadores com Windows. Em 2020, iniciei um curso de francês de três anos, desenvolvendo disciplina e capacidade de processar informações complexas.",
-      icon: <BookOpen className="text-blue-500" size={20} />,
+      icon: <BookOpen className="text-white w-6 h-6" />,
       category: "Fundação",
     },
     {
@@ -18,7 +18,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
       title: "Primeiro Contato com Python",
       description:
         "Tive meu primeiro contato com Python e consegui desenvolver minha lógica de programação. Foi um momento crucial que me mostrou o poder da programação para resolver problemas.",
-      icon: <Code className="text-green-500" size={20} />,
+      icon: <Code className="text-white w-6 h-6" />,
       category: "Lógica",
     },
     {
@@ -26,7 +26,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
       title: "Primeiro Contato com Programação",
       description:
         "Comecei a cursar Análise e Desenvolvimento de Sistemas, onde tive meu primeiro contato formal com as bases do desenvolvimento web: HTML, CSS e JavaScript.",
-      icon: <Laptop className="text-blue-500" size={20} />,
+      icon: <Laptop className="text-white w-6 h-6" />,
       category: "Educação",
     },
     {
@@ -34,7 +34,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
       title: "Desenvolvimento Frontend",
       description:
         "Aprendi React e comecei a criar interfaces interativas. Descobri o poder dos componentes reutilizáveis e do estado dinâmico.",
-      icon: <Laptop className="text-purple-500" size={20} />,
+      icon: <Laptop className="text-white w-6 h-6" />,
       category: "Frontend",
     },
     {
@@ -42,7 +42,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
       title: "Tecnologias de Ponta",
       description:
         "Aprofundei meus estudos em projetos com tecnologias modernas como React, Next.js, Node.js e TypeScript. Transformando ideias em realidade.",
-      icon: <Rocket className="text-orange-500" size={20} />,
+      icon: <Rocket className="text-white w-6 h-6" />,
       category: "Avançado",
     },
     {
@@ -50,7 +50,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
       title: "Objetivo e Aspiração",
       description:
         "Usar minhas habilidades para construir soluções que resolvam problemas reais, sejam eficientes, escaláveis e causem impacto positivo.",
-      icon: <Trophy className="text-yellow-500" size={20} />,
+      icon: <Trophy className="text-white w-6 h-6" />,
       category: "Objetivo",
     },
   ];
@@ -96,83 +96,83 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
 
         {/* Timeline */}
         <div className="mb-20">
-          <div className="relative">
-            {/* Timeline Line - Always visible */}
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
-
+          <div className="grid gap-8 md:gap-12">
             {timeline.map((item, index) => (
               <motion.div
                 key={index}
-                className={`relative flex items-center mb-12 ${
-                  index % 2 === 0 ? "justify-start" : "justify-end"
-                }`}
+                className="relative"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{
-                  y: -5,
-                  scale: 1.02,
-                  transition: { duration: 0.3, ease: "easeOut" },
-                }}
               >
                 {/* Timeline Item */}
-                <div
-                  className={`w-full max-w-md ${
-                    index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
-                  }`}
-                >
-                  <div
-                    className={`p-6 rounded-xl transition-colors duration-200 ${
-                      darkMode
-                        ? "bg-gray-800 hover:bg-gray-700"
-                        : "bg-gray-50 hover:bg-gray-100"
-                    }`}
-                  >
-                    {/* Category Badge */}
+                <div className="flex items-start gap-6">
+                  {/* Icon and Year */}
+                  <div className="flex-shrink-0">
                     <div
-                      className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 ${
+                      className={`w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 ${
                         darkMode
-                          ? "bg-gray-700 text-gray-200"
-                          : "bg-gray-100 text-gray-700"
+                          ? "bg-gradient-to-br from-blue-600 via-blue-500 to-purple-600 shadow-2xl hover:shadow-blue-500/25"
+                          : "bg-gradient-to-br from-blue-500 via-blue-400 to-purple-500 shadow-2xl hover:shadow-blue-500/25"
                       }`}
                     >
-                      {item.category}
+                      <div className="text-white">{item.icon}</div>
                     </div>
-
-                    {/* Year */}
                     <div
-                      className={`text-2xl font-bold mb-2 ${
+                      className={`text-center mt-3 text-sm font-bold ${
                         darkMode ? "text-blue-400" : "text-blue-600"
                       }`}
                     >
                       {item.year}
                     </div>
+                  </div>
 
-                    {/* Title */}
-                    <h3
-                      className={`text-lg font-semibold mb-3 ${
-                        darkMode ? "text-white" : "text-gray-900"
+                  {/* Content */}
+                  <div className="flex-1">
+                    <div
+                      className={`p-8 rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-2xl ${
+                        darkMode
+                          ? "bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 border border-gray-600 shadow-xl"
+                          : "bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:from-gray-50 hover:to-white border border-gray-200 shadow-xl"
                       }`}
                     >
-                      {item.title}
-                    </h3>
+                      {/* Category Badge */}
+                      <div
+                        className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 ${
+                          darkMode
+                            ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                            : "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg"
+                        }`}
+                      >
+                        {item.category}
+                      </div>
 
-                    {/* Description */}
-                    <p
-                      className={`text-sm leading-relaxed ${
-                        darkMode ? "text-gray-300" : "text-gray-600"
-                      }`}
-                    >
-                      {item.description}
-                    </p>
+                      {/* Title */}
+                      <h3
+                        className={`text-xl font-bold mb-4 ${
+                          darkMode ? "text-white" : "text-gray-900"
+                        }`}
+                      >
+                        {item.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p
+                        className={`text-base leading-relaxed ${
+                          darkMode ? "text-gray-300" : "text-gray-600"
+                        }`}
+                      >
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                {/* Timeline Dot with Icon - Always centered on the line */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-4 border-blue-500 rounded-full shadow-lg flex items-center justify-center">
-                  {item.icon}
-                </div>
+                {/* Connecting Line (except for last item) */}
+                {index < timeline.length - 1 && (
+                  <div className="absolute left-10 top-20 w-0.5 h-8 bg-gradient-to-b from-blue-500 to-transparent"></div>
+                )}
               </motion.div>
             ))}
           </div>
