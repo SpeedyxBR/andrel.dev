@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import SEO from "./components/pages/SEO";
 import Header from "./components/pages/Header";
-import Hero from "./components/Hero";
+import Hero from "./components/pages/Hero";
 import About from "./components/pages/About";
 import Skills from "./components/pages/Skills";
 import Certifications from "./components/pages/Certifications";

@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Download, Github, Linkedin, Mail } from "lucide-react";
-import Button from "./ui/Button";
-import { Particles } from "./ui/Particles";
-import { useDeviceDetection } from "../hooks";
+import Button from "../ui/Button";
+import { Particles } from "../ui/Particles";
+import { useDeviceDetection } from "../../hooks";
 
 // Estilos animados para os fundos
-import "../styles/background-dark.scss";
-import "../styles/background-light.scss";
-import "../styles/ipad-responsive.scss";
+// Os estilos são importados globalmente no index.css
 
 const greetings = [
   { lang: "pt", text: "Olá, eu sou o Andrel" },

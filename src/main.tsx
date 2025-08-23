@@ -3,6 +3,9 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import "./styles/background-dark.scss";
+import "./styles/background-light.scss";
+import "./styles/ipad-responsive.scss";
+import "./styles/ipad-optimizations.scss";
 
 const html = document.querySelector("html");
 const theme = localStorage.getItem("theme") ?? "dark";
