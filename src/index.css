@@ -267,23 +267,25 @@ textarea:focus {
 
 .programming-carousel .slick-dots li button:before {
   font-size: 12px;
-  color: #6b7280;
-  opacity: 0.5;
+  color: #9ca3af;
+  opacity: 0.4;
   transition: all 0.3s ease;
 }
 
 .programming-carousel .slick-dots li.slick-active button:before {
-  color: #1e40af;
+  color: #3b82f6;
   opacity: 1;
   transform: scale(1.2);
 }
 
 .dark .programming-carousel .slick-dots li button:before {
-  color: #9ca3af;
+  color: #6b7280;
+  opacity: 0.4;
 }
 
 .dark .programming-carousel .slick-dots li.slick-active button:before {
-  color: #1e3a8a;
+  color: #60a5fa;
+  opacity: 1;
 }
 
 .programming-carousel .slick-prev,
