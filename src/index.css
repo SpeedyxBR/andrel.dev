@@ -253,3 +253,113 @@ textarea:focus {
   background-color: #fff !important;
   transition: background-color 0.3s, color 0.3s;
 }
+
+/* Custom Slick Carousel Styles for About Section */
+.programming-carousel .slick-dots {
+  bottom: -40px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.programming-carousel .slick-dots li {
+  margin: 0 4px;
+}
+
+.programming-carousel .slick-dots li button:before {
+  font-size: 12px;
+  color: #6b7280;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.programming-carousel .slick-dots li.slick-active button:before {
+  color: #1e40af;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.dark .programming-carousel .slick-dots li button:before {
+  color: #9ca3af;
+}
+
+.dark .programming-carousel .slick-dots li.slick-active button:before {
+  color: #1e3a8a;
+}
+
+.programming-carousel .slick-prev,
+.programming-carousel .slick-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(30, 64, 175, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.programming-carousel .slick-prev:hover,
+.programming-carousel .slick-next:hover {
+  background: rgba(30, 64, 175, 0.2);
+  transform: scale(1.1);
+}
+
+.programming-carousel .slick-prev:before,
+.programming-carousel .slick-next:before {
+  font-size: 18px;
+  color: #1e40af;
+  opacity: 0.8;
+}
+
+.dark .programming-carousel .slick-prev,
+.dark .programming-carousel .slick-next {
+  background: rgba(30, 58, 138, 0.1);
+}
+
+.dark .programming-carousel .slick-prev:hover,
+.dark .programming-carousel .slick-next:hover {
+  background: rgba(30, 58, 138, 0.2);
+}
+
+.dark .programming-carousel .slick-prev:before,
+.dark .programming-carousel .slick-next:before {
+  color: #1e3a8a;
+}
+
+/* Smooth transitions */
+.programming-carousel .slick-slide {
+  transition: transform 0.3s ease;
+}
+
+.programming-carousel .slick-slide:hover {
+  transform: translateY(-5px);
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.programming-carousel .slick-active {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Fix for dots positioning */
+.programming-carousel .slick-slider {
+  margin-bottom: 60px;
+}
+
+/* Ensure dots are visible */
+.programming-carousel .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

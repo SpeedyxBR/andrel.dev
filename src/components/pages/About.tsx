@@ -2,6 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Code, BookOpen, Laptop, Rocket, Trophy } from "lucide-react";
 import { Particles } from "../ui/Particles";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaReact, FaCss3Alt, FaHtml5, FaJs } from "react-icons/fa";
+import { SiTypescript, SiNextdotjs, SiNodedotjs } from "react-icons/si";
 
 const About = ({ darkMode }: { darkMode: boolean }) => {
   const timeline = [
@@ -105,6 +110,11 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                whileHover={{
+                  scale: 1.02,
+                  y: -2,
+                  transition: { duration: 0.3, ease: "easeOut" },
+                }}
               >
                 {/* Timeline Item */}
                 <div className="flex items-start gap-6">
@@ -131,11 +141,11 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                   {/* Content */}
                   <div className="flex-1">
                     <div
-                      className={`p-8 rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-2xl ${
+                      className={`p-8 rounded-2xl group ${
                         darkMode
-                          ? "bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 border border-gray-600 shadow-xl"
-                          : "bg-gradient-to-br from-white via-gray-50 to-gray-100 hover:from-gray-50 hover:to-white border border-gray-200 shadow-xl"
-                      }`}
+                          ? "bg-gray-800/50 hover:bg-gray-800/80 text-white backdrop-blur-sm border border-opacity-20 border-gray-700 shadow-lg hover:shadow-xl"
+                          : "bg-white/50 hover:bg-white/80 text-gray-700 backdrop-blur-sm border border-opacity-20 border-gray-200 shadow-lg hover:shadow-xl"
+                      } transition-all duration-300`}
                     >
                       {/* Category Badge */}
                       <div
@@ -184,50 +194,161 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className={`text-center p-6 rounded-2xl ${
-            darkMode
-              ? "bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 border border-gray-600 shadow-xl"
-              : "bg-gradient-to-br from-white via-gray-50 to-gray-100 border border-gray-200 shadow-xl"
-          }`}
+          className="mt-20"
         >
           <h3
-            className={`text-xl font-bold mb-4 ${
-              darkMode ? "text-white" : "text-gray-900"
+            className={`text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-center ${
+              darkMode
+                ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                : "text-gray-900"
             }`}
           >
             Por que Programação?
           </h3>
-          <p
-            className={`text-base leading-relaxed max-w-3xl mx-auto ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
-          >
-            Minha paixão pelo mundo da tecnologia nasceu na infância, não com
-            códigos, mas com o fascínio por desvendar o que havia por trás da
-            tela. O que começou como uma curiosidade inocente, formatando e
-            otimizando computadores com Windows, se transformou no alicerce da
-            minha carreira.
-          </p>
-          <p
-            className={`text-base leading-relaxed max-w-3xl mx-auto mt-3 ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
-          >
-            Em 2020, iniciei um curso de francês de três anos, aprimorando
-            minhas habilidades de aprendizado e disciplina. Em 2023, comecei a
-            cursar Análise e Desenvolvimento de Sistemas, onde tive meu primeiro
-            contato formal com HTML, CSS e JavaScript.
-          </p>
-          <p
-            className={`text-base leading-relaxed max-w-3xl mx-auto mt-3 ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
-          >
-            A partir de 2025, aprofundei meus estudos em tecnologias modernas
-            como React, Next.js, Node.js e TypeScript. Hoje, meu objetivo é usar
-            minhas habilidades para construir soluções que resolvam problemas
-            reais e causem impacto positivo.
-          </p>
+
+          <div className="max-w-4xl mx-auto">
+            <Slider
+              dots={true}
+              infinite={false}
+              speed={500}
+              slidesToShow={1}
+              slidesToScroll={1}
+              autoplay={false}
+              arrows={true}
+              className="programming-carousel"
+              dotsClass="slick-dots"
+              customPaging={() => (
+                <div className="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 transition-all duration-300 hover:bg-blue-400 dark:hover:bg-blue-500" />
+              )}
+              responsive={[
+                {
+                  breakpoint: 768,
+                  settings: {
+                    arrows: false,
+                    dots: true,
+                  },
+                },
+              ]}
+            >
+              {/* Slide 1: Paixão pela Tecnologia */}
+              <div className="px-4">
+                <motion.div
+                  className={`text-center p-8 rounded-2xl group ${
+                    darkMode
+                      ? "bg-gray-800/50 hover:bg-gray-800/80 text-white backdrop-blur-sm border border-opacity-20 border-gray-700 shadow-lg hover:shadow-xl"
+                      : "bg-white/50 hover:bg-white/80 text-gray-700 backdrop-blur-sm border border-opacity-20 border-gray-200 shadow-lg hover:shadow-xl"
+                  } transition-all duration-300`}
+                  whileHover={{
+                    scale: 1.02,
+                    y: -2,
+                    transition: { duration: 0.3, ease: "easeOut" },
+                  }}
+                >
+                  <div className="text-6xl mb-4">💻</div>
+                  <h4 className="text-2xl font-bold mb-4">
+                    Paixão pela Tecnologia
+                  </h4>
+                  <p className="text-lg leading-relaxed max-w-3xl mx-auto">
+                    Minha paixão pelo mundo da tecnologia nasceu na infância,
+                    não com códigos, mas com o fascínio por desvendar o que
+                    havia por trás da tela. O que começou como uma curiosidade
+                    inocente, formatando e otimizando computadores com Windows,
+                    se transformou no alicerce da minha carreira.
+                  </p>
+                </motion.div>
+              </div>
+
+              {/* Slide 2: Desenvolvimento de Habilidades */}
+              <div className="px-4">
+                <motion.div
+                  className={`text-center p-8 rounded-2xl group ${
+                    darkMode
+                      ? "bg-gray-800/50 hover:bg-gray-800/80 text-white backdrop-blur-sm border border-opacity-20 border-gray-700 shadow-lg hover:shadow-xl"
+                      : "bg-white/50 hover:bg-white/80 text-gray-700 backdrop-blur-sm border border-opacity-20 border-gray-200 shadow-lg hover:shadow-xl"
+                  } transition-all duration-300`}
+                  whileHover={{
+                    scale: 1.02,
+                    y: -2,
+                    transition: { duration: 0.3, ease: "easeOut" },
+                  }}
+                >
+                  <div className="text-6xl mb-4">🎯</div>
+                  <h4 className="text-2xl font-bold mb-4">
+                    Desenvolvimento de Habilidades
+                  </h4>
+                  <p className="text-lg leading-relaxed max-w-3xl mx-auto">
+                    Em 2020, iniciei um curso de francês de três anos,
+                    aprimorando minhas habilidades de aprendizado e disciplina.
+                    Em 2023, comecei a cursar Análise e Desenvolvimento de
+                    Sistemas, onde tive meu primeiro contato formal com{" "}
+                    <span className="font-semibold text-orange-500 inline-flex items-center gap-2">
+                      <FaHtml5 size={20} /> HTML
+                    </span>
+                    ,{" "}
+                    <span className="font-semibold text-blue-500 inline-flex items-center gap-2">
+                      <FaCss3Alt size={20} /> CSS
+                    </span>{" "}
+                    e{" "}
+                    <span className="font-semibold text-yellow-500 inline-flex items-center gap-2">
+                      <FaJs size={20} /> JavaScript
+                    </span>
+                    .
+                  </p>
+                </motion.div>
+              </div>
+
+              {/* Slide 3: Tecnologias Modernas */}
+              <div className="px-4">
+                <motion.div
+                  className={`text-center p-8 rounded-2xl group ${
+                    darkMode
+                      ? "bg-gray-800/50 hover:bg-gray-800/80 text-white backdrop-blur-sm border border-opacity-20 border-gray-700 shadow-lg hover:shadow-xl"
+                      : "bg-white/50 hover:bg-white/80 text-gray-700 backdrop-blur-sm border border-opacity-20 border-gray-200 shadow-lg hover:shadow-xl"
+                  } transition-all duration-300`}
+                  whileHover={{
+                    scale: 1.02,
+                    y: -2,
+                    transition: { duration: 0.3, ease: "easeOut" },
+                  }}
+                >
+                  <div className="text-6xl mb-4">🚀</div>
+                  <h4 className="text-2xl font-bold mb-4">
+                    Tecnologias Modernas
+                  </h4>
+                  <p className="text-lg leading-relaxed max-w-3xl mx-auto">
+                    A partir de 2025, aprofundei meus estudos em tecnologias
+                    modernas como{" "}
+                    <span className="font-semibold text-cyan-500 inline-flex items-center gap-2">
+                      <FaReact size={20} /> React
+                    </span>
+                    ,{" "}
+                    <span className="font-semibold text-black dark:text-white inline-flex items-center gap-2">
+                      <SiNextdotjs size={20} /> Next.js
+                    </span>
+                    ,{" "}
+                    <span className="font-semibold text-green-500 inline-flex items-center gap-2">
+                      <SiNodedotjs size={20} /> Node.js
+                    </span>{" "}
+                    e{" "}
+                    <span className="font-semibold text-blue-500 inline-flex items-center gap-2">
+                      <SiTypescript size={20} /> TypeScript
+                    </span>
+                    . Hoje, meu objetivo é usar minhas habilidades para
+                    construir soluções que resolvam problemas reais e causem
+                    impacto positivo.
+                  </p>
+                </motion.div>
+              </div>
+            </Slider>
+
+            {/* Navegação Personalizada */}
+            <div className="flex justify-center items-center gap-4 mt-8">
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                <span className="font-semibold">💡 Dica:</span> Use as setas ou
+                pontos para navegar
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
