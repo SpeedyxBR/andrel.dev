@@ -269,7 +269,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 - **LinkedIn**: [Andrel Carvalho](https://linkedin.com/in/andrelcarvalho)
 - **GitHub**: [@SpeedyxBR](https://github.com/SpeedyxBR)
-- **Email**: andrel.cilva58@exemplo.com
+- **Email**: andrel.cilva58@gmail.com
 - **Portfólio**: [andrel.dev](https://andrel.dev)
 
 ---
