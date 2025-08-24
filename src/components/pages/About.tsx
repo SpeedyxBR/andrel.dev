@@ -210,7 +210,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
             <Slider
               dots={true}
               infinite={false}
-              speed={500}
+              speed={800}
               slidesToShow={1}
               slidesToScroll={1}
               autoplay={false}
@@ -220,12 +220,16 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
               customPaging={() => (
                 <div className="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 transition-all duration-300 hover:bg-blue-400 dark:hover:bg-blue-500" />
               )}
+              fade={true}
+              cssEase="cubic-bezier(0.4, 0, 0.2, 1)"
               responsive={[
                 {
                   breakpoint: 768,
                   settings: {
                     arrows: false,
                     dots: true,
+                    fade: false,
+                    speed: 600,
                   },
                 },
               ]}
