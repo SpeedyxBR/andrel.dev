@@ -339,15 +339,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                   </p>
                 </motion.div>
               </div>
-            </Slider>
-
-            {/* Navegação Personalizada */}
-            <div className="flex justify-center items-center gap-4 mt-8">
-              <div className="text-sm text-gray-500 dark:text-gray-400">
-                <span className="font-semibold">💡 Dica:</span> Use as setas ou
-                pontos para navegar
-              </div>
-            </div>
+            </Slider> 
           </div>
         </motion.div>
       </div>
@@ -355,4 +347,4 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
   );
 };
 
-export default About;
+export default About; 
