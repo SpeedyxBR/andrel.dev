@@ -267,25 +267,25 @@ textarea:focus {
 
 .programming-carousel .slick-dots li button:before {
   font-size: 12px;
-  color: #9ca3af;
-  opacity: 0.4;
+  color: #9ca3af !important;
+  opacity: 0.4 !important;
   transition: all 0.3s ease;
 }
 
 .programming-carousel .slick-dots li.slick-active button:before {
-  color: #3b82f6;
-  opacity: 1;
+  color: #3b82f6 !important;
+  opacity: 1 !important;
   transform: scale(1.2);
 }
 
 .dark .programming-carousel .slick-dots li button:before {
-  color: #6b7280;
-  opacity: 0.4;
+  color: #6b7280 !important;
+  opacity: 0.4 !important;
 }
 
 .dark .programming-carousel .slick-dots li.slick-active button:before {
-  color: #60a5fa;
-  opacity: 1;
+  color: #60a5fa !important;
+  opacity: 1 !important;
 }
 
 .programming-carousel .slick-prev,
@@ -404,7 +404,7 @@ textarea:focus {
   margin-bottom: 60px;
 }
 
-/* Ensure dots are visible */
+/* Ensure dots are visible and properly styled */
 .programming-carousel .slick-dots {
   display: flex !important;
   justify-content: center;
@@ -412,4 +412,50 @@ textarea:focus {
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
+  bottom: -40px;
+  margin-top: 20px;
+}
+
+.programming-carousel .slick-dots li {
+  margin: 0 4px;
+  display: inline-block;
+}
+
+.programming-carousel .slick-dots li button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.programming-carousel .slick-dots li button:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #9ca3af;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.programming-carousel .slick-dots li.slick-active button:before {
+  background-color: #3b82f6;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.dark .programming-carousel .slick-dots li button:before {
+  background-color: #6b7280;
+  opacity: 0.4;
+}
+
+.dark .programming-carousel .slick-dots li.slick-active button:before {
+  background-color: #60a5fa;
+  opacity: 1;
 }

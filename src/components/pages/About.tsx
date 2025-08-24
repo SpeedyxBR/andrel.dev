@@ -216,10 +216,6 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
               autoplay={false}
               arrows={true}
               className="programming-carousel"
-              dotsClass="slick-dots"
-              customPaging={() => (
-                <div className="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 transition-all duration-300 hover:bg-blue-400 dark:hover:bg-blue-500" />
-              )}
               fade={true}
               cssEase="cubic-bezier(0.4, 0, 0.2, 1)"
               responsive={[
