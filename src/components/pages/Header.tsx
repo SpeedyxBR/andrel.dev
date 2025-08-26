@@ -51,10 +51,10 @@ const Header = ({
 
   const menuItems = [
     { id: "home", label: "Home", icon: <Home size={20} /> },
-    { id: "about", label: "Sobre", icon: <User size={20} /> },
+    { id: "about", label: "Minha Jornada", icon: <User size={20} /> },
     { id: "skills", label: "Habilidades", icon: <Code size={20} /> },
-    { id: "certifications", label: "Certificações", icon: <Award size={20} /> },
     { id: "projects", label: "Projetos", icon: <Briefcase size={20} /> },
+    { id: "certifications", label: "Certificações", icon: <Award size={20} /> },
     { id: "contact", label: "Contato", icon: <Mail size={20} /> },
   ];
 
