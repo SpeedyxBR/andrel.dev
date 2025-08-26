@@ -27,9 +27,9 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
       featured: true,
     },
     {
-      title: "BEWEAR - Ecommerce (Mobile First)",
+      title: "BEWEAR - Ecommerce",
       description:
-        "Atualmente em desenvolvimento. Estou construindo uma plataforma de e-commerce de roupas com foco em uma experiência moderna e intuitiva. O front-end em Next.js garante carregamento rápido, SEO eficiente e navegação fluida em listagem, detalhes e carrinho. O back-end em Node.js gerencia catálogo, autenticação e integrações de pagamento com segurança, oferecendo uma jornada de compra completa e confiável.",
+        "Um e-commerce de moda em desenvolvimento, projetado para oferecer uma jornada de compra intuitiva e de alta performance. O front-end, construído com Next.js, garante carregamento instantâneo e uma navegação fluida. O back-end, desenvolvido em Node.js, assegura a gestão segura do catálogo e a autenticação de usuários, além de gerenciar a integração de pagamentos para uma experiência de compra completa e confiável.",
       image: "/Capa.png",
       technologies: [
         "React",
@@ -37,7 +37,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
         "Tailwind CSS",
         "Next.js, Node.js, Stripe, Drizzle, PostgreSQL",
       ],
-      liveUrl: "https://bewear-bootcamp-taupe.vercel.app",
+      liveUrl: "https://bewear-one.vercel.app",
       githubUrl: "https://github.com/SpeedyxBR/bewear",
       date: "Agosto 2025",
       featured: true,

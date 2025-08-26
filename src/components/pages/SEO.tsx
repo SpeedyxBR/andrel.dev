@@ -13,7 +13,7 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title = "Andrel Carvalho - Desenvolvedor Web Full Stack",
   description = "Portfólio de Andrel Carvalho, desenvolvedor web fullstack especializado em React, Node.js, Next.js, TypeScript. Criando experiências digitais únicas.",
-  keywords = "desenvolvedor web, fullstack, react, node.js, typescript, javascript, frontend, backend, next.js",
+  keywords = "desenvolvedor web, full stack, react, react native, node.js, typescript, javascript, frontend, backend, next.js",
   image = "/andrel.jpeg",
   url = "https://andrelcarvalho.dev",
   type = "website",
