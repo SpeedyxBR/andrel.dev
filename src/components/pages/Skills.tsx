@@ -28,6 +28,17 @@ const techs = [
     level: 70,
   },
   {
+    name: "React Native",
+    icon: (
+      <FaReact
+        className="text-blue-800 hover:text-blue-700 transition-colors duration-300"
+        size={52}
+      />
+    ),
+    color: "from-blue-800 to-blue-900",
+    level: 70,
+  },
+  {
     name: "TypeScript",
     icon: (
       <SiTypescript
