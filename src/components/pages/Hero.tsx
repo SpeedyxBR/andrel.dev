@@ -52,7 +52,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Andrel_Carvalho.CV.pdf";
+    link.href = "/Andrel_Carvalho.CV.pdf (2).pdf";
     link.download = "Curriculo-Desenvolvedor-Fullstack.pdf";
     document.body.appendChild(link);
     link.click();
