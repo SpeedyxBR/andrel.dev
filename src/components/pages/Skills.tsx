@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaCss3Alt, FaHtml5, FaJs, FaGitAlt } from "react-icons/fa";
 import { TbBrandGithub } from "react-icons/tb";
@@ -12,6 +11,8 @@ import {
   SiNodedotjs,
   SiFigma,
   SiPostman,
+  SiYarn,
+  SiNpm,
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 
@@ -224,6 +225,28 @@ const techs = [
     ),
     color: "from-purple-500 to-pink-600",
     level: 90,
+  },
+  {
+    name: "Yarn",
+    icon: (
+      <SiYarn
+        className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+        size={52}
+      />
+    ),
+    color: "from-blue-500 to-indigo-600",
+    level: 85,
+  },
+  {
+    name: "NPM",
+    icon: (
+      <SiNpm
+        className="text-red-500 hover:text-red-400 transition-colors duration-300"
+        size={52}
+      />
+    ),
+    color: "from-red-500 to-red-600",
+    level: 85,
   },
 ];
 
