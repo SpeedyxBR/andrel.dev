@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Code, BookOpen, Laptop, Rocket, Trophy } from "lucide-react";
 import { Particles } from "../ui/Particles";
@@ -209,40 +208,41 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
           <div className="max-w-4xl mx-auto">
             <Slider
               dots={true}
-              infinite={false}
-              speed={800}
+              infinite={true}
+              speed={300}
               slidesToShow={1}
               slidesToScroll={1}
               autoplay={false}
               arrows={true}
               className="programming-carousel"
-              fade={true}
-              cssEase="cubic-bezier(0.4, 0, 0.2, 1)"
+              fade={false}
+              swipe={true}
+              touchMove={true}
+              swipeToSlide={true}
+              cssEase="ease-in-out"
               responsive={[
                 {
                   breakpoint: 768,
                   settings: {
-                    arrows: false,
+                    arrows: true,
                     dots: true,
                     fade: false,
-                    speed: 600,
+                    speed: 300,
+                    swipe: true,
+                    touchMove: true,
+                    swipeToSlide: true,
+                    cssEase: "ease-in-out",
                   },
                 },
               ]}
             >
-              {/* Slide 1: Paixão pela Tecnologia */}
               <div className="px-4">
-                <motion.div
+                <div
                   className={`text-center p-8 rounded-2xl group ${
                     darkMode
-                      ? "bg-gray-800/50 hover:bg-gray-800/80 text-white backdrop-blur-sm border border-opacity-20 border-gray-700 shadow-lg hover:shadow-xl"
-                      : "bg-white/50 hover:bg-white/80 text-gray-700 backdrop-blur-sm border border-opacity-20 border-gray-200 shadow-lg hover:shadow-xl"
+                      ? "bg-gray-800/50 text-white backdrop-blur-sm border border-opacity-20 border-gray-700 shadow-lg"
+                      : "bg-white/50 text-gray-700 backdrop-blur-sm border border-opacity-20 border-gray-200 shadow-lg"
                   } transition-all duration-300`}
-                  whileHover={{
-                    scale: 1.02,
-                    y: -2,
-                    transition: { duration: 0.3, ease: "easeOut" },
-                  }}
                 >
                   <div className="text-6xl mb-4">💻</div>
                   <h4 className="text-2xl font-bold mb-4">
@@ -255,22 +255,16 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                     inocente, formatando e otimizando computadores com Windows,
                     se transformou no alicerce da minha carreira.
                   </p>
-                </motion.div>
+                </div>
               </div>
 
-              {/* Slide 2: Desenvolvimento de Habilidades */}
               <div className="px-4">
-                <motion.div
+                <div
                   className={`text-center p-8 rounded-2xl group ${
                     darkMode
-                      ? "bg-gray-800/50 hover:bg-gray-800/80 text-white backdrop-blur-sm border border-opacity-20 border-gray-700 shadow-lg hover:shadow-xl"
-                      : "bg-white/50 hover:bg-white/80 text-gray-700 backdrop-blur-sm border border-opacity-20 border-gray-200 shadow-lg hover:shadow-xl"
+                      ? "bg-gray-800/50 text-white backdrop-blur-sm border border-opacity-20 border-gray-700 shadow-lg"
+                      : "bg-white/50 text-gray-700 backdrop-blur-sm border border-opacity-20 border-gray-200 shadow-lg"
                   } transition-all duration-300`}
-                  whileHover={{
-                    scale: 1.02,
-                    y: -2,
-                    transition: { duration: 0.3, ease: "easeOut" },
-                  }}
                 >
                   <div className="text-6xl mb-4">🎯</div>
                   <h4 className="text-2xl font-bold mb-4">
@@ -294,22 +288,16 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                     </span>
                     .
                   </p>
-                </motion.div>
+                </div>
               </div>
 
-              {/* Slide 3: Tecnologias Modernas */}
               <div className="px-4">
-                <motion.div
+                <div
                   className={`text-center p-8 rounded-2xl group ${
                     darkMode
-                      ? "bg-gray-800/50 hover:bg-gray-800/80 text-white backdrop-blur-sm border border-opacity-20 border-gray-700 shadow-lg hover:shadow-xl"
-                      : "bg-white/50 hover:bg-white/80 text-gray-700 backdrop-blur-sm border border-opacity-20 border-gray-200 shadow-lg hover:shadow-xl"
+                      ? "bg-gray-800/50 text-white backdrop-blur-sm border border-opacity-20 border-gray-700 shadow-lg"
+                      : "bg-white/50 text-gray-700 backdrop-blur-sm border border-opacity-20 border-gray-200 shadow-lg"
                   } transition-all duration-300`}
-                  whileHover={{
-                    scale: 1.02,
-                    y: -2,
-                    transition: { duration: 0.3, ease: "easeOut" },
-                  }}
                 >
                   <div className="text-6xl mb-4">🚀</div>
                   <h4 className="text-2xl font-bold mb-4">
@@ -337,9 +325,9 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                     construir soluções que resolvam problemas reais e causem
                     impacto positivo.
                   </p>
-                </motion.div>
+                </div>
               </div>
-            </Slider> 
+            </Slider>
           </div>
         </motion.div>
       </div>
@@ -347,4 +335,4 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
   );
 };
 
-export default About; 
+export default About;
