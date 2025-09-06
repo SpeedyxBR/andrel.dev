@@ -17,264 +17,308 @@ import {
   SiDocker,
   SiSwagger,
   SiJest,
+  SiPrisma,
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 
-const techs = [
-  {
-    name: "React",
-    icon: (
-      <FaReact
-        className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-cyan-400 to-blue-500",
-    level: 70,
+const techCategories = {
+  frontend: {
+    title: "Frontend",
+    technologies: [
+      {
+        name: "React",
+        icon: (
+          <FaReact
+            className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-cyan-400 to-blue-500",
+        level: 70,
+      },
+      {
+        name: "React Native",
+        icon: (
+          <FaReact
+            className="text-blue-800 hover:text-blue-700 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-blue-800 to-blue-900",
+        level: 70,
+      },
+      {
+        name: "Next.js",
+        icon: (
+          <SiNextdotjs
+            className="text-black hover:text-gray-800 transition-colors duration-300 dark:text-white dark:hover:text-gray-200"
+            size={52}
+          />
+        ),
+        color: "from-gray-900 to-black",
+        level: 70,
+      },
+      {
+        name: "TypeScript",
+        icon: (
+          <SiTypescript
+            className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-blue-500 to-indigo-600",
+        level: 85,
+      },
+      {
+        name: "JavaScript",
+        icon: (
+          <FaJs
+            className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-yellow-400 to-orange-500",
+        level: 79,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: (
+          <SiTailwindcss
+            className="text-teal-400 hover:text-teal-300 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-teal-400 to-cyan-500",
+        level: 88,
+      },
+      {
+        name: "HTML5",
+        icon: (
+          <FaHtml5
+            className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-orange-500 to-red-500",
+        level: 95,
+      },
+      {
+        name: "CSS3",
+        icon: (
+          <FaCss3Alt
+            className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-blue-500 to-indigo-600",
+        level: 90,
+      },
+      {
+        name: "Vite",
+        icon: (
+          <SiVite
+            className="text-purple-500 hover:text-purple-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-purple-500 to-pink-600",
+        level: 90,
+      },
+    ],
   },
-  {
-    name: "React Native",
-    icon: (
-      <FaReact
-        className="text-blue-800 hover:text-blue-700 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-blue-800 to-blue-900",
-    level: 70,
+  backend: {
+    title: "Backend",
+    technologies: [
+      {
+        name: "Node.js",
+        icon: (
+          <SiNodedotjs
+            className="text-green-500 hover:text-green-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-green-500 to-emerald-600",
+        level: 70,
+      },
+      {
+        name: "Express.js",
+        icon: (
+          <SiExpress
+            className="text-gray-600 hover:text-gray-500 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-gray-600 to-gray-700",
+        level: 85,
+      },
+      {
+        name: "Swagger",
+        icon: (
+          <SiSwagger
+            className="text-green-500 hover:text-green-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-green-500 to-emerald-600",
+        level: 75,
+      },
+      {
+        name: "Jest",
+        icon: (
+          <SiJest
+            className="text-red-500 hover:text-red-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-red-500 to-pink-600",
+        level: 80,
+      },
+      {
+        name: "Docker",
+        icon: (
+          <SiDocker
+            className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-blue-500 to-indigo-600",
+        level: 65,
+      },
+      {
+        name: "Postman",
+        icon: (
+          <SiPostman
+            className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-orange-500 to-red-500",
+        level: 80,
+      },
+    ],
   },
-  {
-    name: "TypeScript",
-    icon: (
-      <SiTypescript
-        className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-blue-500 to-indigo-600",
-    level: 85,
+  database: {
+    title: "Database & ORMs",
+    technologies: [
+      {
+        name: "PostgreSQL",
+        icon: (
+          <SiPostgresql
+            className="text-blue-600 hover:text-blue-500 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-blue-600 to-indigo-700",
+        level: 70,
+      },
+      {
+        name: "MongoDB",
+        icon: (
+          <SiMongodb
+            className="text-green-600 hover:text-green-500 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-green-600 to-emerald-700",
+        level: 75,
+      },
+      {
+        name: "Prisma",
+        icon: (
+          <SiPrisma
+            className="text-indigo-600 hover:text-indigo-500 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-indigo-600 to-purple-700",
+        level: 80,
+      },
+      {
+        name: "Drizzle ORM",
+        icon: (
+          <div className="w-13 h-13 flex items-center justify-center">
+            <span className="text-2xl font-bold text-orange-500 hover:text-orange-400 transition-colors duration-300">
+              D
+            </span>
+          </div>
+        ),
+        color: "from-orange-500 to-red-600",
+        level: 75,
+      },
+    ],
   },
-  {
-    name: "JavaScript",
-    icon: (
-      <FaJs
-        className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-yellow-400 to-orange-500",
-    level: 79,
+  tools: {
+    title: "Ferramentas",
+    technologies: [
+      {
+        name: "Git",
+        icon: (
+          <FaGitAlt
+            className="text-orange-600 hover:text-orange-500 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-orange-600 to-red-600",
+        level: 85,
+      },
+      {
+        name: "GitHub",
+        icon: (
+          <TbBrandGithub
+            className="text-black hover:text-gray-800 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-gray-800 to-black",
+        level: 90,
+      },
+      {
+        name: "Figma",
+        icon: (
+          <SiFigma
+            className="text-purple-500 hover:text-purple-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-purple-500 to-pink-600",
+        level: 75,
+      },
+      {
+        name: "VS Code",
+        icon: (
+          <VscVscodeInsiders
+            className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-blue-500 to-indigo-600",
+        level: 95,
+      },
+      {
+        name: "Yarn",
+        icon: (
+          <SiYarn
+            className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-blue-500 to-indigo-600",
+        level: 85,
+      },
+      {
+        name: "NPM",
+        icon: (
+          <SiNpm
+            className="text-red-500 hover:text-red-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-red-500 to-red-600",
+        level: 85,
+      },
+    ],
   },
-  {
-    name: "Tailwind CSS",
-    icon: (
-      <SiTailwindcss
-        className="text-teal-400 hover:text-teal-300 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-teal-400 to-cyan-500",
-    level: 88,
-  },
-  {
-    name: "HTML5",
-    icon: (
-      <FaHtml5
-        className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-orange-500 to-red-500",
-    level: 95,
-  },
-  {
-    name: "CSS3",
-    icon: (
-      <FaCss3Alt
-        className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-blue-500 to-indigo-600",
-    level: 90,
-  },
-  {
-    name: "Node.js",
-    icon: (
-      <SiNodedotjs
-        className="text-green-500 hover:text-green-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-green-500 to-emerald-600",
-    level: 70,
-  },
-  {
-    name: "Next.js",
-    icon: (
-      <SiNextdotjs
-        className="text-black hover:text-gray-800 transition-colors duration-300 dark:text-white dark:hover:text-gray-200"
-        size={52}
-      />
-    ),
-    color: "from-gray-900 to-black",
-    level: 70,
-  },
-  {
-    name: "Express.js",
-    icon: (
-      <SiExpress
-        className="text-gray-600 hover:text-gray-500 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-gray-600 to-gray-700",
-    level: 85,
-  },
-  {
-    name: "PostgreSQL",
-    icon: (
-      <SiPostgresql
-        className="text-blue-600 hover:text-blue-500 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-blue-600 to-indigo-700",
-    level: 70,
-  },
-  {
-    name: "MongoDB",
-    icon: (
-      <SiMongodb
-        className="text-green-600 hover:text-green-500 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-green-600 to-emerald-700",
-    level: 75,
-  },
-  {
-    name: "Git",
-    icon: (
-      <FaGitAlt
-        className="text-orange-600 hover:text-orange-500 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-orange-600 to-red-600",
-    level: 85,
-  },
-  {
-    name: "GitHub",
-    icon: (
-      <TbBrandGithub
-        className="text-black hover:text-gray-800 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-gray-800 to-black",
-    level: 90,
-  },
-  {
-    name: "Figma",
-    icon: (
-      <SiFigma
-        className="text-purple-500 hover:text-purple-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-purple-500 to-pink-600",
-    level: 75,
-  },
-  {
-    name: "VS Code",
-    icon: (
-      <VscVscodeInsiders
-        className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-blue-500 to-indigo-600",
-    level: 95,
-  },
-  {
-    name: "Postman",
-    icon: (
-      <SiPostman
-        className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-orange-500 to-red-500",
-    level: 80,
-  },
-  {
-    name: "Docker",
-    icon: (
-      <SiDocker
-        className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-blue-500 to-indigo-600",
-    level: 65,
-  },
-  {
-    name: "Vite",
-    icon: (
-      <SiVite
-        className="text-purple-500 hover:text-purple-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-purple-500 to-pink-600",
-    level: 90,
-  },
-  {
-    name: "Yarn",
-    icon: (
-      <SiYarn
-        className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-blue-500 to-indigo-600",
-    level: 85,
-  },
-  {
-    name: "NPM",
-    icon: (
-      <SiNpm
-        className="text-red-500 hover:text-red-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-red-500 to-red-600",
-    level: 85,
-  },
-  {
-    name: "Swagger",
-    icon: (
-      <SiSwagger
-        className="text-green-500 hover:text-green-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-green-500 to-emerald-600",
-    level: 75,
-  },
-  {
-    name: "Jest",
-    icon: (
-      <SiJest
-        className="text-red-500 hover:text-red-400 transition-colors duration-300"
-        size={52}
-      />
-    ),
-    color: "from-red-500 to-pink-600",
-    level: 80,
-  },
-];
+};
 
 const Skills = ({ darkMode }: { darkMode: boolean }) => {
   return (
@@ -367,45 +411,77 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="grid grid-cols-2 sm:grid-cols-3 ipad:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 ipad:gap-8 lg:gap-8 skills-grid">
-            {techs.map((tech, idx) => (
-              <motion.div
-                key={idx}
-                className={`flex flex-col items-center justify-center p-6 rounded-2xl group ${
-                  darkMode
-                    ? "bg-gray-800/50 hover:bg-gray-800/80 text-white"
-                    : "bg-white/50 hover:bg-white/80 text-gray-700 shadow-lg hover:shadow-xl"
-                } backdrop-blur-sm border border-opacity-20 transition-all duration-300 ${
-                  darkMode ? "border-gray-700" : "border-gray-200"
-                }`}
-                whileHover={{
-                  scale: 1.05,
-                  y: -5,
-                  transition: { duration: 0.3, ease: "easeOut" },
-                }}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.5,
-                  delay: idx * 0.1,
-                  ease: "easeOut",
-                }}
-                viewport={{ once: true }}
-              >
-                <div className="relative mb-4">{tech.icon}</div>
-
-                {/* Barra de Progresso removida */}
-
-                <motion.span
-                  className={`text-sm font-semibold tracking-wide text-center ${
-                    darkMode ? "text-gray-200" : "text-gray-700"
-                  } group-hover:text-opacity-80 transition-all duration-300`}
-                  whileHover={{ scale: 1.02 }}
+          <div className="space-y-16">
+            {Object.entries(techCategories).map(
+              ([categoryKey, category], categoryIdx) => (
+                <motion.div
+                  key={categoryKey}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: categoryIdx * 0.2 }}
+                  viewport={{ once: true }}
+                  className="space-y-8"
                 >
-                  {tech.name}
-                </motion.span>
-              </motion.div>
-            ))}
+                  <div className="text-center">
+                    <h3
+                      className={`text-2xl sm:text-3xl font-bold mb-4 ${
+                        darkMode
+                          ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                          : "text-gray-800"
+                      }`}
+                    >
+                      {category.title}
+                    </h3>
+                    <div
+                      className={`w-24 h-1 mx-auto rounded-full ${
+                        darkMode
+                          ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"
+                          : "bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"
+                      }`}
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-2 sm:grid-cols-3 ipad:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 ipad:gap-8 lg:gap-8">
+                    {category.technologies.map((tech, techIdx) => (
+                      <motion.div
+                        key={tech.name}
+                        className={`flex flex-col items-center justify-center p-6 rounded-2xl group ${
+                          darkMode
+                            ? "bg-gray-800/50 hover:bg-gray-800/80 text-white"
+                            : "bg-white/50 hover:bg-white/80 text-gray-700 shadow-lg hover:shadow-xl"
+                        } backdrop-blur-sm border border-opacity-20 transition-all duration-300 ${
+                          darkMode ? "border-gray-700" : "border-gray-200"
+                        }`}
+                        whileHover={{
+                          scale: 1.05,
+                          y: -5,
+                          transition: { duration: 0.3, ease: "easeOut" },
+                        }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{
+                          duration: 0.5,
+                          delay: categoryIdx * 0.2 + techIdx * 0.1,
+                          ease: "easeOut",
+                        }}
+                        viewport={{ once: true }}
+                      >
+                        <div className="relative mb-4">{tech.icon}</div>
+
+                        <motion.span
+                          className={`text-sm font-semibold tracking-wide text-center ${
+                            darkMode ? "text-gray-200" : "text-gray-700"
+                          } group-hover:text-opacity-80 transition-all duration-300`}
+                          whileHover={{ scale: 1.02 }}
+                        >
+                          {tech.name}
+                        </motion.span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              )
+            )}
           </div>
         </motion.div>
       </div>
