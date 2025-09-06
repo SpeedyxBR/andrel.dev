@@ -226,11 +226,15 @@ const techCategories = {
       {
         name: "Drizzle ORM",
         icon: (
-          <div className="w-13 h-13 flex items-center justify-center">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">D</span>
-            </div>
-          </div>
+          <svg
+            className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
+            width="52"
+            height="52"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+          </svg>
         ),
         color: "from-orange-500 to-red-600",
         level: 75,
@@ -265,11 +269,15 @@ const techCategories = {
       {
         name: "Windows",
         icon: (
-          <div className="w-13 h-13 flex items-center justify-center">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">W</span>
-            </div>
-          </div>
+          <svg
+            className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+            width="52"
+            height="52"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M3 12V6.75l6-1.32v6.48L3 12zm17-9v8.75l-10 .15V5.21L20 3zM13 13.5v6.75l-10-1.8V13.5l10 .15zm7.5.75L20 13.5v5.25l.5.1V14.25z" />
+          </svg>
         ),
         color: "from-blue-500 to-indigo-600",
         level: 90,
