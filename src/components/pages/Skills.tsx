@@ -14,6 +14,9 @@ import {
   SiYarn,
   SiNpm,
   SiExpress,
+  SiDocker,
+  SiSwagger,
+  SiJest,
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 
@@ -205,17 +208,17 @@ const techs = [
     color: "from-orange-500 to-red-500",
     level: 80,
   },
-  // {
-  //   name: "Docker",
-  //   icon: (
-  //     <SiDocker
-  //       className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-  //       size={52}
-  //     />
-  //   ),
-  //   color: "from-blue-500 to-indigo-600",
-  //   level: 65,
-  // },
+  {
+    name: "Docker",
+    icon: (
+      <SiDocker
+        className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+        size={52}
+      />
+    ),
+    color: "from-blue-500 to-indigo-600",
+    level: 65,
+  },
   {
     name: "Vite",
     icon: (
@@ -248,6 +251,28 @@ const techs = [
     ),
     color: "from-red-500 to-red-600",
     level: 85,
+  },
+  {
+    name: "Swagger",
+    icon: (
+      <SiSwagger
+        className="text-green-500 hover:text-green-400 transition-colors duration-300"
+        size={52}
+      />
+    ),
+    color: "from-green-500 to-emerald-600",
+    level: 75,
+  },
+  {
+    name: "Jest",
+    icon: (
+      <SiJest
+        className="text-red-500 hover:text-red-400 transition-colors duration-300"
+        size={52}
+      />
+    ),
+    color: "from-red-500 to-pink-600",
+    level: 80,
   },
 ];
 
