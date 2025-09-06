@@ -226,18 +226,13 @@ const techCategories = {
       {
         name: "Drizzle ORM",
         icon: (
-          <svg
-            className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
+          <img
+            src="/drizzle-orm.webp"
+            alt="Drizzle ORM"
+            className="w-13 h-13 object-contain transition-opacity duration-300 hover:opacity-80"
             width="52"
             height="52"
-            viewBox="0 0 1024 370"
-            fill="currentColor"
-          >
-            <path d="M0 0h1024v370H0V0zm512 185c0 102.1-82.9 185-185 185S142 287.1 142 185 224.9 0 327 0s185 82.9 185 185zm0 0c0-102.1 82.9-185 185-185s185 82.9 185 185-82.9 185-185 185-185-82.9-185-185z" />
-            <circle cx="327" cy="185" r="142" />
-            <circle cx="697" cy="185" r="142" />
-            <path d="M512 43c38.1 0 69 30.9 69 69s-30.9 69-69 69-69-30.9-69-69 30.9-69 69-69zm0 0c-38.1 0-69 30.9-69 69s30.9 69 69 69 69-30.9 69-69-30.9-69-69-69z" />
-          </svg>
+          />
         ),
         color: "from-orange-500 to-red-600",
         level: 75,
