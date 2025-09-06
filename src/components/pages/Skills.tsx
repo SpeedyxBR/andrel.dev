@@ -230,10 +230,13 @@ const techCategories = {
             className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
             width="52"
             height="52"
-            viewBox="0 0 24 24"
+            viewBox="0 0 1024 370"
             fill="currentColor"
           >
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+            <path d="M0 0h1024v370H0V0zm512 185c0 102.1-82.9 185-185 185S142 287.1 142 185 224.9 0 327 0s185 82.9 185 185zm0 0c0-102.1 82.9-185 185-185s185 82.9 185 185-82.9 185-185 185-185-82.9-185-185z" />
+            <circle cx="327" cy="185" r="142" />
+            <circle cx="697" cy="185" r="142" />
+            <path d="M512 43c38.1 0 69 30.9 69 69s-30.9 69-69 69-69-30.9-69-69 30.9-69 69-69zm0 0c-38.1 0-69 30.9-69 69s30.9 69 69 69 69-30.9 69-69-30.9-69-69-69z" />
           </svg>
         ),
         color: "from-orange-500 to-red-600",
@@ -269,15 +272,13 @@ const techCategories = {
       {
         name: "Windows",
         icon: (
-          <svg
-            className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
+          <img
+            src="/windows.png"
+            alt="Windows"
+            className="w-13 h-13 object-contain transition-opacity duration-300 hover:opacity-80"
             width="52"
             height="52"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path d="M3 12V6.75l6-1.32v6.48L3 12zm17-9v8.75l-10 .15V5.21L20 3zM13 13.5v6.75l-10-1.8V13.5l10 .15zm7.5.75L20 13.5v5.25l.5.1V14.25z" />
-          </svg>
+          />
         ),
         color: "from-blue-500 to-indigo-600",
         level: 90,
