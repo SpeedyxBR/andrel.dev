@@ -18,6 +18,7 @@ import {
   SiSwagger,
   SiJest,
   SiPrisma,
+  SiStackoverflow,
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 
@@ -184,17 +185,6 @@ const techCategories = {
         color: "from-blue-500 to-indigo-600",
         level: 65,
       },
-      {
-        name: "Postman",
-        icon: (
-          <SiPostman
-            className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
-            size={52}
-          />
-        ),
-        color: "from-orange-500 to-red-500",
-        level: 80,
-      },
     ],
   },
   database: {
@@ -237,9 +227,9 @@ const techCategories = {
         name: "Drizzle ORM",
         icon: (
           <div className="w-13 h-13 flex items-center justify-center">
-            <span className="text-2xl font-bold text-orange-500 hover:text-orange-400 transition-colors duration-300">
-              D
-            </span>
+            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">D</span>
+            </div>
           </div>
         ),
         color: "from-orange-500 to-red-600",
@@ -271,6 +261,40 @@ const techCategories = {
         ),
         color: "from-gray-800 to-black",
         level: 90,
+      },
+      {
+        name: "Windows",
+        icon: (
+          <div className="w-13 h-13 flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">W</span>
+            </div>
+          </div>
+        ),
+        color: "from-blue-500 to-indigo-600",
+        level: 90,
+      },
+      {
+        name: "Postman",
+        icon: (
+          <SiPostman
+            className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-orange-500 to-red-500",
+        level: 80,
+      },
+      {
+        name: "Stack Overflow",
+        icon: (
+          <SiStackoverflow
+            className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
+            size={52}
+          />
+        ),
+        color: "from-orange-500 to-red-500",
+        level: 85,
       },
       {
         name: "Figma",
