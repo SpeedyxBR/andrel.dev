@@ -13,6 +13,7 @@ import {
   SiPostman,
   SiYarn,
   SiNpm,
+  SiExpress,
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
 
@@ -116,17 +117,17 @@ const techs = [
     color: "from-gray-900 to-black",
     level: 70,
   },
-  // {
-  //   name: "Express.js",
-  //   icon: (
-  //     <SiExpress
-  //       className="text-gray-600 hover:text-gray-500 transition-colors duration-300"
-  //       size={52}
-  //     />
-  //   ),
-  //   color: "from-gray-600 to-gray-700",
-  //   level: 85,
-  // },
+  {
+    name: "Express.js",
+    icon: (
+      <SiExpress
+        className="text-gray-600 hover:text-gray-500 transition-colors duration-300"
+        size={52}
+      />
+    ),
+    color: "from-gray-600 to-gray-700",
+    level: 85,
+  },
   {
     name: "PostgreSQL",
     icon: (
