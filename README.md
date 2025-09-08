@@ -5,152 +5,228 @@
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white" alt="PWA" />
 </div>
 
 <br />
 
 <div align="center">
   <h3>✨ Desenvolvedor Web Full Stack ✨</h3>
-  <p><strong>Criando experiências digitais com React, Node.js, TypeScript e Next.js</strong></p>
+  <p><strong>Criando experiências digitais com React, TypeScript e Vite</strong></p>
   <p><em>Focado em código limpo, performance e experiência do usuário</em></p>
 </div>
 
 ---
 
-## 🎯 Sobre o Projeto
+## 📚 Sumário
 
-Este é o portfólio profissional de **Andrel Carvalho**, um desenvolvedor web full stack apaixonado por tecnologia. O projeto demonstra habilidades avançadas em desenvolvimento frontend e backend, com um design moderno e responsivo que reflete a qualidade do trabalho desenvolvido.
-
-### 🌟 Características Principais
-
-- **🎨 Design Moderno**: Interface elegante com tema escuro e partículas animadas
-- **📱 Totalmente Responsivo**: Otimizado para todos os dispositivos
-- **⚡ Performance Otimizada**: Construído com Vite para máxima velocidade
-- **🎭 Animações Suaves**: Framer Motion para transições fluidas
-- **🌙 Tema Adaptativo**: Alternância automática entre modo claro e escuro
-- **📧 Formulário Funcional**: Integração com EmailJS para contato direto
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Tecnologias](#️-tecnologias)
+- [Funcionalidades](#-funcionalidades)
+- [Como Executar](#-como-executar)
+- [Configuração do EmailJS](#-configuração-do-emailjs)
+- [Scripts Disponíveis](#-scripts-disponíveis)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [PWA](#-pwa)
+- [SEO](#-seo)
+- [Responsividade](#-responsividade)
+- [Deploy](#-deploy)
+- [Dicas e Troubleshooting](#-dicas-e-troubleshooting)
+- [FAQ](#-faq)
+- [Contribuição](#-contribuição)
+- [Licença e Contato](#-licença-e-contato)
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🎯 Sobre o Projeto
+
+Este é o portfólio profissional de **Andrel Carvalho**, um desenvolvedor web full stack. O projeto apresenta um design moderno, animações fluidas, foco em acessibilidade e alto desempenho.
+
+### 🌟 Destaques
+
+- **🎨 Design**: visual moderno com tema escuro/claro
+- **📱 Responsivo**: otimizado para mobile, tablet e desktop
+- **⚡ Performance**: bundling com Vite e otimizações de imagens
+- **🎭 Animações**: transições suaves com Framer Motion
+- **📧 Contato**: integração com EmailJS
+- **📦 PWA**: suporte a Progressive Web App (instalável)
+
+---
+
+## 🛠️ Tecnologias
 
 ### Frontend
 
-- **React 18** - Biblioteca para interfaces de usuário
-- **TypeScript** - Tipagem estática para JavaScript
-- **Tailwind CSS** - Framework CSS utilitário
-- **Framer Motion** - Biblioteca de animações
-- **Lucide React** - Ícones modernos e escaláveis
+- React 18
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React / React Icons
 
-### Build & Deploy
+### Build e Qualidade
 
-- **Vite** - Build tool ultra-rápido
-- **PostCSS** - Processamento CSS avançado
-- **ESLint** - Linting de código
+- Vite 5
+- PostCSS + Autoprefixer
+- ESLint (React, Hooks, TypeScript)
 
 ### Integrações
 
-- **EmailJS** - Envio de emails direto do frontend
-- **React Icons** - Biblioteca de ícones populares
+- EmailJS
+- react-slick / slick-carousel (carrossel)
+- vite-plugin-pwa (PWA)
 
 ---
 
-## ✨ Funcionalidades Implementadas
+## ✨ Funcionalidades
 
-### 🏠 **Seção Hero**
+### 🏠 Hero
 
-- Apresentação profissional com avatar 3D
-- Call-to-action para download do currículo
-- Links para redes sociais (LinkedIn, GitHub, Email)
-- Partículas animadas de fundo
+- Apresentação com CTA para currículo e redes sociais
+- Partículas de fundo e animações de entrada
 
-### 📚 **Seção Sobre**
+### 📚 Sobre
 
-- Timeline interativa da jornada profissional
-- Carousel Slick com 3 slides informativos
-- Ícones das tecnologias com cores personalizadas
-- Animações de entrada com Framer Motion
+- Timeline/descrição da jornada profissional
+- Conteúdo animado e ícones por tecnologia
 
-### 🎯 **Seção Habilidades**
+### 🎯 Habilidades
 
-- Cards interativos com níveis de proficiência
-- Hover effects elegantes
-- Categorização por área de conhecimento
+- Cards interativos com níveis e categorias
 
-### 🏆 **Seção Certificações**
+### 🏆 Certificações
 
-- Exibição de certificados profissionais
-- Layout responsivo e organizado
+- Exibição responsiva de certificados (imagens em `public/`)
 
-### 🚀 **Seção Projetos**
+### 🚀 Projetos
 
-- Grid de projetos com imagens e descrições
-- Links para repositórios e demos
-- Tecnologias utilizadas em cada projeto
+- Grid com imagens, descrição, tecnologias e links
 
-### 📞 **Seção Contato**
+### 📞 Contato
 
-- Formulário funcional integrado ao EmailJS
-- Layout side-by-side elegante
-- Validação de campos em tempo real
+- Formulário com EmailJS e validação de campos
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🚀 Como Executar
 
-### Pré-requisitos
+Pré-requisitos:
 
-- Node.js 16+
-- npm ou yarn
+- Node.js 16+ (recomendado 18+)
+- npm (ou yarn/pnpm)
 
-### 1. Clone o Repositório
+1. Clone o repositório
 
 ```bash
 git clone https://github.com/SpeedyxBR/andrel.dev.git
 cd andrel.dev
 ```
 
-### 2. Instale as Dependências
+2. Instale dependências
 
 ```bash
 npm install
 ```
 
-### 3. Configure o EmailJS
-
-1. Crie uma conta em [EmailJS](https://www.emailjs.com/)
-2. Conecte seu serviço de email (Gmail, Outlook, etc.)
-3. Crie um template de email
-4. Copie as credenciais: `service_id`, `template_id`, `public_key`
-5. Atualize o arquivo `src/components/Contact.tsx`
-
-### 4. Execute em Desenvolvimento
+3. Execute em desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-### 5. Build para Produção
+4. Build de produção
 
 ```bash
 npm run build
 ```
 
+5. Preview local do build
+
+```bash
+npm run preview
+```
+
+---
+
+## 🔐 Configuração do EmailJS
+
+1. Crie conta em `https://www.emailjs.com/`
+2. Conecte um serviço de email (Gmail/Outlook etc.)
+3. Crie um Template e copie: `service_id`, `template_id`, `public_key`
+4. Atualize as credenciais no arquivo `src/components/pages/Contact.tsx` (ou onde estiver a integração)
+
+Campos comuns do template: `from_name`, `from_email`, `message` (ajuste conforme o componente).
+
+---
+
+## 📜 Scripts Disponíveis
+
+- `npm run dev`: inicia o servidor de desenvolvimento Vite
+- `npm run build`: gera o build de produção em `dist/`
+- `npm run preview`: serve o build de produção localmente
+- `npm run lint`: roda o ESLint na base do projeto
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── pages/
+│   │   ├── Hero.tsx
+│   │   ├── About.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Certifications.tsx
+│   │   └── Contact.tsx
+│   └── ui/
+│       ├── Button.tsx
+│       ├── Card.tsx
+│       ├── Loading.tsx
+│       ├── Particles.tsx
+│       └── Toast.tsx
+├── hooks/
+├── styles/
+└── constants/
+
+public/
+├── imagens e certificados (ex.: `bootcamp-certificado.png`, `andrel.jpeg`)
+└── arquivos estáticos (ex.: currículo PDF)
+```
+
+---
+
+## 📦 PWA
+
+O projeto utiliza `vite-plugin-pwa` para oferecer experiência instalável:
+
+- Gera manifest e service worker no build
+- Suporte offline básico para rotas/ativos estáticos
+
+Para testar o PWA:
+
+```bash
+npm run build
+npm run preview
+# acesse http://localhost:4173 e verifique o indicador de instalável no navegador
+```
+
+---
+
+## 🔎 SEO
+
+SEO e metatags são gerenciados via `react-helmet-async` no componente `src/components/pages/SEO.tsx`. Ajuste título, descrição e open graph para cada página/seção conforme necessário.
+
 ---
 
 ## 📱 Responsividade
 
-O portfólio é totalmente responsivo e otimizado para:
+- Mobile (≥320px), Tablet (≥768px), Desktop (≥1024px) e variações de iPad
+- Breakpoints e utilitários definidos no Tailwind (`tailwind.config.js`)
 
-- 📱 **Mobile** (320px - 768px)
-- 📱 **Tablet** (768px - 1024px)
-- 💻 **Desktop** (1024px+)
-- 🖥️ **iPad** com breakpoints específicos
+Exemplo de screens personalizadas:
 
-### 🎨 Breakpoints Personalizados
-
-```javascript
+```js
 screens: {
   xs: "475px",
   ipad: "768px",
@@ -163,49 +239,9 @@ screens: {
 
 ---
 
-## 🎭 Animações e Interações
+## ☁️ Deploy
 
-### ✨ **Framer Motion**
-
-- Entrada suave dos elementos
-- Hover effects nos cards
-- Transições de página fluidas
-
-### 🎪 **Slick Carousel**
-
-- Navegação por setas elegantes
-- Bolinhas indicadoras personalizadas
-- Transições suaves entre slides
-
-### 🌟 **Partículas Animadas**
-
-- Fundo dinâmico com partículas
-- Adaptação automática ao tema
-- Performance otimizada
-
----
-
-## 🌙 Sistema de Temas
-
-- **Modo Escuro**: Tema principal com gradientes azul-roxo
-- **Modo Claro**: Alternativa clara para melhor legibilidade
-- **Transição Suave**: Mudança automática entre temas
-- **Persistência**: Lembra a preferência do usuário
-
----
-
-## 📊 Performance
-
-- **⚡ Vite**: Build ultra-rápido
-- **🎯 Code Splitting**: Carregamento sob demanda
-- **🖼️ Otimização de Imagens**: Lazy loading automático
-- **📱 Mobile First**: Otimizações específicas para dispositivos móveis
-
----
-
-## 🚀 Deploy
-
-### Vercel (Recomendado)
+### Vercel (recomendado)
 
 ```bash
 npm install -g vercel
@@ -214,63 +250,57 @@ vercel
 
 ### Netlify
 
-1. Conecte seu repositório GitHub
-2. Configure build command: `npm run build`
-3. Deploy automático a cada push
+1. Conecte o repositório
+2. Build command: `npm run build`
+3. Publish directory: `dist`
 
 ### GitHub Pages
 
 ```bash
 npm run build
-# Faça upload da pasta dist/
+# publique a pasta dist/
 ```
 
 ---
 
-## 📁 Estrutura do Projeto
+## 🧩 Dicas e Troubleshooting
 
-```
-src/
-├── components/
-│   ├── pages/          # Componentes principais
-│   │   ├── Hero.tsx    # Seção de apresentação
-│   │   ├── About.tsx   # Sobre com timeline
-│   │   ├── Skills.tsx  # Habilidades técnicas
-│   │   ├── Projects.tsx # Portfólio de projetos
-│   │   └── Contact.tsx # Formulário de contato
-│   └── ui/             # Componentes reutilizáveis
-│       ├── Button.tsx  # Botões personalizados
-│       ├── Card.tsx    # Cards com hover effects
-│       └── Particles.tsx # Sistema de partículas
-├── hooks/               # Hooks customizados
-├── styles/              # Estilos SCSS
-└── constants/           # Configurações e temas
-```
+- Email não enviado: verifique `service_id`, `template_id`, `public_key` e permissões no EmailJS
+- Imagens não aparecem: confirme o caminho dentro de `public/` e imports relativos
+- Estilos não aplicam: cheque `src/index.css` e a configuração do Tailwind
+- PWA não instala: teste em `npm run preview` e limpe caches do navegador
+- Lint falhando: rode `npm run lint` e ajuste mensagens exibidas
 
 ---
 
-## 🤝 Contribuindo
+## ❓ FAQ
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
+- Posso usar este projeto como base? Sim, com atribuição ao autor
+- Onde atualizo o currículo? Substitua o PDF em `public/` e ajuste o link no componente adequado
+- Como adiciono um novo projeto? Inclua a imagem em `public/` e atualize a lista em `Projects.tsx`
+
+---
+
+## 🤝 Contribuição
+
+1. Faça um fork
+2. Crie uma branch (`git checkout -b feature/minha-feature`)
+3. Commit (`git commit -m "feat: minha feature"`)
+4. Push (`git push origin feature/minha-feature`)
 5. Abra um Pull Request
 
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Commits: prefira o padrão `feat`, `fix`, `chore`, `docs`, `refactor`.
 
 ---
 
-## 📞 Contato
+## 📄 Licença e Contato
 
-- **LinkedIn**: [Andrel Carvalho](https://linkedin.com/in/andrelcarvalho)
-- **GitHub**: [@SpeedyxBR](https://github.com/SpeedyxBR)
-- **Email**: andrel.cilva58@gmail.com
-- **Portfólio**: [andrel.dev](https://andrel.dev)
+Este projeto está sob a licença MIT. Consulte `LICENSE` (se aplicável).
+
+- LinkedIn: Andrel Carvalho
+- GitHub: `@SpeedyxBR`
+- Email: `andrel.cilva58@gmail.com`
+- Portfólio: `andrel.dev`
 
 ---
 
