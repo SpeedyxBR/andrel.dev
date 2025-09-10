@@ -76,6 +76,18 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
     },
 
     {
+      title: "Docker - Containerização de Aplicações",
+      issuer: "Full Stack Club",
+      date: "Dezembro 2024",
+      link: "https://drive.google.com/file/d/1example/view",
+      description:
+        "Aprendendo a containerizar aplicações com Docker, incluindo criação de Dockerfiles, gerenciamento de containers, volumes, redes e orquestração. Desenvolvimento de aplicações escaláveis e portáveis com tecnologias de containerização modernas.",
+      image: "/docker-certificado.png",
+      technologies: ["Docker", "Containerização", "DevOps", "Deployment"],
+      featured: true,
+    },
+
+    {
       title: "Estruturas de Repetição e Arrays em JavaScript",
       issuer: "DIO",
       date: "2024",
