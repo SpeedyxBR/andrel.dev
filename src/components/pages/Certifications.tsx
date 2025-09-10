@@ -58,7 +58,7 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
       link: "https://drive.google.com/file/d/1yh1tIaNRKX6xFNDDMd1HiOIaDD6VgILL/view?usp=drive_link",
       description:
         "Aprofundamento no sistema modular do Node.js, incluindo CommonJS e ES Modules, criação de módulos customizados, NPM, gerenciamento de dependências e estruturação de projetos escaláveis. Desenvolvimento de bibliotecas reutilizáveis e aplicação de boas práticas de arquitetura modular para construção de aplicações robustas e maintíveis.",
-      image: "/fundamentosnodejs.png",
+      image: "/nodemodulos.png",
       technologies: ["Node.js", "CommonJS", "ES Modules", "NPM"],
       featured: true,
     },
