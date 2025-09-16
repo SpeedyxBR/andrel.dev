@@ -34,7 +34,7 @@ const Header = ({
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Andrel_Carvalho.CV.pdf (2).pdf";
+    link.href = "/Andrel_Carvalho.CV.pdf (4).pdf";
     link.download = "Curriculo-Desenvolvedor-Fullstack.pdf";
     document.body.appendChild(link);
     link.click();
