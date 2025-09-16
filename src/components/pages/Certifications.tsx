@@ -79,11 +79,22 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
       title: "Docker - Containerização de Aplicações",
       issuer: "Full Stack Club",
       date: "Dezembro 2024",
-      link: "https://drive.google.com/file/d/1example/view",
+      link: "https://drive.google.com/file/d/1lHHoXsYAtq9aRpCmfinAusOKLIcYZoZO/view?usp=sharing",
       description:
         "Aprendendo a containerizar aplicações com Docker, incluindo criação de Dockerfiles, gerenciamento de containers, volumes, redes e orquestração. Desenvolvimento de aplicações escaláveis e portáveis com tecnologias de containerização modernas.",
       image: "/docker-certificado.png",
       technologies: ["Docker", "Containerização", "DevOps", "Deployment"],
+      featured: true,
+    },
+    {
+      title: "Fundamentos do React",  
+      issuer: "Full Stack Club",
+      date: "Dezembro 2024",
+      link: "https://drive.google.com/file/d/1lHHoXsYAtq9aRpCmfinAusOKLIcYZoZO/view?usp=sharing",	
+      description:
+        "Aprendendo a criar aplicações com React, incluindo componentes, props, estado, hooks e contextos. Desenvolvimento de aplicações escaláveis e portáveis com tecnologias de frontend modernas.",
+      image: "/fundamentos-react.png",
+      technologies: ["React", "Componentes", "Props", "Estado", "Hooks", "Contextos", "Virtual DOM"],
       featured: true,
     },
 
