@@ -31,7 +31,7 @@ const techCategories = {
         icon: (
           <FaReact
             className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-cyan-400 to-blue-500",
@@ -42,7 +42,7 @@ const techCategories = {
         icon: (
           <FaReact
             className="text-blue-800 hover:text-blue-700 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-blue-800 to-blue-900",
@@ -53,7 +53,7 @@ const techCategories = {
         icon: (
           <SiNextdotjs
             className="text-black hover:text-gray-800 transition-colors duration-300 dark:text-white dark:hover:text-gray-200"
-            size={40}
+            size={52}
           />
         ),
         color: "from-gray-900 to-black",
@@ -64,7 +64,7 @@ const techCategories = {
         icon: (
           <SiTypescript
             className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-blue-500 to-indigo-600",
@@ -75,7 +75,7 @@ const techCategories = {
         icon: (
           <FaJs
             className="text-yellow-400 hover:text-yellow-300 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-yellow-400 to-orange-500",
@@ -86,7 +86,7 @@ const techCategories = {
         icon: (
           <SiTailwindcss
             className="text-teal-400 hover:text-teal-300 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-teal-400 to-cyan-500",
@@ -97,7 +97,7 @@ const techCategories = {
         icon: (
           <FaHtml5
             className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-orange-500 to-red-500",
@@ -108,7 +108,7 @@ const techCategories = {
         icon: (
           <FaCss3Alt
             className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-blue-500 to-indigo-600",
@@ -119,7 +119,7 @@ const techCategories = {
         icon: (
           <SiVite
             className="text-purple-500 hover:text-purple-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-purple-500 to-pink-600",
@@ -135,7 +135,7 @@ const techCategories = {
         icon: (
           <SiNodedotjs
             className="text-green-500 hover:text-green-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-green-500 to-emerald-600",
@@ -146,7 +146,7 @@ const techCategories = {
         icon: (
           <SiExpress
             className="text-gray-600 hover:text-gray-500 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-gray-600 to-gray-700",
@@ -157,7 +157,7 @@ const techCategories = {
         icon: (
           <SiSwagger
             className="text-green-500 hover:text-green-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-green-500 to-emerald-600",
@@ -168,7 +168,7 @@ const techCategories = {
         icon: (
           <SiJest
             className="text-red-500 hover:text-red-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-red-500 to-pink-600",
@@ -179,7 +179,7 @@ const techCategories = {
         icon: (
           <SiDocker
             className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-blue-500 to-indigo-600",
@@ -217,7 +217,7 @@ const techCategories = {
         icon: (
           <SiPrisma
             className="text-indigo-600 hover:text-indigo-500 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-indigo-600 to-purple-700",
@@ -229,9 +229,9 @@ const techCategories = {
           <img
             src="/drizzle-orm.webp"
             alt="Drizzle ORM"
-            className="w-10 h-10 object-contain transition-opacity duration-300 hover:opacity-80"
-            width="40"
-            height="40"
+            className="w-13 h-13 object-contain transition-opacity duration-300 hover:opacity-80"
+            width="52"
+            height="52"
           />
         ),
         color: "from-orange-500 to-red-600",
@@ -258,7 +258,7 @@ const techCategories = {
         icon: (
           <TbBrandGithub
             className="text-black hover:text-gray-800 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-gray-800 to-black",
@@ -270,9 +270,9 @@ const techCategories = {
           <img
             src="/windows.png"
             alt="Windows"
-            className="w-10 h-10 object-contain transition-opacity duration-300 hover:opacity-80"
-            width="40"
-            height="40"
+            className="w-13 h-13 object-contain transition-opacity duration-300 hover:opacity-80"
+            width="52"
+            height="52"
           />
         ),
         color: "from-blue-500 to-indigo-600",
@@ -283,7 +283,7 @@ const techCategories = {
         icon: (
           <SiPostman
             className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-orange-500 to-red-500",
@@ -294,7 +294,7 @@ const techCategories = {
         icon: (
           <SiStackoverflow
             className="text-orange-500 hover:text-orange-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-orange-500 to-red-500",
@@ -305,7 +305,7 @@ const techCategories = {
         icon: (
           <SiFigma
             className="text-purple-500 hover:text-purple-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-purple-500 to-pink-600",
@@ -316,7 +316,7 @@ const techCategories = {
         icon: (
           <VscVscodeInsiders
             className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-blue-500 to-indigo-600",
@@ -327,7 +327,7 @@ const techCategories = {
         icon: (
           <SiYarn
             className="text-blue-500 hover:text-blue-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-blue-500 to-indigo-600",
@@ -338,7 +338,7 @@ const techCategories = {
         icon: (
           <SiNpm
             className="text-red-500 hover:text-red-400 transition-colors duration-300"
-            size={40}
+            size={52}
           />
         ),
         color: "from-red-500 to-red-600",
@@ -399,7 +399,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
         />
       ))}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+        <div className="text-center mb-12 ipad:mb-16 lg:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -407,7 +407,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
             viewport={{ once: true }}
           >
             <h2
-              className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 ${
+              className={`text-3xl sm:text-4xl ipad:text-4xl lg:text-5xl font-bold mb-6 ${
                 darkMode
                   ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                   : "text-gray-900"
@@ -423,7 +423,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
             viewport={{ once: true }}
           >
             <p
-              className={`text-base sm:text-lg lg:text-xl max-w-3xl mx-auto ${
+              className={`text-lg sm:text-xl ipad:text-xl lg:text-xl max-w-3xl mx-auto ${
                 darkMode ? "text-gray-300" : "text-gray-600"
               }`}
             >
@@ -439,7 +439,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="space-y-10">
+          <div className="space-y-16">
             {Object.entries(techCategories).map(
               ([categoryKey, category], categoryIdx) => (
                 <motion.div
@@ -448,11 +448,11 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: categoryIdx * 0.2 }}
                   viewport={{ once: true }}
-                  className="space-y-6"
+                  className="space-y-8"
                 >
                   <div className="text-center">
                     <h3
-                      className={`text-xl sm:text-2xl font-bold mb-3 ${
+                      className={`text-2xl sm:text-3xl font-bold mb-4 ${
                         darkMode
                           ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                           : "text-gray-800"
@@ -469,11 +469,11 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
                     />
                   </div>
 
-                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3 sm:gap-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 ipad:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 ipad:gap-8 lg:gap-8">
                     {category.technologies.map((tech, techIdx) => (
                       <motion.div
                         key={tech.name}
-                        className={`flex flex-col items-center justify-center p-4 sm:p-5 rounded-xl group ${
+                        className={`flex flex-col items-center justify-center p-6 rounded-2xl group ${
                           darkMode
                             ? "bg-gray-800/50 hover:bg-gray-800/80 text-white"
                             : "bg-white/50 hover:bg-white/80 text-gray-700 shadow-lg hover:shadow-xl"
@@ -494,10 +494,10 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
                         }}
                         viewport={{ once: true }}
                       >
-                        <div className="relative mb-3">{tech.icon}</div>
+                        <div className="relative mb-4">{tech.icon}</div>
 
                         <motion.span
-                          className={`text-xs sm:text-sm font-semibold tracking-wide text-center ${
+                          className={`text-sm font-semibold tracking-wide text-center ${
                             darkMode ? "text-gray-200" : "text-gray-700"
                           } group-hover:text-opacity-80 transition-all duration-300`}
                           whileHover={{ scale: 1.02 }}
