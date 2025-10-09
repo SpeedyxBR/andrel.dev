@@ -21,6 +21,7 @@ import {
   SiStackoverflow,
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const techCategories = {
   frontend: {
@@ -513,6 +514,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
           </div>
         </motion.div>
       </div>
+      <SpeedInsights />
     </section>
   );
 };
