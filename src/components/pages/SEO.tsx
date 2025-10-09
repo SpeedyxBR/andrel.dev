@@ -128,24 +128,6 @@ const SEO: React.FC<SEOProps> = ({
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-
-      {/* Google Analytics */}
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-      ></script>
-      <script>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'GA_MEASUREMENT_ID', {
-            page_title: '${fullTitle}',
-            page_location: window.location.href,
-            send_page_view: false
-          });
-        `}
-      </script>
     </Helmet>
   );
 };
