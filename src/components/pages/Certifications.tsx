@@ -87,14 +87,22 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
       featured: true,
     },
     {
-      title: "Banco de Dados, Postgres & SQL",  
+      title: "Banco de Dados, Postgres & SQL",
       issuer: "Full Stack Club",
       date: "Outubro 2025 - 8 horas",
-      link: "https://drive.google.com/file/d/1sshDFucHLF39Yo1ToZ4qL5jrklbQDKEg/view?usp=sharing",	
+      link: "https://drive.google.com/file/d/1sshDFucHLF39Yo1ToZ4qL5jrklbQDKEg/view?usp=sharing",
       description:
         "Aprendendo a criar aplicações com Postgres, incluindo criação de bancos de dados, tabelas, constraints, queries, views, stored procedures, triggers e funções. Desenvolvimento de aplicações escaláveis e portáveis com tecnologias de banco de dados modernas.",
       image: "/bancodedados-sql.png",
-      technologies: ["Postgres", "SQL", "Database", "PostgreSQL", "Stored Procedures", "Triggers", "Functions"],
+      technologies: [
+        "Postgres",
+        "SQL",
+        "Database",
+        "PostgreSQL",
+        "Stored Procedures",
+        "Triggers",
+        "Functions",
+      ],
       featured: true,
     },
 
@@ -360,7 +368,7 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
                   ))}
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex gap-2 sm:gap-3">
                   <a
                     href={cert.link}
                     target="_blank"
