@@ -7,3 +7,4 @@ export {
   useOrientation,
   useResponsiveBreakpoint,
 } from "./useDeviceDetection";
+export { useAnalytics } from "./useAnalytics";

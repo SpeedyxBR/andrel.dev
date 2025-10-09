@@ -469,7 +469,7 @@ const Skills = ({ darkMode }: { darkMode: boolean }) => {
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-3 ipad:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 ipad:gap-8 lg:gap-8">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
                     {category.technologies.map((tech, techIdx) => (
                       <motion.div
                         key={tech.name}

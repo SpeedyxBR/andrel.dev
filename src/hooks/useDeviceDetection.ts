@@ -4,7 +4,6 @@ interface DeviceInfo {
   isMobile: boolean;
   isTablet: boolean;
   isIpad: boolean;
-  isDesktop: boolean;
   orientation: "portrait" | "landscape";
   screenWidth: number;
   screenHeight: number;
@@ -15,7 +14,6 @@ export const useDeviceDetection = (): DeviceInfo => {
     isMobile: false,
     isTablet: false,
     isIpad: false,
-    isDesktop: false,
     orientation: "portrait",
     screenWidth: 0,
     screenHeight: 0,
@@ -39,9 +37,6 @@ export const useDeviceDetection = (): DeviceInfo => {
       // Detectar tablets (incluindo iPad)
       const isTablet = (width >= 768 && width <= 1024) || isIpad;
 
-      // Detectar desktop
-      const isDesktop = width > 1024;
-
       // Detectar orientação
       const orientation = width > height ? "landscape" : "portrait";
 
@@ -49,7 +44,6 @@ export const useDeviceDetection = (): DeviceInfo => {
         isMobile,
         isTablet,
         isIpad,
-        isDesktop,
         orientation,
         screenWidth: width,
         screenHeight: height,
@@ -88,7 +82,7 @@ export const useOrientation = (): "portrait" | "landscape" => {
 
 // Hook para breakpoints responsivos
 export const useResponsiveBreakpoint = (): "mobile" | "tablet" | "desktop" => {
-  const { isMobile, isTablet, isDesktop } = useDeviceDetection();
+  const { isMobile, isTablet } = useDeviceDetection();
 
   if (isMobile) return "mobile";
   if (isTablet) return "tablet";

@@ -70,7 +70,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
     <section
       id="home"
       aria-labelledby="hero-title"
-      className={`min-h-screen flex items-center justify-center pt-16 transition-colors duration-500 relative hero-section ${
+      className={`min-h-screen flex items-center justify-center pt-16 pb-8 transition-colors duration-500 relative hero-section ${
         darkMode ? "text-white" : "text-gray-900"
       }`}
     >
@@ -87,8 +87,8 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
         </>
       )}
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-        <div className="flex flex-col ipad:flex-row lg:flex-row items-center gap-8 ipad:gap-12 lg:gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20 relative z-10">
+        <div className="flex flex-col-reverse ipad:flex-row lg:flex-row items-center gap-6 sm:gap-8 ipad:gap-10 lg:gap-12">
           {/* Imagem - Lado esquerdo em desktop */}
           <motion.div
             className="ipad:w-1/2 lg:w-1/2 flex justify-center ipad:justify-start lg:justify-start"
@@ -97,7 +97,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.div
-              className="w-56 h-56 ipad:w-72 ipad:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-blue-600 hero-image"
+              className="w-48 h-48 sm:w-56 sm:h-56 ipad:w-72 ipad:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-blue-600 hero-image"
               animate={
                 reducedMotion || isMobile || isIpad
                   ? undefined
@@ -131,7 +131,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <motion.h1
-              className="text-4xl sm:text-5xl ipad:text-5xl lg:text-6xl font-bold mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-center sm:text-left"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -147,7 +147,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             </motion.h1>
 
             <motion.h2
-              className={`text-2xl sm:text-3xl ipad:text-3xl lg:text-4xl font-bold mb-6 ${
+              className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-center sm:text-left ${
                 darkMode
                   ? "bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                   : "bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
@@ -160,7 +160,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             </motion.h2>
 
             <motion.p
-              className="text-lg sm:text-xl ipad:text-xl lg:text-xl mb-6 ipad:mb-8 lg:mb-8 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl lg:text-xl mb-6 sm:mb-8 lg:mb-8 leading-relaxed text-center sm:text-left max-w-2xl mx-auto sm:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}
@@ -174,16 +174,16 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row ipad:flex-row justify-center items-center gap-6 sm:gap-8 ipad:gap-8 mb-8 ipad:mb-10 lg:mb-10 ipad:-translate-x-8 lg:-translate-x-11"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-10 lg:mb-10 w-full max-w-md mx-auto sm:max-w-none sm:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}
             >
               <Button
                 onClick={handleDownloadCV}
-                icon={<Download size={20} />}
+                icon={<Download size={20} aria-hidden="true" />}
                 size="lg"
-                className="w-48 sm:w-56 ipad:w-56 lg:w-64 whitespace-nowrap"
+                className="w-full sm:w-auto focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 aria-label="Baixar currículo em PDF"
               >
                 Baixar Currículo
@@ -192,9 +192,9 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
                 onClick={scrollToProjects}
                 variant="outline"
                 size="lg"
-                className={`${
+                className={`w-full sm:w-auto focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                   darkMode ? "border-gray-500 text-gray-200" : ""
-                } w-40 sm:w-44 ipad:w-44 lg:w-52 whitespace-nowrap`}
+                }`}
                 aria-label="Ir para a seção de projetos"
               >
                 Ver Projetos
@@ -202,7 +202,7 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
             </motion.div>
 
             <motion.nav
-              className="flex justify-center gap-6 sm:gap-8 ipad:gap-8 mb-16 ipad:mb-20 lg:mb-20 ipad:-translate-x-8 lg:-translate-x-11"
+              className="flex justify-center gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 lg:mb-16"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.4 }}
@@ -212,64 +212,67 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
                 href="https://github.com/SpeedyxBR"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 ${
+                className={`p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                   darkMode
                     ? "bg-gray-800 text-white hover:text-blue-400"
                     : "bg-white text-gray-700 hover:text-gray-900"
                 }`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                aria-label="Abrir GitHub de Andrel"
+                aria-label="Abrir perfil do GitHub de Andrel Carvalho (abre em nova aba)"
                 title="GitHub"
               >
-                <Github size={24} />
+                <Github size={24} aria-hidden="true" />
               </motion.a>
               <motion.a
                 href="https://www.linkedin.com/in/andrel-carvalho"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 ${
+                className={`p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                   darkMode
                     ? "bg-gray-800 text-white hover:text-blue-400"
                     : "bg-white text-gray-700 hover:text-blue-600"
                 }`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                aria-label="Abrir LinkedIn de Andrel"
+                aria-label="Abrir perfil do LinkedIn de Andrel Carvalho (abre em nova aba)"
                 title="LinkedIn"
               >
-                <Linkedin size={24} />
+                <Linkedin size={24} aria-hidden="true" />
               </motion.a>
               <motion.a
                 href="mailto:andrel.cilva@gmail.com"
-                className={`p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 ${
+                className={`p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${
                   darkMode
                     ? "bg-gray-800 text-white hover:text-green-400"
                     : "bg-white text-gray-700 hover:text-green-600"
                 }`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                aria-label="Enviar e-mail para Andrel"
+                aria-label="Enviar e-mail para andrel.cilva@gmail.com"
                 title="E-mail"
               >
-                <Mail size={24} />
+                <Mail size={24} aria-hidden="true" />
               </motion.a>
             </motion.nav>
 
-            <motion.div
-              className={`flex justify-center lg:justify-start cursor-pointer mt-8 ${
+            <motion.button
+              className={`flex justify-center lg:justify-start cursor-pointer mt-8 p-2 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                 reducedMotion || isMobile || isIpad ? "" : "animate-bounce"
-              }`}
+              } ${darkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"}`}
               onClick={scrollToProjects}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.6 }}
+              aria-label="Rolar para baixo para ver os projetos"
+              type="button"
             >
               <ChevronDown
                 size={32}
                 className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                aria-hidden="true"
               />
-            </motion.div>
+            </motion.button>
           </motion.div>
         </div>
       </div>

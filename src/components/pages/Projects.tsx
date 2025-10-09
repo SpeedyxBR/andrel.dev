@@ -149,7 +149,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
         </div>
 
         {/* Featured Projects */}
-        <div className="grid ipad:grid-cols-2 lg:grid-cols-2 gap-6 ipad:gap-8 lg:gap-8 mb-12 ipad:mb-16 lg:mb-16 projects-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 projects-grid">
           {featuredProjects.map((project, index) => (
             <motion.div
               key={index}
@@ -274,7 +274,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
               Outros Projetos
             </h3>
           </motion.div>
-          <div className="grid ipad:grid-cols-2 md:grid-cols-2 gap-4 ipad:gap-6 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {otherProjects.map((project, index) => (
               <motion.div
                 key={index}
