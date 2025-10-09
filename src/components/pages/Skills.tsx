@@ -21,7 +21,7 @@ import {
   SiStackoverflow,
 } from "react-icons/si";
 import { VscVscodeInsiders } from "react-icons/vsc";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const techCategories = {
   frontend: {
