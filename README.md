@@ -1,4 +1,4 @@
-# 🚀 Portfólio Profissional - Andrel Carvalho
+# 🚀 Portfólio Profissional - Andrel Carvalho 2.0
 
 <div align="center">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
