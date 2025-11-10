@@ -18,7 +18,7 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
     {
       title: "Yu-Gi-Oh | Jo-ken-po Edition",
       description:
-        "Jogo de jokenpo que criei para explicar conceitos de lógica de programação aplicados a jogos. Conceitos abordados: Armazenamento e gerenciamento de estado manual, Funções limpas, Organização de código.",
+                "Um jogo de Jokenpô (Pedra, Papel e Tesoura) desenvolvido para demonstrar conceitos fundamentais de lógica de programação de uma forma interativa e divertida. O projeto aborda o gerenciamento de estado de forma manual, a criação de funções puras para a lógica do jogo e a importância da organização do código para a manutenibilidade. É um ótimo exemplo prático para iniciantes que desejam entender como a lógica de programação é aplicada na criação de jogos simples.",
       image: "/yugioh.jpg",
       technologies: ["HTML5", "CSS3", "JavaScript"],
       liveUrl: "https://js-yugioh-assets-gray.vercel.app",
@@ -27,6 +27,27 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
       featured: true,
     },
     {
+      title: "Aparatus Barber - Mobile First",
+      description:
+                "Uma aplicação inovadora para barbearias, desenvolvida com foco em dispositivos móveis. O front-end, construído com Next.js e Tailwind CSS, oferece uma interface moderna e responsiva. O back-end, em Node.js, gerencia agendamentos e clientes, enquanto a integração com a API da Google Gemini fornece um assistente de IA para atendimento. O sistema de pagamentos é processado de forma segura pelo Stripe, garantindo uma experiência completa e eficiente.",
+      image: "/Aparatus.png",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Next.js",
+        "Stripe",
+        "Drizzle ORM",
+        "PostgreSQL"
+      ],
+      liveUrl: "https://bewear-one.vercel.app",
+      githubUrl: "https://github.com/SpeedyxBR/bewear",
+      date: "Novembro 2025",
+      featured: true,
+    },
+
+       {
       title: "BEWEAR - Ecommerce",
       description:
         "Um e-commerce de moda em desenvolvimento, projetado para oferecer uma jornada de compra intuitiva e de alta performance. O front-end, construído com Next.js, garante carregamento instantâneo e uma navegação fluida. O back-end, desenvolvido em Node.js, assegura a gestão segura do catálogo e a autenticação de usuários, além de gerenciar a integração de pagamentos para uma experiência de compra completa e confiável.",
@@ -35,10 +56,14 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
         "React",
         "TypeScript",
         "Tailwind CSS",
-        "Next.js, Node.js, Stripe, Drizzle, PostgreSQL",
+        "Node.js",
+        "Next.js",
+        "Stripe",
+        "Prisma ORM",
+        "PostgreSQL"
       ],
-      liveUrl: "https://bewear-one.vercel.app",
-      githubUrl: "https://github.com/SpeedyxBR/bewear",
+      liveUrl: "https://aparatus-barber-nu.vercel.app",
+      githubUrl: "https://github.com/SpeedyxBR/aparatus-barber",
       date: "Agosto 2025",
       featured: true,
     },
