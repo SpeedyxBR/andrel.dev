@@ -41,8 +41,8 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
         "Drizzle ORM",
         "PostgreSQL"
       ],
-      liveUrl: "https://bewear-one.vercel.app",
-      githubUrl: "https://github.com/SpeedyxBR/bewear",
+      liveUrl: "https://aparatus-barber-nu.vercel.app",        
+      githubUrl: "https://github.com/SpeedyxBR/aparatus-barber",
       date: "Novembro 2025",
       featured: true,
     },
@@ -62,8 +62,8 @@ const Projects = ({ darkMode }: { darkMode: boolean }) => {
         "Prisma ORM",
         "PostgreSQL"
       ],
-      liveUrl: "https://aparatus-barber-nu.vercel.app",
-      githubUrl: "https://github.com/SpeedyxBR/aparatus-barber",
+      liveUrl: "https://bewear-one.vercel.app",
+      githubUrl: "https://github.com/SpeedyxBR/bewear",  
       date: "Agosto 2025",
       featured: true,
     },
