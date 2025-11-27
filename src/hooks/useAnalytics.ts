@@ -14,12 +14,9 @@ interface AnalyticsPageView {
   page_path: string;
 }
 
-// Hook personalizado para Google Analytics
 export const useAnalytics = () => {
-  // Verifica se o gtag está disponível
   const isGtagAvailable = typeof window !== "undefined" && (window as any).gtag;
 
-  // Função para rastrear eventos
   const trackEvent = useCallback(
     (event: AnalyticsEvent) => {
       if (isGtagAvailable) {
@@ -35,7 +32,6 @@ export const useAnalytics = () => {
     [isGtagAvailable]
   );
 
-  // Função para rastrear page views
   const trackPageView = useCallback(
     (pageData: AnalyticsPageView) => {
       if (isGtagAvailable) {
@@ -47,7 +43,6 @@ export const useAnalytics = () => {
     [isGtagAvailable]
   );
 
-  // Função para rastrear cliques em links externos
   const trackOutboundLink = useCallback(
     (url: string, linkText?: string) => {
       trackEvent({
@@ -59,7 +54,6 @@ export const useAnalytics = () => {
     [trackEvent]
   );
 
-  // Função para rastrear downloads
   const trackDownload = useCallback(
     (fileName: string, fileType?: string) => {
       trackEvent({
@@ -71,7 +65,6 @@ export const useAnalytics = () => {
     [trackEvent]
   );
 
-  // Função para rastrear interações sociais
   const trackSocialInteraction = useCallback(
     (platform: string, action: string) => {
       trackEvent({
@@ -83,7 +76,6 @@ export const useAnalytics = () => {
     [trackEvent]
   );
 
-  // Função para rastrear erros
   const trackError = useCallback(
     (error: Error, errorInfo?: any) => {
       trackEvent({
