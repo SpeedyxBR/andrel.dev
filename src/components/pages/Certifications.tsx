@@ -87,6 +87,17 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
       featured: true,
     },
     {
+      title: "Clean Code - Melhorando a qualidade do código",
+      issuer: "Full Stack Club",
+      date: "Dezembro 2024",
+      link: "https://drive.google.com/file/d/1HR4Nl9HuNU1lpM7ZrQxYwa69sPZDx6-t/view?usp=drive_link",
+      description:
+        "Aprendendo a melhorar a qualidade do código, incluindo criação de Dockerfiles, gerenciamento de containers, volumes, redes e orquestração. Desenvolvimento de aplicações escaláveis e portáveis com tecnologias de containerização modernas.",
+      image: "/clean-code.png",
+      technologies: ["Clean Code", "Code Quality", "Code Review", "Code Style"],
+      featured: true,
+    },
+    {
       title: "Banco de Dados, Postgres & SQL",
       issuer: "Full Stack Club",
       date: "Outubro 2025 - 8 horas",
