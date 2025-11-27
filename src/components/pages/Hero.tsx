@@ -5,9 +5,6 @@ import Button from "../ui/Button";
 import { Particles } from "../ui/Particles";
 import { useDeviceDetection } from "../../hooks";
 
-// Estilos animados para os fundos
-// Os estilos são importados globalmente no index.css
-
 const greetings = [
   { lang: "pt", text: "Olá, eu sou o Andrel" },
   { lang: "en", text: "Hi, I'm Andrel" },
@@ -22,7 +19,6 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
   const [reducedMotion, setReducedMotion] = useState(false);
   const { isMobile, isIpad } = useDeviceDetection();
 
-  // Desabilita troca de idioma em mobile para melhorar performance
   useEffect(() => {
     if (!isMobile && !isIpad) {
       const interval = setInterval(() => {
@@ -44,7 +40,6 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
     return () => mq.removeEventListener("change", handler);
   }, []);
 
-  // ⬇️ Aplica classe no <body> dinamicamente
   useEffect(() => {
     document.body.classList.toggle("dark-background", darkMode);
     document.body.classList.toggle("light-background", !darkMode);
@@ -75,7 +70,6 @@ const Hero = ({ darkMode }: { darkMode: boolean }) => {
       }`}
     >
       <div className="stars" aria-hidden="true"></div>
-      {/* Desabilita partículas e estrelas cadentes em mobile para melhorar performance */}
       {!darkMode && !reducedMotion && !isMobile && !isIpad && (
         <Particles darkMode={darkMode} count={4} />
       )}
