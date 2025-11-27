@@ -78,7 +78,7 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
     {
       title: "Docker - Containerização de Aplicações",
       issuer: "Full Stack Club",
-      date: "Dezembro 2024",
+      date: "Setembro 2025",
       link: "https://drive.google.com/file/d/1lHHoXsYAtq9aRpCmfinAusOKLIcYZoZO/view?usp=sharing",
       description:
         "Aprendendo a containerizar aplicações com Docker, incluindo criação de Dockerfiles, gerenciamento de containers, volumes, redes e orquestração. Desenvolvimento de aplicações escaláveis e portáveis com tecnologias de containerização modernas.",
@@ -89,7 +89,7 @@ const Certifications = ({ darkMode }: { darkMode: boolean }) => {
     {
       title: "Clean Code - Melhorando a qualidade do código",
       issuer: "Full Stack Club",
-      date: "Dezembro 2024",
+      date: "Novembro 2025",
       link: "https://drive.google.com/file/d/1HR4Nl9HuNU1lpM7ZrQxYwa69sPZDx6-t/view?usp=drive_link",
       description:
         "Aprendendo a melhorar a qualidade do código, incluindo criação de Dockerfiles, gerenciamento de containers, volumes, redes e orquestração. Desenvolvimento de aplicações escaláveis e portáveis com tecnologias de containerização modernas.",
