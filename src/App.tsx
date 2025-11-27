@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import SEO from "./components/pages/SEO";
-import Header from "./components/pages/Header";
+import Header from "./components/layout/Header";
 import Hero from "./components/pages/Hero";
 import About from "./components/pages/About";
 import Skills from "./components/pages/Skills";
 import Certifications from "./components/pages/Certifications";
 import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/Contact";
-import Footer from "./components/pages/Footer";
+import Footer from "./components/layout/Footer";
 import Toast from "./components/ui/Toast";
 import { useToast } from "./hooks/useToast";
 
