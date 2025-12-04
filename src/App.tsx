@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { HelmetProvider } from "react-helmet-async";
-import SEO from "./components/pages/SEO";
+import { useEffect, useState } from "react";
 import Header from "./components/layout/Header";
 import Hero from "./components/pages/Hero";
 import About from "./components/pages/About";
@@ -14,8 +12,11 @@ import { useToast } from "./hooks/useToast";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
-    const stored = localStorage.getItem("theme");
-    return stored === "light" ? false : true;
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("theme");
+      return stored === "light" ? false : true;
+    }
+    return true;
   });
 
   const { toasts, removeToast } = useToast();
@@ -34,9 +35,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <HelmetProvider>
-      <SEO />
-      <div
+    <div
         className={
           darkMode
             ? "min-h-screen bg-transparent text-white transition-colors duration-300 relative"
@@ -75,7 +74,6 @@ function App() {
           />
         ))}
       </div>
-    </HelmetProvider>
   );
 }
 
