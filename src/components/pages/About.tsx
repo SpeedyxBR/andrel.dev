@@ -175,17 +175,6 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                   style={{ transform: "translateX(-50%)" }}
                 />
 
-                {/* Year Badge - Mobile */}
-                <div
-                  className={`absolute left-16 md:hidden px-3 py-1 rounded-full text-xs font-bold ${
-                    darkMode
-                      ? "bg-blue-500/20 text-blue-400"
-                      : "bg-blue-500/20 text-blue-600"
-                  }`}
-                >
-                  {item.year}
-                </div>
-
                 {/* Content Card */}
                 <motion.div
                   className={`ml-20 md:ml-0 md:w-5/12 ${
@@ -206,9 +195,9 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                       className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${item.bgColor} blur-xl`}
                     />
 
-                    {/* Year Badge - Desktop */}
+                    {/* Year Badge */}
                     <div
-                      className={`hidden md:inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 ${
+                      className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 ${
                         darkMode
                           ? "bg-blue-500/20 text-blue-400"
                           : "bg-blue-500/20 text-blue-600"
