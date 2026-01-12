@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {
-  Heart,
   Github,
   Linkedin,
   Mail,
@@ -13,7 +12,7 @@ import {
   MapPin,
   Globe
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Button from "@/components/ui/Button";
 
 const Footer = ({ darkMode }: { darkMode: boolean }) => {
   const currentYear = new Date().getFullYear();
@@ -178,13 +177,11 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className={`text-sm ${darkMode ? "text-gray-500" : "text-gray-500"}`}>
-            © {currentYear} Andrel Carvalho. Todos os direitos reservados.
+            © {currentYear} Andrel.dev. Todos os direitos reservados.
           </p>
           
           <div className="flex items-center gap-6">
-            <span className={`text-sm flex items-center gap-1.5 ${darkMode ? "text-gray-500" : "text-gray-500"}`}>
-              Feito com <Heart size={14} className="text-red-500 fill-red-500 animate-pulse" /> e Next.js
-            </span>
+            {/* Removed 'Made with' text */}
             
             <button
               onClick={scrollToTop}
