@@ -177,7 +177,7 @@ const Footer = ({ darkMode }: { darkMode: boolean }) => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className={`text-sm ${darkMode ? "text-gray-500" : "text-gray-500"}`}>
-            © {currentYear} Andrel.dev. Todos os direitos reservados.
+            © {currentYear} Andrel Carvalho. Todos os direitos reservados.
           </p>
           
           <div className="flex items-center gap-6">

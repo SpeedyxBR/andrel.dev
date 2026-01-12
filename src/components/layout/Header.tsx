@@ -99,8 +99,8 @@ const Header = ({
                   href={item.href}
                   className={`relative group transition-colors duration-200 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1 ${
                     isActiveRoute(item.href)
-                      ? "text-blue-600"
-                      : "text-black dark:text-gray-200"
+                      ? "text-blue-500 dark:text-blue-400"
+                      : "text-gray-700 dark:text-white"
                   }`}
                   role="menuitem"
                   aria-label={`Ir para ${item.label}`}
@@ -210,11 +210,9 @@ const Header = ({
             }}
             className={`fixed top-0 right-0 h-full w-80 z-[9999] ${
               darkMode
-                ? "bg-gradient-to-b from-gray-900 via-gray-800 to-black"
-                : "bg-gradient-to-b from-white via-gray-50 to-gray-100"
-            } shadow-2xl border-l ${
-              darkMode ? "border-gray-700" : "border-gray-200"
-            }`}
+                ? "bg-gray-950/95 border-gray-800"
+                : "bg-white/95 border-gray-200"
+            } shadow-2xl border-l backdrop-blur-md`}
             id="mobile-navigation"
             role="dialog"
             aria-modal="true"
