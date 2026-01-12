@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Menu,
   X,
@@ -23,6 +25,7 @@ const Header = ({
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,22 +44,19 @@ const Header = ({
     document.body.removeChild(link);
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-    }
-  };
-
   const menuItems = [
-    { id: "home", label: "Home", icon: <Home size={20} /> },
-    { id: "about", label: "Minha Jornada", icon: <User size={20} /> },
-    { id: "skills", label: "Habilidades", icon: <Code size={20} /> },
-    { id: "projects", label: "Projetos", icon: <Briefcase size={20} /> },
-    { id: "certifications", label: "Certificações", icon: <Award size={20} /> },
-    { id: "contact", label: "Contato", icon: <Mail size={20} /> },
+    { href: "/", label: "Home", icon: <Home size={20} /> },
+    { href: "/jornada", label: "Minha Jornada", icon: <User size={20} /> },
+    { href: "/habilidades", label: "Habilidades", icon: <Code size={20} /> },
+    { href: "/projetos", label: "Projetos", icon: <Briefcase size={20} /> },
+    { href: "/certificacoes", label: "Certificações", icon: <Award size={20} /> },
+    { href: "/contato", label: "Contato", icon: <Mail size={20} /> },
   ];
+
+  const isActiveRoute = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <>
@@ -77,15 +77,15 @@ const Header = ({
         >
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <button
-                onClick={() => scrollToSection("home")}
+              <Link
+                href="/"
                 className={`text-lg sm:text-xl ipad:text-xl lg:text-xl font-bold hover:scale-105 transition-transform duration-200 cursor-pointer header-logo ${
                   darkMode ? "text-white" : "text-gray-900"
                 } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded`}
                 aria-label="Ir para o início da página"
               >
                 Andrel <span className="text-blue-600">Carvalho</span>
-              </button>
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
@@ -94,25 +94,35 @@ const Header = ({
               role="menubar"
             >
               {menuItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="relative group text-black dark:text-gray-200 transition-colors duration-200 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1"
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`relative group transition-colors duration-200 flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1 ${
+                    isActiveRoute(item.href)
+                      ? "text-blue-600"
+                      : "text-black dark:text-gray-200"
+                  }`}
                   role="menuitem"
-                  aria-label={`Ir para a seção ${item.label}`}
+                  aria-label={`Ir para ${item.label}`}
                 >
                   <span
-                    className="text-blue-600 group-hover:text-blue-500 transition-colors duration-200"
+                    className={`${
+                      isActiveRoute(item.href)
+                        ? "text-blue-500"
+                        : "text-blue-600 group-hover:text-blue-500"
+                    } transition-colors duration-200`}
                     aria-hidden="true"
                   >
                     {item.icon}
                   </span>
                   <span className="z-10 relative">{item.label}</span>
                   <span
-                    className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"
+                    className={`absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform transition-transform origin-left duration-300 ${
+                      isActiveRoute(item.href) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                    }`}
                     aria-hidden="true"
                   />
-                </button>
+                </Link>
               ))}
               <button
                 onClick={handleDownloadCV}
@@ -268,39 +278,51 @@ const Header = ({
               {/* Menu Items */}
               <div className="flex-1 space-y-2">
                 {menuItems.map((item, index) => (
-                  <motion.button
-                    key={item.id}
+                  <motion.div
+                    key={item.href}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 + index * 0.1 }}
                     whileHover={{ scale: 1.02, x: 5 }}
                     whileTap={{ scale: 0.98 }}
-                    onClick={() => scrollToSection(item.id)}
-                    className={`relative group text-left w-full p-4 rounded-xl transition-all duration-200 flex items-center gap-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
-                      darkMode
-                        ? "text-gray-200 hover:text-blue-400 hover:bg-gray-800/50"
-                        : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-                    }`}
-                    role="menuitem"
-                    aria-label={`Ir para a seção ${item.label}`}
                   >
-                    <motion.span
-                      whileHover={{ rotate: 5 }}
-                      className={`p-2 rounded-lg ${
-                        darkMode
-                          ? "bg-blue-600/20 text-blue-400"
-                          : "bg-blue-100 text-blue-600"
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`relative group text-left w-full p-4 rounded-xl transition-all duration-200 flex items-center gap-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+                        isActiveRoute(item.href)
+                          ? darkMode
+                            ? "text-blue-400 bg-gray-800/50"
+                            : "text-blue-600 bg-blue-50"
+                          : darkMode
+                            ? "text-gray-200 hover:text-blue-400 hover:bg-gray-800/50"
+                            : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
                       }`}
+                      role="menuitem"
+                      aria-label={`Ir para ${item.label}`}
                     >
-                      {item.icon}
-                    </motion.span>
-                    <span className="font-medium">{item.label}</span>
-                    <motion.div
-                      initial={{ scaleX: 0 }}
-                      whileHover={{ scaleX: 1 }}
-                      className="absolute bottom-0 left-4 right-4 h-0.5 bg-blue-500 origin-left"
-                    />
-                  </motion.button>
+                      <motion.span
+                        whileHover={{ rotate: 5 }}
+                        className={`p-2 rounded-lg ${
+                          isActiveRoute(item.href)
+                            ? darkMode
+                              ? "bg-blue-500/30 text-blue-300"
+                              : "bg-blue-200 text-blue-700"
+                            : darkMode
+                              ? "bg-blue-600/20 text-blue-400"
+                              : "bg-blue-100 text-blue-600"
+                        }`}
+                      >
+                        {item.icon}
+                      </motion.span>
+                      <span className="font-medium">{item.label}</span>
+                      <motion.div
+                        initial={{ scaleX: isActiveRoute(item.href) ? 1 : 0 }}
+                        whileHover={{ scaleX: 1 }}
+                        className="absolute bottom-0 left-4 right-4 h-0.5 bg-blue-500 origin-left"
+                      />
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
 
