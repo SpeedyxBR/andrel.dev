@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/layout/Header";
 import Hero from "./components/pages/Hero";
-import About from "./components/pages/About";
-import Skills from "./components/pages/Skills";
-import Certifications from "./components/pages/Certifications";
-import Projects from "./components/pages/Projects";
-import Contact from "./components/pages/Contact";
+import AboutSummary from "./components/pages/AboutSummary";
 import Footer from "./components/layout/Footer";
 import Toast from "./components/ui/Toast";
 import { useToast } from "./hooks/useToast";
@@ -54,11 +50,7 @@ function App() {
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <main>
           <Hero darkMode={darkMode} />
-          <About darkMode={darkMode} />
-          <Skills darkMode={darkMode} />
-          <Projects darkMode={darkMode} />
-          <Certifications darkMode={darkMode} />
-          <Contact darkMode={darkMode} />
+          <AboutSummary darkMode={darkMode} />
         </main>
         <Footer darkMode={darkMode} />
 
@@ -78,3 +70,4 @@ function App() {
 }
 
 export default App;
+
