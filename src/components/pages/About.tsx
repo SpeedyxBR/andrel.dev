@@ -221,7 +221,7 @@ const About = ({ darkMode }: { darkMode: boolean }) => {
                     <div className="flex items-center gap-4 mb-4">
                       {/* Icon */}
                       <div
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br ${item.color} shadow-lg`}
+                        className={`w-12 h-12 shrink-0 rounded-xl flex items-center justify-center bg-gradient-to-br ${item.color} shadow-lg`}
                       >
                         <span className="text-white">{item.icon}</span>
                       </div>
