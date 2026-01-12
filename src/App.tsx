@@ -5,6 +5,7 @@ import AboutSummary from "./components/pages/AboutSummary";
 import Footer from "./components/layout/Footer";
 import Toast from "./components/ui/Toast";
 import { useToast } from "./hooks/useToast";
+import { useLenis } from "./hooks/useLenis";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -16,6 +17,9 @@ function App() {
   });
 
   const { toasts, removeToast } = useToast();
+  
+  // Smooth scroll with Lenis
+  useLenis();
 
   useEffect(() => {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
